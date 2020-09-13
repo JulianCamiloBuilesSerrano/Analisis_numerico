@@ -1,12 +1,4 @@
-
-# -------------------------------------------------------------------------------------
-# Código realizado por: 
-# * Juan Jose Camacho   
-# * Gabriela Maria Camacho
-# -------------------------------------------------------------------------------------
-# Clase análisis numérico mier-vier 2001
-# -------------------------------------------------------------------------------------
-
+#Desarrollado por Julian Builes,Santiago Bermudez, Daniel Reyes y Daniel Fierro
 #Instalar Pracma
 library(pracma)
 library(MASS)
@@ -31,22 +23,22 @@ polinomioCalculado = mpfr(taylor(f,0,3),bits)
 
 inicio = mpfr( -2^(-8),bits)
 final = mpfr(2^(-8),bits)
-
-s = seq( inicio,final,0.0009 )
+s = seq( inicio,final,0.00009 )
 error = c()
-for (i in range(1,length(s))){
+for (i in seq(length(s))){
   print("evaluando")
-  print(s[i])
+  print(i)
   r =horner(p = polinomioCalculado, s[i])
   cat("el valor con taylor es\t")
   print(r$y)
   x = mpfr(f(s[i]),bits)
   cat("el valor esperado es ")
   print(x)
-  print(abs(x-r$y))
+  print('+++++++++++++++++++++++++++++++++')
   error <- c(error,abs(x-r$y))
 } 
 print(error)
+
 polyApprox(f=f, a = inicio,b = final,n =3 )
 
 
