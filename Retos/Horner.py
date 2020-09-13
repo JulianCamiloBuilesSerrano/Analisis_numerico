@@ -10,20 +10,6 @@ import numpy as np
 from numpy.polynomial.laguerre import lagval
 
 
-def metodoUno(polinomio, x):
-    contador = 0
-    res = 0
-    for index, p in enumerate(reversed(polinomio)):
-        r = 1
-        for i in range(index):
-            r = r * x
-            contador += 1
-        res = res + (r * p)
-        contador += 1
-    print("El numero de multiplicaciones con el metodo uno es {}".format(contador))
-    return res
-
-
 def Derivada(C):
     m = len(C)-1
     j = 0
