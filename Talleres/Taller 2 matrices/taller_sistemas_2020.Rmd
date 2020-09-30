@@ -17,23 +17,29 @@ library(Rlinsolve)
 ```
 
 
+1. a. Revise las siguientes funciones con la matriz A, que puede decir acerca de su funcionamiento y explique como se utilizan para descomponer la matriz A
+Solcion :
+Compilando y viendo el resulatdo de las funciones, eye, ones, zeros y matrix se pude enterder que todos tienen una funcion basica en comun, y es la de poder crear una matriz dependiendo del valor de numero de columnas dadas:
+  eye: se encarga de crear una matriz identidad de n x m.
+  ones: Crea una  n x m de solo unos.
+  Zeros: crea una matriz n x m solo con el valor de 0 en cada posicion, tambaien denominada     matriz nula
+  matrix: Dado un vector con con valores y el numero de filas se crea una matriz con los datos corresponientes, para el correcto funcionamiento el valor de la cantidad de filas que ser un submultiplo o multiplo de el tamaño del vector dado.
 
+Dentro de las funciones dadas,con el resultado de la multiplicacion de la matriz A con la matriz identidad( funcion eye ) se puede determinar la diagonal de la matriz A. Con las otras dos funciones no se puede hace hacer una descomposicion de sus partes, ya que si A se multiplican con la matriz de ceros el resultado va a ser una matriz de ceros y en el caso de la matriz de unos el resultado es la misma matriz A.
 
-1. a. Revise las siguientes funciones con la matriz A, que puede decir acerca de su funcionamiento y explique como se utilizan para descomponer la matriz A        
 b. Evalue la matriz de transición para el método $\textbf{SOR}$  y de $Jacobi$   
 
-
 ```{r,echo=T}
+n =  4
 D1<-eye(n, m = n)
 D2<-ones(n, m = n)
 D3<-zeros(n, m = n)
 A = matrix(c(-8.1, -7, 6.123, -2, -1, 4,
 -3, -1, 0, -1, -5, 0.6,
 -1, 0.33, 6, 1/2), nrow=4, byrow=TRUE)
-A
+
 ```
-  
-    
+
 2. Dada la siguiente matriz, utilice las funciones anteriores para descomponer la matriz $A=L+D+U$, recuerde que esta descomposición es la del metodo de (Jacobi). Verifique su respuesta   
     
 Adicionalmente, verifique si A es simétrica, si A es diagonalmente dominante, justifique su respuesta   
