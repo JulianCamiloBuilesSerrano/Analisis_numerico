@@ -1,5 +1,5 @@
 ---
-title: "Análisis Numérico- nombres integrantes"
+title: "Análisis Numérico- Julian Builes, Daniel Reyes, Daniel Fierro, Santiago Bermudez"
 output:
   html_document:
     df_print: paged
@@ -225,7 +225,10 @@ b
 
 4. a. Pruebe el siguiente algoritmo con una matriz $A_{6}$, modifiquelo para que $a_{ii}=0$ para todo $i$  
 
+- El algoritmo que se nos propone, lo que hace es que recibe una matriz y un factor, dependiendo de el factor lo que hara es cambiar todos los valores de la diagonal respectiva a ceros. La modificacion propuesta lo que hace es que evaluamos la matriz diagonal (con ayuda de la funcion eye), y para todos los casos, la diagonal de la matriz tambien sera una matriz de ceros.
+
 ```{r, echo=T}
+
 tril1 <- function(M, k = 0) {
 if (k == 0) {
 M[upper.tri(M, diag = FALSE)] <- 0
@@ -234,6 +237,38 @@ M[col(M) >= row(M) + k + 1] <- 0
 }
 return(M)
 }
+
+
+###########
+
+##Funcion ya modificada
+trilmod <- function(M, k = 0) {
+if (k == 0) {
+
+M[upper.tri(M, diag = TRUE)] <- 0
+
+} else {
+  M[col(M) >= row(M) + k + 1] <- 0
+  n=6
+  D1<-eye(n, m = n)
+  tra=M-(M*D1)
+  M<-tra
+
+
+}
+return(M)
+}
+
+
+##Matriz de datos aleatoria de tamaño 6x6
+Ma<-matrix(sample(-100:100, 36), nrow = 6)
+print("Algoritmo original")
+tril1(Ma, k=0)
+print("Algoritmo modificado")
+trilmod(Ma, k=0)
+
+
+
 ```
 
 
@@ -261,6 +296,24 @@ b. Genere una tabla que tenga 10 iteraciones, del método de Jacobi con vector i
 
 8. Instalar el paquete Matrix y descomponga la matriz $A$ (del punto dos) de la forma $LU$ y la factorizarla como $A=QR$. Verifique su respuesta.  
 
+Solucion: En el paquete Matrix nos encontramos con distintas funciones que nos permiten hacer descomposiciones de matrices. En primera instancia utilizamos la funcion tril que nos proporciona la matriz triangular inferior de la matriz original, y la funcion triu para obtener la triangular superior. Por otra parte, el paquete tambien nos proporciona una funcion para la factorizacion $A=QR$, la cual es qr.
+
+```{r, echo=T}
+A = matrix(c(-8.1, -7, 6.123, -2, -1, 4,
+-3, -1, 0, -1, -5, 0.6,
+-1, 0.33, 6, 1/2), nrow=4, byrow=TRUE)
+A
+
+I<-tril(A, k=0)
+I
+
+S<-triu(A, k=0)
+S
+
+Qr<-qr(A)
+Qr
+```
+
 9. Realice varias pruebas que la matriz de transición por el método de Gauss-Seidel esta dada por $T=(-D^{-1}U)(I+LD^{-1})^{-1}$    
 
 
@@ -268,7 +321,32 @@ b. Genere una tabla que tenga 10 iteraciones, del método de Jacobi con vector i
 10.
 a. Determinar numéricamente la intersección entre la circunferencia $x^2 + y^2 = 1$ y la recta $y = x$. Usamos una aproximación inicial $(1,1)$.   
 
+- Encontramos un paquete de R, denominado BB, que se encarga de reolver y optimizar sistemas de ecuaciones no lineales, y utilizamos una funcion (llamada BBsolve), que nos permite encontrar las intersecciones de las ecuaciones presentadas dada la aproximacion lineal. Entonces se procedio a seguir los pasos que se ilustran en el HELP de la funcion para hacer el mejor uso de esta. Y primero es necesario pasar las ecuaciones a una funcion que seria el sistema de ecuaciones no lineales. Al final comprobamos el resultado de la funcion que nos arrojo con geogebra.
+
+
+```{r}
+library(BB)
+
+re<-c(1,1)
+
+    
+sistem=function(x){
+  n<-length(x)
+  fun<-rep(NA, n)
+  fun[1] = (x[1]^2)+(x[2]^2)-1
+  fun[2] = (x[1])-(x[2])
+  fun
+}
+
+sol=BBsolve(re, sistem)
+sol$par
+```
+
+
 b Analizar y comentar el siguiente código  
+
+Solucion: Principalmente BBsolve, es una funcion que utiliza longitudes de paso Barzilai-Borwein para resolver sistemas de ecuaciones no lineales. Esta funcion recibe como parametros un vector el cual da una estimacion de las raices del sistema de ecuaciones no  lineales, como segundo parametro se recibe una funcion que dado un vector como argumento que lo transforma internamente (en cada una de sus posiciones) para al final retornar el vector modificado, todo esto se realiza en la funcion denominada "trigexp".Despues regresa una lista de unos, los cuales indican los mejores paramentros para resolver el sistema  de ecuaciones.  
+
 ```{r, echo=T}
 library(BB)
 trigexp = function(x) {
