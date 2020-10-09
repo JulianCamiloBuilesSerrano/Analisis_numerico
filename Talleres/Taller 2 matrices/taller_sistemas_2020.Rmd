@@ -17,14 +17,21 @@ library(Rlinsolve)
 ```
 
 
-1. a. Revise las siguientes funciones con la matriz A, que puede decir acerca de su funcionamiento y explique como se utilizan para descomponer la matriz A
-Solcion :
-Compilando y viendo el resulatdo de las funciones, eye, ones, zeros y matrix se pude enterder que todos tienen una funcion basica en comun, y es la de poder crear una matriz dependiendo del valor de numero de columnas dadas:
-  eye: se encarga de crear una matriz identidad de n x m.
-  ones: Crea una  n x m de solo unos.
-  Zeros: crea una matriz n x m solo con el valor de 0 en cada posicion, tambaien denominada     matriz nula
-  matrix: Dado un vector con con valores y el numero de filas se crea una matriz con los datos corresponientes, para el correcto funcionamiento el valor de la cantidad de filas que ser un submultiplo o multiplo de el tamaño del vector dado.
+1. 
+a. Revise las siguientes funciones con la matriz A, que puede decir acerca de su funcionamiento y explique como se utilizan para descomponer la matriz A.
 
+Solcion :
+
+Compilando y viendo el resulatdo de las funciones, eye, ones, zeros y matrix se pude enterder que todos tienen una funcion basica en comun, y es la de poder crear una matriz dependiendo del valor de numero de columnas dadas:
+
+  eye : se encarga de crear una matriz identidad de n x m.
+  
+  ones : Crea una  n x m de solo unos.
+  
+  Zeros : crea una matriz n x m solo con el valor de 0 en cada posicion, tambaien denominada     matriz nula.
+  
+  matrix: Dado un vector con con valores y el numero de filas se crea una matriz con los datos corresponientes, para el correcto funcionamiento el valor de la cantidad de filas que ser un submultiplo o multiplo de el tamaño del vector dado.
+  
 Dentro de las funciones dadas,con el resultado de la multiplicacion de la matriz A con la matriz identidad( funcion eye ) se puede determinar la diagonal de la matriz A. Con las otras dos funciones no se puede hace hacer una descomposicion de sus partes, ya que si A se multiplican con la matriz de ceros el resultado va a ser una matriz de ceros y en el caso de la matriz de unos el resultado es la misma matriz A.
 
 b. Evalue la matriz de transición para el método $\textbf{SOR}$  y de $Jacobi$   
@@ -37,32 +44,168 @@ D3<-zeros(n, m = n)
 A = matrix(c(-8.1, -7, 6.123, -2, -1, 4,
 -3, -1, 0, -1, -5, 0.6,
 -1, 0.33, 6, 1/2), nrow=4, byrow=TRUE)
+D = D1 * A # matriz de diagonales 
+Dinversa = solve(D)#inversa de la diagonal de A
+SumMatSup <-A
+matrioInf <-A
+SumMatSup[lower.tri(A,diag = TRUE)]<-0
+L <- SumMatSup # Matriz de diagonal iferior
+  
+matrioInf[upper.tri(A,diag = TRUE)]<-0
+U <- matrioInf #matriz de diagonal superir 
 
+Tjacovi <-  Dinversa%*%(U+L)
+w = 1.2
+Tsor  <- solve( D  - w* L ) %*% ( (1 - w)* D + w*U  )
 ```
 
-2. Dada la siguiente matriz, utilice las funciones anteriores para descomponer la matriz $A=L+D+U$, recuerde que esta descomposición es la del metodo de (Jacobi). Verifique su respuesta   
-    
-Adicionalmente, verifique si A es simétrica, si A es diagonalmente dominante, justifique su respuesta   
+2. Dada la siguiente matriz, utilice las funciones anteriores para descomponer la matriz $A=L+D+U$, recuerde que esta descomposición es la del metodo de (Jacobi). Verifique su respuesta
+
+
 
 ```{r, echo=T}
+n = 4
+D1<-eye(n, m = n)
+D2<-ones(n, m = n)
+D3<-zeros(n, m = n)
 A = matrix(c(-8.1, -7/4, 6.1, -2, -1, 4,
 -3, -1, 0, -1, -5, 0.6,
 -1, 1/3, 6, 1/2), nrow=4, byrow=TRUE)
-A
+D = D1 * A
+SumMatSup <-A
+matrioInf <-A
+SumMatSup[lower.tri(A,diag = TRUE)]<-0
+L <- SumMatSup # Matriz de diagonal iferior
+L = L*-1  
+matrioInf[upper.tri(A,diag = TRUE)]<-0
+U <- matrioInf #matriz de diagonal superior 
+U = U*-1
+```
+a. Adicionalmente, verifique si A es simétrica, si A es diagonalmente dominante, justifique su respuesta 
+
+Solucion: 
+
+- para verificar si una matriz es simetica se tiene que tomar la tranpuesta de la matriz original y el resultado tiene que ser el mismo a la matriz original, eneste caso para la matriz dada de 4x4 al transponerla no se va a dar la misma matriz original.
+- Para el caso de la matriz A, se tomo cada fila sin incluir el valor de la diagonal y se comparo que la suma del el valor absoluto de los componentes sea menor a el valor en la diagonal y asi por cada valor fila, el seultado dio que la matriz no es diagonalmente dominante.
+
+```{r}
+t = t(A)#transpuesta de la matriz
+if (identical(A, t)){#verificacion de simetria 
+  print("Matriz simetrica ")
+}else
+{
+  print('No es simetrica')
+}
+for (i in seq(1,4,by = 1)){#verificar si es daigonalmente dominante
+  sum = 0
+  for ( j in seq(1,4)){
+    sum = sum + abs(A[i,j])
+  }
+  sum  = sum - abs(A[i,i])
+  d = abs(A[i,i])
+  
+  if( d < sum ){
+    es = FALSE
+    print("No es diagoanalmente dominante ")
+    break
+    
+  }
+  es = TRUE
+}
+if(es)
+  print('Es diagonalmente dominante')
 ```
   
-  b. Utilice la función itersolve(A, b, tol , method = "Gauss-Seidel") y solucionar el sistema asociado a la matriz $A$ con:   $b=[1.45,3,5.12,-4]^{t}$ con una tolerancia de error de $1e^-8$    
+  b. Utilice la función itersolve(A, b, tol , method = "Gauss-Seidel") y solucionar el sistema asociado a la matriz $A$ con:   $b=[1.45,3,5.12,-4]^{t}$ con una tolerancia de error de $1e^-8$ 
+  
+- La funcion **intersolve()** tiene la tarea de calcular una matriz $A$ con un vector $b$ según el tipo de metodo que se especifique, al evaluar la matriz dada en el ejercicio con su correspondiente vector y el metodo de Gauss-Seidel, se obtuvo una respueta la cual comparamos con la de Excel, al evaluar los resultados se pudo observar que eran totalmente diferentes, dando el Excel cifras pequeñas a diferencia del metodo de la libreria **pragma** que da unos valores muy grandes. Con este problema deicidimos buscar otra funcion en la libreria de Rlinsolve, la cual es **lsolve.gs()** la cual es una funcion que evalua directamente una matriz por el metodo de Gauss-Seidel. Al comparar se pudo obtener que el resultado del excel y la funcion de **Rlinsolve** era el mismo. Se cree que este problema que se obtinene con intersolve es dado porque la funcion no converge y es por eso que arroja resultados tan grandes,a diferencia de la otra fuuncion que posiblemente está adaptada para poder encontrar una solución cuando las matrices no convergen.
 
-c. Genere las iteraciones del método de Jacobi, calcular error relativo para cada iteracion y comparar la solución con el método de Gauss-Seidel  
-d. Encuentre la matriz de transición y el radio espectral     
+```{r}
+b = matrix(c(1.45,3,5.12,-4),  nrow=4, byrow=TRUE)
+sol =  itersolve(A = A, b = b,tol = 1e-8, method = "Gauss-Seidel" )
+sol2 =lsolve.gs(A,b,reltol = 1e-8)
+sol$x
+sol$iter
+print('solucion dos')
+sol2$x
+sol2$iter
+```
+
+c. Genere las iteraciones del método de Jacobi, calcular error relativo para cada iteracion y comparar la solución con el método de Gauss-Seidel.
+
+-  Para realizar las iteraciones del método de Jacobi se realizó solo en análisis de las primeras 5 iteraciones, ya que la matriz no converge, esto se puede ver ya que el valor del error va aumentando por cada iteración, es por eso que se decidió usar la función **lsolve.jacovi** y se comparó con el resultado de Gauss-seidel, esta comparación mostro que la función de *GS* requiere 1000 iteraciones para llegar a la solución, mientras que la de *Jacobi* dio 349 iteraciones, lo cual muestra un gran cambio en la velocidad en la cual convergen los métodos, donde *Jacovi* es casi tres veces más rápido que *GS*.
+
+d. Encuentre la matriz de transición y el radio espectral 
+
+-   En el siguiente codigo se va a realizar el calculo de el metodo de jacovi, para esto se realizo las validaciones por medio del radio expectral, la matriz de trancision y la evalucion del error por medio de la $Norma_{\infty}$. La evaluacion del raio expectral se hace por medio de la obtencion del vector propio, para despues obtener el mayor valor absoluto dentro de este. Para la matriz de transicion solo se usa $D^{-1}(L+U)X^{(k)}. Los restultados  se observan en la ejecion del siguiente codigo. Como se pude observar el radio expectral es mayor que uno, por lo cual indica que la matriz no converge, es por esto que la funcion para en la iteracion 5.
+```{r}
+jacobi<-  function(){ 
+x = matrix(c(1,1,1,1),  nrow=4, byrow=TRUE) 
+e = 1000
+i = 0
+T = Dinversa%*%(L+U) #matriz de trasicion 
+radioExp = max(abs(eig(T)))
+if(radioExp> 1){# radio expectral 
+  cat('Radio expectral mas grande que 1, no se pude calcular, el cual es: ',radioExp,'\n')
+}
+p1 = Dinversa%*%b
+
+print('Matiz T')
+print(T)
+while(e > 1e-8){
+  Dinversa = solve(D)
+  xi = p1 + T%*%x
+  e = abs(norm(xi,'I') - norm(x,'I'))
+  x = xi
+  i = 1 + i 
+  cat("El error es: ",e,'\n')
+  if (i > 6)
+    break
+}
+print('Resultado de la funcion:')
+print(x)
+j = lsolve.jacobi(A,b,reltol =1e-8 )
+print('Otra funcion')
+j$x
+print('iteraciones:')
+j$iter
+}
+jacobi()
+```
+
+
+
+
 
 3. Sea el sistema $AX=b$ dados en ejercicio,y  con tol= e^-8        
- a. Implemente una función en R para que evalue las raíces del polinomio característico asociado a la matriz $A$    
+ a. Implemente una función en R para que evalue las raíces del polinomio característico asociado a la     matriz $A$    
+ 
+ - La siguiente función toma una matriz y lo que hace es que por medio del método **charpoly** se va a obtener el polinomio característico, lo cual después por medio de la ayuda de la función de **newton** poder evaluar la raíz el polinomio.
+```{r}
+raicesPoliCar <-function(A){
+  poli = charpoly(A)
+  f <- function(x){
+    r =  horner((poli),x)
+    return(r$y)
+  }
+  x =seq(-11,30)
+  x = newton(fun = f , x0 = 5,tol = 1e-8)
+  x
+}
+raicesPoliCar(A)
+
+```
+ 
  b. Use el teorema de convergencia para determinar cuál método iterativo es más favorable.  
  c. Evalue la matriz de transición para cada caso (método) y en el caso del método de relajación determine el valor óptimo de $\omega$      
  d. Teniendo en cuenta lo anterior resolver el sistema   
  e Comparar con la solución por defecto       
 f. Evaluar el número de condición de la matriz A    
+```{r}
+co =  norm(A,'I')*norm(solve(A),'I')
+co
+```
+
 g. Evaluar el efecto en la solución si la entradad $a_{11}=4.01$ aplicar cambio y solucionar. Después, debe comparar con el valor condicón   
 
 ```{r, echo=T}
@@ -90,7 +233,7 @@ return(M)
 
 5. Cree una función que cuente el número de multiplicaciones en el método directo de Gauss-Jordan, para resolver un sistema de $n$ ecuaciones y pruebelo para $n=5$    
 
-7. Dado el siguiente sistema: 
+6. Dado el siguiente sistema: 
 
 $2x-z=1$   
 $\beta$$x+2y-z=2$     
@@ -101,14 +244,15 @@ $-x+y+ \alpha$$z=1$
 a. Encuentre el valor de $\alpha$ y $\beta$ para asegura la convergencia por el método de Jacobi y para Gauss Seidel. Sugerencia: utilice el teorema convergencia      
 b. Genere una tabla que tenga 10 iteraciones, del método de Jacobi con vector inicial $x_{0}=[1,2,3]^t$      
 
-8. Instalar el paquete Matrix y descomponga la matriz $A$ (del punto dos) de la forma $LU$ y la factorizarla como $A=QR$. Verifique su respuesta.  
+7. Instalar el paquete Matrix y descomponga la matriz $A$ (del punto dos) de la forma $LU$ y la factorizarla como $A=QR$. Verifique su respuesta.  
 
-9. Realice varias pruebas que la matriz de transición por el método de Gauss-Seidel esta dada por $T=(-D^{-1}U)(I+LD^{-1})^{-1}$    
+8. Realice varias pruebas que la matriz de transición por el método de Gauss-Seidel esta dada por $T=(-D^{-1}U)(I+LD^{-1})^{-1}$    
 
 
 ### Sistemas No lineales  
-10.
+9.
 a. Determinar numéricamente la intersección entre la circunferencia $x^2 + y^2 = 1$ y la recta $y = x$. Usamos una aproximación inicial $(1,1)$.   
+
 b Analizar y comentar el siguiente código  
 ```{r, echo=T}
 trigexp = function(x) {
