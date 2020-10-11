@@ -309,7 +309,93 @@ trilmod(Ma, k=0)
 
 
 ### 5.
-Cree una función que cuente el número de multiplicaciones en el método directo de Gauss-Jordan, para resolver un sistema de $n$ ecuaciones y pruebelo para $n=5$    
+Cree una función que cuente el número de multiplicaciones en el método directo de Gauss-Jordan, para resolver un sistema de $n$ ecuaciones y pruebelo para $n=5$
+```{r, echo=T}
+A = matrix(c(4, -1, -1, -1, -1, 4,
+-1, -1, -1, -1, 4, -1,
+-1, -1, -1, 4), nrow=4, byrow=TRUE)
+A
+b = c(1.11111, 5, 1.5,-2.33)
+b
+```
+
+4. a. Pruebe el siguiente algoritmo con una matriz $A_{6}$, modifiquelo para que $a_{ii}=0$ para todo $i$  
+
+```{r, echo=T}
+tril1 <- function(M, k = 0) {
+if (k == 0) {
+M[upper.tri(M, diag = FALSE)] <- 0
+} else {
+M[col(M) >= row(M) + k + 1] <- 0
+}
+return(M)
+}
+```
+
+
+5. Cree una función que cuente el número de multiplicaciones en el método directo de Gauss-Jordan, para resolver un sistema de $n$ ecuaciones y pruebelo para $n=5$   
+
+```{r, echo=T}
+matrizJordan <- matrix(data = c(2,3,7,-2,5,6,8,9,4),nrow =3,ncol = 3, byrow = TRUE)
+Res <- c(3,5,8)
+a <- matrizJordan
+b <- Res
+
+Jordan <- function(a,b){
+x3 = length(b)
+cont = 0
+  for (e in 1:x3){
+      t = a[e,e]
+      b[e] <- b[e]/t
+      for (j in e:x3) {
+        a[e,j] <- a[e,j]/t
+      }
+      for (i in 1:x3){
+        if (i != e){
+          t = a[i,e]
+          b[i] <- b[i]-t*b[e]
+           for (j in e:x3) {
+             a[i,j] <- a[i,j]-t*a[e,j]
+      }
+    }
+  }
+}
+  x <- seq(NULL) 
+  for (i in 1:x3) {
+     x[i]<-b[i]
+  }
+  x
+  return(x)
+}
+
+ConteoGaus <- function(n){
+  c = 0 
+  x1 = length(n)
+  for (e in x1){
+    for (i in x1) {
+      if(i!=e){
+        for (j in e:x1) {
+          c = c + 1
+          
+        }
+      }
+    }
+  }
+  return(n)
+}
+print("Matriz de coeficientes: ")
+matrizJordan
+print("Vector de constantes: ")
+Res
+
+Res = Jordan(matrizJordan,Res)
+print("Soluciones al sistema de ecuaciones: ")
+Res
+Noperaciones = ConteoGaus(x3)
+print("El numero de operaciones es: ")
+Noperaciones
+
+```
 
 ### 7.
 Dado el siguiente sistema: 
