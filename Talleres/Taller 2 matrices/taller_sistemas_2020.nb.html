@@ -11,7 +11,7 @@
 
 
 
-<title>Análisis Numérico- nombres integrantes</title>
+<title>Análisis Numérico- Julian Builes, Daniel Reyes, Daniel Fierro, Santiago Bermudez</title>
 
 <script>/*! jQuery v1.11.3 | (c) 2005, 2015 jQuery Foundation, Inc. | jquery.org/license */
 !function(a,b){"object"==typeof module&&"object"==typeof module.exports?module.exports=a.document?b(a,!0):function(a){if(!a.document)throw new Error("jQuery requires a window with a document");return b(a)}:b(a)}("undefined"!=typeof window?window:this,function(a,b){var c=[],d=c.slice,e=c.concat,f=c.push,g=c.indexOf,h={},i=h.toString,j=h.hasOwnProperty,k={},l="1.11.3",m=function(a,b){return new m.fn.init(a,b)},n=/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g,o=/^-ms-/,p=/-([\da-z])/gi,q=function(a,b){return b.toUpperCase()};m.fn=m.prototype={jquery:l,constructor:m,selector:"",length:0,toArray:function(){return d.call(this)},get:function(a){return null!=a?0>a?this[a+this.length]:this[a]:d.call(this)},pushStack:function(a){var b=m.merge(this.constructor(),a);return b.prevObject=this,b.context=this.context,b},each:function(a,b){return m.each(this,a,b)},map:function(a){return this.pushStack(m.map(this,function(b,c){return a.call(b,c,b)}))},slice:function(){return this.pushStack(d.apply(this,arguments))},first:function(){return this.eq(0)},last:function(){return this.eq(-1)},eq:function(a){var b=this.length,c=+a+(0>a?b:0);return this.pushStack(c>=0&&b>c?[this[c]]:[])},end:function(){return this.prevObject||this.constructor(null)},push:f,sort:c.sort,splice:c.splice},m.extend=m.fn.extend=function(){var a,b,c,d,e,f,g=arguments[0]||{},h=1,i=arguments.length,j=!1;for("boolean"==typeof g&&(j=g,g=arguments[h]||{},h++),"object"==typeof g||m.isFunction(g)||(g={}),h===i&&(g=this,h--);i>h;h++)if(null!=(e=arguments[h]))for(d in e)a=g[d],c=e[d],g!==c&&(j&&c&&(m.isPlainObject(c)||(b=m.isArray(c)))?(b?(b=!1,f=a&&m.isArray(a)?a:[]):f=a&&m.isPlainObject(a)?a:{},g[d]=m.extend(j,f,c)):void 0!==c&&(g[d]=c));return g},m.extend({expando:"jQuery"+(l+Math.random()).replace(/\D/g,""),isReady:!0,error:function(a){throw new Error(a)},noop:function(){},isFunction:function(a){return"function"===m.type(a)},isArray:Array.isArray||function(a){return"array"===m.type(a)},isWindow:function(a){return null!=a&&a==a.window},isNumeric:function(a){return!m.isArray(a)&&a-parseFloat(a)+1>=0},isEmptyObject:function(a){var b;for(b in a)return!1;return!0},isPlainObject:function(a){var b;if(!a||"object"!==m.type(a)||a.nodeType||m.isWindow(a))return!1;try{if(a.constructor&&!j.call(a,"constructor")&&!j.call(a.constructor.prototype,"isPrototypeOf"))return!1}catch(c){return!1}if(k.ownLast)for(b in a)return j.call(a,b);for(b in a);return void 0===b||j.call(a,b)},type:function(a){return null==a?a+"":"object"==typeof a||"function"==typeof a?h[i.call(a)]||"object":typeof a},globalEval:function(b){b&&m.trim(b)&&(a.execScript||function(b){a.eval.call(a,b)})(b)},camelCase:function(a){return a.replace(o,"ms-").replace(p,q)},nodeName:function(a,b){return a.nodeName&&a.nodeName.toLowerCase()===b.toLowerCase()},each:function(a,b,c){var d,e=0,f=a.length,g=r(a);if(c){if(g){for(;f>e;e++)if(d=b.apply(a[e],c),d===!1)break}else for(e in a)if(d=b.apply(a[e],c),d===!1)break}else if(g){for(;f>e;e++)if(d=b.call(a[e],e,a[e]),d===!1)break}else for(e in a)if(d=b.call(a[e],e,a[e]),d===!1)break;return a},trim:function(a){return null==a?"":(a+"").replace(n,"")},makeArray:function(a,b){var c=b||[];return null!=a&&(r(Object(a))?m.merge(c,"string"==typeof a?[a]:a):f.call(c,a)),c},inArray:function(a,b,c){var d;if(b){if(g)return g.call(b,a,c);for(d=b.length,c=c?0>c?Math.max(0,d+c):c:0;d>c;c++)if(c in b&&b[c]===a)return c}return-1},merge:function(a,b){var c=+b.length,d=0,e=a.length;while(c>d)a[e++]=b[d++];if(c!==c)while(void 0!==b[d])a[e++]=b[d++];return a.length=e,a},grep:function(a,b,c){for(var d,e=[],f=0,g=a.length,h=!c;g>f;f++)d=!b(a[f],f),d!==h&&e.push(a[f]);return e},map:function(a,b,c){var d,f=0,g=a.length,h=r(a),i=[];if(h)for(;g>f;f++)d=b(a[f],f,c),null!=d&&i.push(d);else for(f in a)d=b(a[f],f,c),null!=d&&i.push(d);return e.apply([],i)},guid:1,proxy:function(a,b){var c,e,f;return"string"==typeof b&&(f=a[b],b=a,a=f),m.isFunction(a)?(c=d.call(arguments,2),e=function(){return a.apply(b||this,c.concat(d.call(arguments)))},e.guid=a.guid=a.guid||m.guid++,e):void 0},now:function(){return+new Date},support:k}),m.each("Boolean Number String Function Array Date RegExp Object Error".split(" "),function(a,b){h["[object "+b+"]"]=b.toLowerCase()});function r(a){var b="length"in a&&a.length,c=m.type(a);return"function"===c||m.isWindow(a)?!1:1===a.nodeType&&b?!0:"array"===c||0===b||"number"==typeof b&&b>0&&b-1 in a}var s=function(a){var b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u="sizzle"+1*new Date,v=a.document,w=0,x=0,y=ha(),z=ha(),A=ha(),B=function(a,b){return a===b&&(l=!0),0},C=1<<31,D={}.hasOwnProperty,E=[],F=E.pop,G=E.push,H=E.push,I=E.slice,J=function(a,b){for(var c=0,d=a.length;d>c;c++)if(a[c]===b)return c;return-1},K="checked|selected|async|autofocus|autoplay|controls|defer|disabled|hidden|ismap|loop|multiple|open|readonly|required|scoped",L="[\\x20\\t\\r\\n\\f]",M="(?:\\\\.|[\\w-]|[^\\x00-\\xa0])+",N=M.replace("w","w#"),O="\\["+L+"*("+M+")(?:"+L+"*([*^$|!~]?=)"+L+"*(?:'((?:\\\\.|[^\\\\'])*)'|\"((?:\\\\.|[^\\\\\"])*)\"|("+N+"))|)"+L+"*\\]",P=":("+M+")(?:\\((('((?:\\\\.|[^\\\\'])*)'|\"((?:\\\\.|[^\\\\\"])*)\")|((?:\\\\.|[^\\\\()[\\]]|"+O+")*)|.*)\\)|)",Q=new RegExp(L+"+","g"),R=new RegExp("^"+L+"+|((?:^|[^\\\\])(?:\\\\.)*)"+L+"+$","g"),S=new RegExp("^"+L+"*,"+L+"*"),T=new RegExp("^"+L+"*([>+~]|"+L+")"+L+"*"),U=new RegExp("="+L+"*([^\\]'\"]*?)"+L+"*\\]","g"),V=new RegExp(P),W=new RegExp("^"+N+"$"),X={ID:new RegExp("^#("+M+")"),CLASS:new RegExp("^\\.("+M+")"),TAG:new RegExp("^("+M.replace("w","w*")+")"),ATTR:new RegExp("^"+O),PSEUDO:new RegExp("^"+P),CHILD:new RegExp("^:(only|first|last|nth|nth-last)-(child|of-type)(?:\\("+L+"*(even|odd|(([+-]|)(\\d*)n|)"+L+"*(?:([+-]|)"+L+"*(\\d+)|))"+L+"*\\)|)","i"),bool:new RegExp("^(?:"+K+")$","i"),needsContext:new RegExp("^"+L+"*[>+~]|:(even|odd|eq|gt|lt|nth|first|last)(?:\\("+L+"*((?:-\\d)?\\d*)"+L+"*\\)|)(?=[^-]|$)","i")},Y=/^(?:input|select|textarea|button)$/i,Z=/^h\d$/i,$=/^[^{]+\{\s*\[native \w/,_=/^(?:#([\w-]+)|(\w+)|\.([\w-]+))$/,aa=/[+~]/,ba=/'|\\/g,ca=new RegExp("\\\\([\\da-f]{1,6}"+L+"?|("+L+")|.)","ig"),da=function(a,b,c){var d="0x"+b-65536;return d!==d||c?b:0>d?String.fromCharCode(d+65536):String.fromCharCode(d>>10|55296,1023&d|56320)},ea=function(){m()};try{H.apply(E=I.call(v.childNodes),v.childNodes),E[v.childNodes.length].nodeType}catch(fa){H={apply:E.length?function(a,b){G.apply(a,I.call(b))}:function(a,b){var c=a.length,d=0;while(a[c++]=b[d++]);a.length=c-1}}}function ga(a,b,d,e){var f,h,j,k,l,o,r,s,w,x;if((b?b.ownerDocument||b:v)!==n&&m(b),b=b||n,d=d||[],k=b.nodeType,"string"!=typeof a||!a||1!==k&&9!==k&&11!==k)return d;if(!e&&p){if(11!==k&&(f=_.exec(a)))if(j=f[1]){if(9===k){if(h=b.getElementById(j),!h||!h.parentNode)return d;if(h.id===j)return d.push(h),d}else if(b.ownerDocument&&(h=b.ownerDocument.getElementById(j))&&t(b,h)&&h.id===j)return d.push(h),d}else{if(f[2])return H.apply(d,b.getElementsByTagName(a)),d;if((j=f[3])&&c.getElementsByClassName)return H.apply(d,b.getElementsByClassName(j)),d}if(c.qsa&&(!q||!q.test(a))){if(s=r=u,w=b,x=1!==k&&a,1===k&&"object"!==b.nodeName.toLowerCase()){o=g(a),(r=b.getAttribute("id"))?s=r.replace(ba,"\\$&"):b.setAttribute("id",s),s="[id='"+s+"'] ",l=o.length;while(l--)o[l]=s+ra(o[l]);w=aa.test(a)&&pa(b.parentNode)||b,x=o.join(",")}if(x)try{return H.apply(d,w.querySelectorAll(x)),d}catch(y){}finally{r||b.removeAttribute("id")}}}return i(a.replace(R,"$1"),b,d,e)}function ha(){var a=[];function b(c,e){return a.push(c+" ")>d.cacheLength&&delete b[a.shift()],b[c+" "]=e}return b}function ia(a){return a[u]=!0,a}function ja(a){var b=n.createElement("div");try{return!!a(b)}catch(c){return!1}finally{b.parentNode&&b.parentNode.removeChild(b),b=null}}function ka(a,b){var c=a.split("|"),e=a.length;while(e--)d.attrHandle[c[e]]=b}function la(a,b){var c=b&&a,d=c&&1===a.nodeType&&1===b.nodeType&&(~b.sourceIndex||C)-(~a.sourceIndex||C);if(d)return d;if(c)while(c=c.nextSibling)if(c===b)return-1;return a?1:-1}function ma(a){return function(b){var c=b.nodeName.toLowerCase();return"input"===c&&b.type===a}}function na(a){return function(b){var c=b.nodeName.toLowerCase();return("input"===c||"button"===c)&&b.type===a}}function oa(a){return ia(function(b){return b=+b,ia(function(c,d){var e,f=a([],c.length,b),g=f.length;while(g--)c[e=f[g]]&&(c[e]=!(d[e]=c[e]))})})}function pa(a){return a&&"undefined"!=typeof a.getElementsByTagName&&a}c=ga.support={},f=ga.isXML=function(a){var b=a&&(a.ownerDocument||a).documentElement;return b?"HTML"!==b.nodeName:!1},m=ga.setDocument=function(a){var b,e,g=a?a.ownerDocument||a:v;return g!==n&&9===g.nodeType&&g.documentElement?(n=g,o=g.documentElement,e=g.defaultView,e&&e!==e.top&&(e.addEventListener?e.addEventListener("unload",ea,!1):e.attachEvent&&e.attachEvent("onunload",ea)),p=!f(g),c.attributes=ja(function(a){return a.className="i",!a.getAttribute("className")}),c.getElementsByTagName=ja(function(a){return a.appendChild(g.createComment("")),!a.getElementsByTagName("*").length}),c.getElementsByClassName=$.test(g.getElementsByClassName),c.getById=ja(function(a){return o.appendChild(a).id=u,!g.getElementsByName||!g.getElementsByName(u).length}),c.getById?(d.find.ID=function(a,b){if("undefined"!=typeof b.getElementById&&p){var c=b.getElementById(a);return c&&c.parentNode?[c]:[]}},d.filter.ID=function(a){var b=a.replace(ca,da);return function(a){return a.getAttribute("id")===b}}):(delete d.find.ID,d.filter.ID=function(a){var b=a.replace(ca,da);return function(a){var c="undefined"!=typeof a.getAttributeNode&&a.getAttributeNode("id");return c&&c.value===b}}),d.find.TAG=c.getElementsByTagName?function(a,b){return"undefined"!=typeof b.getElementsByTagName?b.getElementsByTagName(a):c.qsa?b.querySelectorAll(a):void 0}:function(a,b){var c,d=[],e=0,f=b.getElementsByTagName(a);if("*"===a){while(c=f[e++])1===c.nodeType&&d.push(c);return d}return f},d.find.CLASS=c.getElementsByClassName&&function(a,b){return p?b.getElementsByClassName(a):void 0},r=[],q=[],(c.qsa=$.test(g.querySelectorAll))&&(ja(function(a){o.appendChild(a).innerHTML="<a id='"+u+"'></a><select id='"+u+"-\f]' msallowcapture=''><option selected=''></option></select>",a.querySelectorAll("[msallowcapture^='']").length&&q.push("[*^$]="+L+"*(?:''|\"\")"),a.querySelectorAll("[selected]").length||q.push("\\["+L+"*(?:value|"+K+")"),a.querySelectorAll("[id~="+u+"-]").length||q.push("~="),a.querySelectorAll(":checked").length||q.push(":checked"),a.querySelectorAll("a#"+u+"+*").length||q.push(".#.+[+~]")}),ja(function(a){var b=g.createElement("input");b.setAttribute("type","hidden"),a.appendChild(b).setAttribute("name","D"),a.querySelectorAll("[name=d]").length&&q.push("name"+L+"*[*^$|!~]?="),a.querySelectorAll(":enabled").length||q.push(":enabled",":disabled"),a.querySelectorAll("*,:x"),q.push(",.*:")})),(c.matchesSelector=$.test(s=o.matches||o.webkitMatchesSelector||o.mozMatchesSelector||o.oMatchesSelector||o.msMatchesSelector))&&ja(function(a){c.disconnectedMatch=s.call(a,"div"),s.call(a,"[s!='']:x"),r.push("!=",P)}),q=q.length&&new RegExp(q.join("|")),r=r.length&&new RegExp(r.join("|")),b=$.test(o.compareDocumentPosition),t=b||$.test(o.contains)?function(a,b){var c=9===a.nodeType?a.documentElement:a,d=b&&b.parentNode;return a===d||!(!d||1!==d.nodeType||!(c.contains?c.contains(d):a.compareDocumentPosition&&16&a.compareDocumentPosition(d)))}:function(a,b){if(b)while(b=b.parentNode)if(b===a)return!0;return!1},B=b?function(a,b){if(a===b)return l=!0,0;var d=!a.compareDocumentPosition-!b.compareDocumentPosition;return d?d:(d=(a.ownerDocument||a)===(b.ownerDocument||b)?a.compareDocumentPosition(b):1,1&d||!c.sortDetached&&b.compareDocumentPosition(a)===d?a===g||a.ownerDocument===v&&t(v,a)?-1:b===g||b.ownerDocument===v&&t(v,b)?1:k?J(k,a)-J(k,b):0:4&d?-1:1)}:function(a,b){if(a===b)return l=!0,0;var c,d=0,e=a.parentNode,f=b.parentNode,h=[a],i=[b];if(!e||!f)return a===g?-1:b===g?1:e?-1:f?1:k?J(k,a)-J(k,b):0;if(e===f)return la(a,b);c=a;while(c=c.parentNode)h.unshift(c);c=b;while(c=c.parentNode)i.unshift(c);while(h[d]===i[d])d++;return d?la(h[d],i[d]):h[d]===v?-1:i[d]===v?1:0},g):n},ga.matches=function(a,b){return ga(a,null,null,b)},ga.matchesSelector=function(a,b){if((a.ownerDocument||a)!==n&&m(a),b=b.replace(U,"='$1']"),!(!c.matchesSelector||!p||r&&r.test(b)||q&&q.test(b)))try{var d=s.call(a,b);if(d||c.disconnectedMatch||a.document&&11!==a.document.nodeType)return d}catch(e){}return ga(b,n,null,[a]).length>0},ga.contains=function(a,b){return(a.ownerDocument||a)!==n&&m(a),t(a,b)},ga.attr=function(a,b){(a.ownerDocument||a)!==n&&m(a);var e=d.attrHandle[b.toLowerCase()],f=e&&D.call(d.attrHandle,b.toLowerCase())?e(a,b,!p):void 0;return void 0!==f?f:c.attributes||!p?a.getAttribute(b):(f=a.getAttributeNode(b))&&f.specified?f.value:null},ga.error=function(a){throw new Error("Syntax error, unrecognized expression: "+a)},ga.uniqueSort=function(a){var b,d=[],e=0,f=0;if(l=!c.detectDuplicates,k=!c.sortStable&&a.slice(0),a.sort(B),l){while(b=a[f++])b===a[f]&&(e=d.push(f));while(e--)a.splice(d[e],1)}return k=null,a},e=ga.getText=function(a){var b,c="",d=0,f=a.nodeType;if(f){if(1===f||9===f||11===f){if("string"==typeof a.textContent)return a.textContent;for(a=a.firstChild;a;a=a.nextSibling)c+=e(a)}else if(3===f||4===f)return a.nodeValue}else while(b=a[d++])c+=e(b);return c},d=ga.selectors={cacheLength:50,createPseudo:ia,match:X,attrHandle:{},find:{},relative:{">":{dir:"parentNode",first:!0}," ":{dir:"parentNode"},"+":{dir:"previousSibling",first:!0},"~":{dir:"previousSibling"}},preFilter:{ATTR:function(a){return a[1]=a[1].replace(ca,da),a[3]=(a[3]||a[4]||a[5]||"").replace(ca,da),"~="===a[2]&&(a[3]=" "+a[3]+" "),a.slice(0,4)},CHILD:function(a){return a[1]=a[1].toLowerCase(),"nth"===a[1].slice(0,3)?(a[3]||ga.error(a[0]),a[4]=+(a[4]?a[5]+(a[6]||1):2*("even"===a[3]||"odd"===a[3])),a[5]=+(a[7]+a[8]||"odd"===a[3])):a[3]&&ga.error(a[0]),a},PSEUDO:function(a){var b,c=!a[6]&&a[2];return X.CHILD.test(a[0])?null:(a[3]?a[2]=a[4]||a[5]||"":c&&V.test(c)&&(b=g(c,!0))&&(b=c.indexOf(")",c.length-b)-c.length)&&(a[0]=a[0].slice(0,b),a[2]=c.slice(0,b)),a.slice(0,3))}},filter:{TAG:function(a){var b=a.replace(ca,da).toLowerCase();return"*"===a?function(){return!0}:function(a){return a.nodeName&&a.nodeName.toLowerCase()===b}},CLASS:function(a){var b=y[a+" "];return b||(b=new RegExp("(^|"+L+")"+a+"("+L+"|$)"))&&y(a,function(a){return b.test("string"==typeof a.className&&a.className||"undefined"!=typeof a.getAttribute&&a.getAttribute("class")||"")})},ATTR:function(a,b,c){return function(d){var e=ga.attr(d,a);return null==e?"!="===b:b?(e+="","="===b?e===c:"!="===b?e!==c:"^="===b?c&&0===e.indexOf(c):"*="===b?c&&e.indexOf(c)>-1:"$="===b?c&&e.slice(-c.length)===c:"~="===b?(" "+e.replace(Q," ")+" ").indexOf(c)>-1:"|="===b?e===c||e.slice(0,c.length+1)===c+"-":!1):!0}},CHILD:function(a,b,c,d,e){var f="nth"!==a.slice(0,3),g="last"!==a.slice(-4),h="of-type"===b;return 1===d&&0===e?function(a){return!!a.parentNode}:function(b,c,i){var j,k,l,m,n,o,p=f!==g?"nextSibling":"previousSibling",q=b.parentNode,r=h&&b.nodeName.toLowerCase(),s=!i&&!h;if(q){if(f){while(p){l=b;while(l=l[p])if(h?l.nodeName.toLowerCase()===r:1===l.nodeType)return!1;o=p="only"===a&&!o&&"nextSibling"}return!0}if(o=[g?q.firstChild:q.lastChild],g&&s){k=q[u]||(q[u]={}),j=k[a]||[],n=j[0]===w&&j[1],m=j[0]===w&&j[2],l=n&&q.childNodes[n];while(l=++n&&l&&l[p]||(m=n=0)||o.pop())if(1===l.nodeType&&++m&&l===b){k[a]=[w,n,m];break}}else if(s&&(j=(b[u]||(b[u]={}))[a])&&j[0]===w)m=j[1];else while(l=++n&&l&&l[p]||(m=n=0)||o.pop())if((h?l.nodeName.toLowerCase()===r:1===l.nodeType)&&++m&&(s&&((l[u]||(l[u]={}))[a]=[w,m]),l===b))break;return m-=e,m===d||m%d===0&&m/d>=0}}},PSEUDO:function(a,b){var c,e=d.pseudos[a]||d.setFilters[a.toLowerCase()]||ga.error("unsupported pseudo: "+a);return e[u]?e(b):e.length>1?(c=[a,a,"",b],d.setFilters.hasOwnProperty(a.toLowerCase())?ia(function(a,c){var d,f=e(a,b),g=f.length;while(g--)d=J(a,f[g]),a[d]=!(c[d]=f[g])}):function(a){return e(a,0,c)}):e}},pseudos:{not:ia(function(a){var b=[],c=[],d=h(a.replace(R,"$1"));return d[u]?ia(function(a,b,c,e){var f,g=d(a,null,e,[]),h=a.length;while(h--)(f=g[h])&&(a[h]=!(b[h]=f))}):function(a,e,f){return b[0]=a,d(b,null,f,c),b[0]=null,!c.pop()}}),has:ia(function(a){return function(b){return ga(a,b).length>0}}),contains:ia(function(a){return a=a.replace(ca,da),function(b){return(b.textContent||b.innerText||e(b)).indexOf(a)>-1}}),lang:ia(function(a){return W.test(a||"")||ga.error("unsupported lang: "+a),a=a.replace(ca,da).toLowerCase(),function(b){var c;do if(c=p?b.lang:b.getAttribute("xml:lang")||b.getAttribute("lang"))return c=c.toLowerCase(),c===a||0===c.indexOf(a+"-");while((b=b.parentNode)&&1===b.nodeType);return!1}}),target:function(b){var c=a.location&&a.location.hash;return c&&c.slice(1)===b.id},root:function(a){return a===o},focus:function(a){return a===n.activeElement&&(!n.hasFocus||n.hasFocus())&&!!(a.type||a.href||~a.tabIndex)},enabled:function(a){return a.disabled===!1},disabled:function(a){return a.disabled===!0},checked:function(a){var b=a.nodeName.toLowerCase();return"input"===b&&!!a.checked||"option"===b&&!!a.selected},selected:function(a){return a.parentNode&&a.parentNode.selectedIndex,a.selected===!0},empty:function(a){for(a=a.firstChild;a;a=a.nextSibling)if(a.nodeType<6)return!1;return!0},parent:function(a){return!d.pseudos.empty(a)},header:function(a){return Z.test(a.nodeName)},input:function(a){return Y.test(a.nodeName)},button:function(a){var b=a.nodeName.toLowerCase();return"input"===b&&"button"===a.type||"button"===b},text:function(a){var b;return"input"===a.nodeName.toLowerCase()&&"text"===a.type&&(null==(b=a.getAttribute("type"))||"text"===b.toLowerCase())},first:oa(function(){return[0]}),last:oa(function(a,b){return[b-1]}),eq:oa(function(a,b,c){return[0>c?c+b:c]}),even:oa(function(a,b){for(var c=0;b>c;c+=2)a.push(c);return a}),odd:oa(function(a,b){for(var c=1;b>c;c+=2)a.push(c);return a}),lt:oa(function(a,b,c){for(var d=0>c?c+b:c;--d>=0;)a.push(d);return a}),gt:oa(function(a,b,c){for(var d=0>c?c+b:c;++d<b;)a.push(d);return a})}},d.pseudos.nth=d.pseudos.eq;for(b in{radio:!0,checkbox:!0,file:!0,password:!0,image:!0})d.pseudos[b]=ma(b);for(b in{submit:!0,reset:!0})d.pseudos[b]=na(b);function qa(){}qa.prototype=d.filters=d.pseudos,d.setFilters=new qa,g=ga.tokenize=function(a,b){var c,e,f,g,h,i,j,k=z[a+" "];if(k)return b?0:k.slice(0);h=a,i=[],j=d.preFilter;while(h){(!c||(e=S.exec(h)))&&(e&&(h=h.slice(e[0].length)||h),i.push(f=[])),c=!1,(e=T.exec(h))&&(c=e.shift(),f.push({value:c,type:e[0].replace(R," ")}),h=h.slice(c.length));for(g in d.filter)!(e=X[g].exec(h))||j[g]&&!(e=j[g](e))||(c=e.shift(),f.push({value:c,type:g,matches:e}),h=h.slice(c.length));if(!c)break}return b?h.length:h?ga.error(a):z(a,i).slice(0)};function ra(a){for(var b=0,c=a.length,d="";c>b;b++)d+=a[b].value;return d}function sa(a,b,c){var d=b.dir,e=c&&"parentNode"===d,f=x++;return b.first?function(b,c,f){while(b=b[d])if(1===b.nodeType||e)return a(b,c,f)}:function(b,c,g){var h,i,j=[w,f];if(g){while(b=b[d])if((1===b.nodeType||e)&&a(b,c,g))return!0}else while(b=b[d])if(1===b.nodeType||e){if(i=b[u]||(b[u]={}),(h=i[d])&&h[0]===w&&h[1]===f)return j[2]=h[2];if(i[d]=j,j[2]=a(b,c,g))return!0}}}function ta(a){return a.length>1?function(b,c,d){var e=a.length;while(e--)if(!a[e](b,c,d))return!1;return!0}:a[0]}function ua(a,b,c){for(var d=0,e=b.length;e>d;d++)ga(a,b[d],c);return c}function va(a,b,c,d,e){for(var f,g=[],h=0,i=a.length,j=null!=b;i>h;h++)(f=a[h])&&(!c||c(f,d,e))&&(g.push(f),j&&b.push(h));return g}function wa(a,b,c,d,e,f){return d&&!d[u]&&(d=wa(d)),e&&!e[u]&&(e=wa(e,f)),ia(function(f,g,h,i){var j,k,l,m=[],n=[],o=g.length,p=f||ua(b||"*",h.nodeType?[h]:h,[]),q=!a||!f&&b?p:va(p,m,a,h,i),r=c?e||(f?a:o||d)?[]:g:q;if(c&&c(q,r,h,i),d){j=va(r,n),d(j,[],h,i),k=j.length;while(k--)(l=j[k])&&(r[n[k]]=!(q[n[k]]=l))}if(f){if(e||a){if(e){j=[],k=r.length;while(k--)(l=r[k])&&j.push(q[k]=l);e(null,r=[],j,i)}k=r.length;while(k--)(l=r[k])&&(j=e?J(f,l):m[k])>-1&&(f[j]=!(g[j]=l))}}else r=va(r===g?r.splice(o,r.length):r),e?e(null,g,r,i):H.apply(g,r)})}function xa(a){for(var b,c,e,f=a.length,g=d.relative[a[0].type],h=g||d.relative[" "],i=g?1:0,k=sa(function(a){return a===b},h,!0),l=sa(function(a){return J(b,a)>-1},h,!0),m=[function(a,c,d){var e=!g&&(d||c!==j)||((b=c).nodeType?k(a,c,d):l(a,c,d));return b=null,e}];f>i;i++)if(c=d.relative[a[i].type])m=[sa(ta(m),c)];else{if(c=d.filter[a[i].type].apply(null,a[i].matches),c[u]){for(e=++i;f>e;e++)if(d.relative[a[e].type])break;return wa(i>1&&ta(m),i>1&&ra(a.slice(0,i-1).concat({value:" "===a[i-2].type?"*":""})).replace(R,"$1"),c,e>i&&xa(a.slice(i,e)),f>e&&xa(a=a.slice(e)),f>e&&ra(a))}m.push(c)}return ta(m)}function ya(a,b){var c=b.length>0,e=a.length>0,f=function(f,g,h,i,k){var l,m,o,p=0,q="0",r=f&&[],s=[],t=j,u=f||e&&d.find.TAG("*",k),v=w+=null==t?1:Math.random()||.1,x=u.length;for(k&&(j=g!==n&&g);q!==x&&null!=(l=u[q]);q++){if(e&&l){m=0;while(o=a[m++])if(o(l,g,h)){i.push(l);break}k&&(w=v)}c&&((l=!o&&l)&&p--,f&&r.push(l))}if(p+=q,c&&q!==p){m=0;while(o=b[m++])o(r,s,g,h);if(f){if(p>0)while(q--)r[q]||s[q]||(s[q]=F.call(i));s=va(s)}H.apply(i,s),k&&!f&&s.length>0&&p+b.length>1&&ga.uniqueSort(i)}return k&&(w=v,j=t),r};return c?ia(f):f}return h=ga.compile=function(a,b){var c,d=[],e=[],f=A[a+" "];if(!f){b||(b=g(a)),c=b.length;while(c--)f=xa(b[c]),f[u]?d.push(f):e.push(f);f=A(a,ya(e,d)),f.selector=a}return f},i=ga.select=function(a,b,e,f){var i,j,k,l,m,n="function"==typeof a&&a,o=!f&&g(a=n.selector||a);if(e=e||[],1===o.length){if(j=o[0]=o[0].slice(0),j.length>2&&"ID"===(k=j[0]).type&&c.getById&&9===b.nodeType&&p&&d.relative[j[1].type]){if(b=(d.find.ID(k.matches[0].replace(ca,da),b)||[])[0],!b)return e;n&&(b=b.parentNode),a=a.slice(j.shift().value.length)}i=X.needsContext.test(a)?0:j.length;while(i--){if(k=j[i],d.relative[l=k.type])break;if((m=d.find[l])&&(f=m(k.matches[0].replace(ca,da),aa.test(j[0].type)&&pa(b.parentNode)||b))){if(j.splice(i,1),a=f.length&&ra(j),!a)return H.apply(e,f),e;break}}}return(n||h(a,o))(f,b,!p,e,aa.test(a)&&pa(b.parentNode)||b),e},c.sortStable=u.split("").sort(B).join("")===u,c.detectDuplicates=!!l,m(),c.sortDetached=ja(function(a){return 1&a.compareDocumentPosition(n.createElement("div"))}),ja(function(a){return a.innerHTML="<a href='#'></a>","#"===a.firstChild.getAttribute("href")})||ka("type|href|height|width",function(a,b,c){return c?void 0:a.getAttribute(b,"type"===b.toLowerCase()?1:2)}),c.attributes&&ja(function(a){return a.innerHTML="<input/>",a.firstChild.setAttribute("value",""),""===a.firstChild.getAttribute("value")})||ka("value",function(a,b,c){return c||"input"!==a.nodeName.toLowerCase()?void 0:a.defaultValue}),ja(function(a){return null==a.getAttribute("disabled")})||ka(K,function(a,b,c){var d;return c?void 0:a[b]===!0?b.toLowerCase():(d=a.getAttributeNode(b))&&d.specified?d.value:null}),ga}(a);m.find=s,m.expr=s.selectors,m.expr[":"]=m.expr.pseudos,m.unique=s.uniqueSort,m.text=s.getText,m.isXMLDoc=s.isXML,m.contains=s.contains;var t=m.expr.match.needsContext,u=/^<(\w+)\s*\/?>(?:<\/\1>|)$/,v=/^.[^:#\[\.,]*$/;function w(a,b,c){if(m.isFunction(b))return m.grep(a,function(a,d){return!!b.call(a,d,a)!==c});if(b.nodeType)return m.grep(a,function(a){return a===b!==c});if("string"==typeof b){if(v.test(b))return m.filter(b,a,c);b=m.filter(b,a)}return m.grep(a,function(a){return m.inArray(a,b)>=0!==c})}m.filter=function(a,b,c){var d=b[0];return c&&(a=":not("+a+")"),1===b.length&&1===d.nodeType?m.find.matchesSelector(d,a)?[d]:[]:m.find.matches(a,m.grep(b,function(a){return 1===a.nodeType}))},m.fn.extend({find:function(a){var b,c=[],d=this,e=d.length;if("string"!=typeof a)return this.pushStack(m(a).filter(function(){for(b=0;e>b;b++)if(m.contains(d[b],this))return!0}));for(b=0;e>b;b++)m.find(a,d[b],c);return c=this.pushStack(e>1?m.unique(c):c),c.selector=this.selector?this.selector+" "+a:a,c},filter:function(a){return this.pushStack(w(this,a||[],!1))},not:function(a){return this.pushStack(w(this,a||[],!0))},is:function(a){return!!w(this,"string"==typeof a&&t.test(a)?m(a):a||[],!1).length}});var x,y=a.document,z=/^(?:\s*(<[\w\W]+>)[^>]*|#([\w-]*))$/,A=m.fn.init=function(a,b){var c,d;if(!a)return this;if("string"==typeof a){if(c="<"===a.charAt(0)&&">"===a.charAt(a.length-1)&&a.length>=3?[null,a,null]:z.exec(a),!c||!c[1]&&b)return!b||b.jquery?(b||x).find(a):this.constructor(b).find(a);if(c[1]){if(b=b instanceof m?b[0]:b,m.merge(this,m.parseHTML(c[1],b&&b.nodeType?b.ownerDocument||b:y,!0)),u.test(c[1])&&m.isPlainObject(b))for(c in b)m.isFunction(this[c])?this[c](b[c]):this.attr(c,b[c]);return this}if(d=y.getElementById(c[2]),d&&d.parentNode){if(d.id!==c[2])return x.find(a);this.length=1,this[0]=d}return this.context=y,this.selector=a,this}return a.nodeType?(this.context=this[0]=a,this.length=1,this):m.isFunction(a)?"undefined"!=typeof x.ready?x.ready(a):a(m):(void 0!==a.selector&&(this.selector=a.selector,this.context=a.context),m.makeArray(a,this))};A.prototype=m.fn,x=m(y);var B=/^(?:parents|prev(?:Until|All))/,C={children:!0,contents:!0,next:!0,prev:!0};m.extend({dir:function(a,b,c){var d=[],e=a[b];while(e&&9!==e.nodeType&&(void 0===c||1!==e.nodeType||!m(e).is(c)))1===e.nodeType&&d.push(e),e=e[b];return d},sibling:function(a,b){for(var c=[];a;a=a.nextSibling)1===a.nodeType&&a!==b&&c.push(a);return c}}),m.fn.extend({has:function(a){var b,c=m(a,this),d=c.length;return this.filter(function(){for(b=0;d>b;b++)if(m.contains(this,c[b]))return!0})},closest:function(a,b){for(var c,d=0,e=this.length,f=[],g=t.test(a)||"string"!=typeof a?m(a,b||this.context):0;e>d;d++)for(c=this[d];c&&c!==b;c=c.parentNode)if(c.nodeType<11&&(g?g.index(c)>-1:1===c.nodeType&&m.find.matchesSelector(c,a))){f.push(c);break}return this.pushStack(f.length>1?m.unique(f):f)},index:function(a){return a?"string"==typeof a?m.inArray(this[0],m(a)):m.inArray(a.jquery?a[0]:a,this):this[0]&&this[0].parentNode?this.first().prevAll().length:-1},add:function(a,b){return this.pushStack(m.unique(m.merge(this.get(),m(a,b))))},addBack:function(a){return this.add(null==a?this.prevObject:this.prevObject.filter(a))}});function D(a,b){do a=a[b];while(a&&1!==a.nodeType);return a}m.each({parent:function(a){var b=a.parentNode;return b&&11!==b.nodeType?b:null},parents:function(a){return m.dir(a,"parentNode")},parentsUntil:function(a,b,c){return m.dir(a,"parentNode",c)},next:function(a){return D(a,"nextSibling")},prev:function(a){return D(a,"previousSibling")},nextAll:function(a){return m.dir(a,"nextSibling")},prevAll:function(a){return m.dir(a,"previousSibling")},nextUntil:function(a,b,c){return m.dir(a,"nextSibling",c)},prevUntil:function(a,b,c){return m.dir(a,"previousSibling",c)},siblings:function(a){return m.sibling((a.parentNode||{}).firstChild,a)},children:function(a){return m.sibling(a.firstChild)},contents:function(a){return m.nodeName(a,"iframe")?a.contentDocument||a.contentWindow.document:m.merge([],a.childNodes)}},function(a,b){m.fn[a]=function(c,d){var e=m.map(this,b,c);return"Until"!==a.slice(-5)&&(d=c),d&&"string"==typeof d&&(e=m.filter(d,e)),this.length>1&&(C[a]||(e=m.unique(e)),B.test(a)&&(e=e.reverse())),this.pushStack(e)}});var E=/\S+/g,F={};function G(a){var b=F[a]={};return m.each(a.match(E)||[],function(a,c){b[c]=!0}),b}m.Callbacks=function(a){a="string"==typeof a?F[a]||G(a):m.extend({},a);var b,c,d,e,f,g,h=[],i=!a.once&&[],j=function(l){for(c=a.memory&&l,d=!0,f=g||0,g=0,e=h.length,b=!0;h&&e>f;f++)if(h[f].apply(l[0],l[1])===!1&&a.stopOnFalse){c=!1;break}b=!1,h&&(i?i.length&&j(i.shift()):c?h=[]:k.disable())},k={add:function(){if(h){var d=h.length;!function f(b){m.each(b,function(b,c){var d=m.type(c);"function"===d?a.unique&&k.has(c)||h.push(c):c&&c.length&&"string"!==d&&f(c)})}(arguments),b?e=h.length:c&&(g=d,j(c))}return this},remove:function(){return h&&m.each(arguments,function(a,c){var d;while((d=m.inArray(c,h,d))>-1)h.splice(d,1),b&&(e>=d&&e--,f>=d&&f--)}),this},has:function(a){return a?m.inArray(a,h)>-1:!(!h||!h.length)},empty:function(){return h=[],e=0,this},disable:function(){return h=i=c=void 0,this},disabled:function(){return!h},lock:function(){return i=void 0,c||k.disable(),this},locked:function(){return!i},fireWith:function(a,c){return!h||d&&!i||(c=c||[],c=[a,c.slice?c.slice():c],b?i.push(c):j(c)),this},fire:function(){return k.fireWith(this,arguments),this},fired:function(){return!!d}};return k},m.extend({Deferred:function(a){var b=[["resolve","done",m.Callbacks("once memory"),"resolved"],["reject","fail",m.Callbacks("once memory"),"rejected"],["notify","progress",m.Callbacks("memory")]],c="pending",d={state:function(){return c},always:function(){return e.done(arguments).fail(arguments),this},then:function(){var a=arguments;return m.Deferred(function(c){m.each(b,function(b,f){var g=m.isFunction(a[b])&&a[b];e[f[1]](function(){var a=g&&g.apply(this,arguments);a&&m.isFunction(a.promise)?a.promise().done(c.resolve).fail(c.reject).progress(c.notify):c[f[0]+"With"](this===d?c.promise():this,g?[a]:arguments)})}),a=null}).promise()},promise:function(a){return null!=a?m.extend(a,d):d}},e={};return d.pipe=d.then,m.each(b,function(a,f){var g=f[2],h=f[3];d[f[1]]=g.add,h&&g.add(function(){c=h},b[1^a][2].disable,b[2][2].lock),e[f[0]]=function(){return e[f[0]+"With"](this===e?d:this,arguments),this},e[f[0]+"With"]=g.fireWith}),d.promise(e),a&&a.call(e,e),e},when:function(a){var b=0,c=d.call(arguments),e=c.length,f=1!==e||a&&m.isFunction(a.promise)?e:0,g=1===f?a:m.Deferred(),h=function(a,b,c){return function(e){b[a]=this,c[a]=arguments.length>1?d.call(arguments):e,c===i?g.notifyWith(b,c):--f||g.resolveWith(b,c)}},i,j,k;if(e>1)for(i=new Array(e),j=new Array(e),k=new Array(e);e>b;b++)c[b]&&m.isFunction(c[b].promise)?c[b].promise().done(h(b,k,c)).fail(g.reject).progress(h(b,j,i)):--f;return f||g.resolveWith(k,c),g.promise()}});var H;m.fn.ready=function(a){return m.ready.promise().done(a),this},m.extend({isReady:!1,readyWait:1,holdReady:function(a){a?m.readyWait++:m.ready(!0)},ready:function(a){if(a===!0?!--m.readyWait:!m.isReady){if(!y.body)return setTimeout(m.ready);m.isReady=!0,a!==!0&&--m.readyWait>0||(H.resolveWith(y,[m]),m.fn.triggerHandler&&(m(y).triggerHandler("ready"),m(y).off("ready")))}}});function I(){y.addEventListener?(y.removeEventListener("DOMContentLoaded",J,!1),a.removeEventListener("load",J,!1)):(y.detachEvent("onreadystatechange",J),a.detachEvent("onload",J))}function J(){(y.addEventListener||"load"===event.type||"complete"===y.readyState)&&(I(),m.ready())}m.ready.promise=function(b){if(!H)if(H=m.Deferred(),"complete"===y.readyState)setTimeout(m.ready);else if(y.addEventListener)y.addEventListener("DOMContentLoaded",J,!1),a.addEventListener("load",J,!1);else{y.attachEvent("onreadystatechange",J),a.attachEvent("onload",J);var c=!1;try{c=null==a.frameElement&&y.documentElement}catch(d){}c&&c.doScroll&&!function e(){if(!m.isReady){try{c.doScroll("left")}catch(a){return setTimeout(e,50)}I(),m.ready()}}()}return H.promise(b)};var K="undefined",L;for(L in m(k))break;k.ownLast="0"!==L,k.inlineBlockNeedsLayout=!1,m(function(){var a,b,c,d;c=y.getElementsByTagName("body")[0],c&&c.style&&(b=y.createElement("div"),d=y.createElement("div"),d.style.cssText="position:absolute;border:0;width:0;height:0;top:0;left:-9999px",c.appendChild(d).appendChild(b),typeof b.style.zoom!==K&&(b.style.cssText="display:inline;margin:0;border:0;padding:1px;width:1px;zoom:1",k.inlineBlockNeedsLayout=a=3===b.offsetWidth,a&&(c.style.zoom=1)),c.removeChild(d))}),function(){var a=y.createElement("div");if(null==k.deleteExpando){k.deleteExpando=!0;try{delete a.test}catch(b){k.deleteExpando=!1}}a=null}(),m.acceptData=function(a){var b=m.noData[(a.nodeName+" ").toLowerCase()],c=+a.nodeType||1;return 1!==c&&9!==c?!1:!b||b!==!0&&a.getAttribute("classid")===b};var M=/^(?:\{[\w\W]*\}|\[[\w\W]*\])$/,N=/([A-Z])/g;function O(a,b,c){if(void 0===c&&1===a.nodeType){var d="data-"+b.replace(N,"-$1").toLowerCase();if(c=a.getAttribute(d),"string"==typeof c){try{c="true"===c?!0:"false"===c?!1:"null"===c?null:+c+""===c?+c:M.test(c)?m.parseJSON(c):c}catch(e){}m.data(a,b,c)}else c=void 0}return c}function P(a){var b;for(b in a)if(("data"!==b||!m.isEmptyObject(a[b]))&&"toJSON"!==b)return!1;
@@ -1743,7 +1743,7 @@ summary {
 
 
 
-<h1 class="title toc-ignore">Análisis Numérico- nombres integrantes</h1>
+<h1 class="title toc-ignore">Análisis Numérico- Julian Builes, Daniel Reyes, Daniel Fierro, Santiago Bermudez</h1>
 
 </div>
 
@@ -1754,53 +1754,32 @@ Los siguientes ejercicios estan relacionados con el tema de sistemas de ecuacion
 Para la realización de los siguientes ejercicios instalar las librerias pracma, matrix y Rlinsolve</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShwcmFjbWEpXG5saWJyYXJ5KE1hdHJpeClcbmBgYCJ9 -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShwcmFjbWEpXG5saWJyYXJ5KE1hdHJpeClcbmxpYnJhcnkoUmxpbnNvbHZlKVxuYGBgIn0= -->
 <pre class="r"><code>library(pracma)
-library(Matrix)</code></pre>
+library(Matrix)
+library(Rlinsolve)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiXG5BdHRhY2hpbmcgcGFja2FnZTog46S847ixTWF0cml446S847iyXG5cblRoZSBmb2xsb3dpbmcgb2JqZWN0cyBhcmUgbWFza2VkIGZyb20g46S847ixcGFja2FnZTpwcmFjbWHjpLzjuLI6XG5cbiAgICBleHBtLCBsdSwgdHJpbCwgdHJpdVxuIn0= -->
-<pre><code>
-Attaching package: 㤼㸱Matrix㤼㸲
-
-The following objects are masked from 㤼㸱package:pracma㤼㸲:
-
-    expm, lu, tril, triu</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShSbGluc29sdmUpXG5gYGAifQ== -->
-<pre class="r"><code>library(Rlinsolve)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiKiogLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSAqKlxuKiogUmxpbnNvbHZlXG4qKiAgLSBTb2x2aW5nIChTcGFyc2UpIFN5c3RlbSBvZiBMaW5lYXIgRXF1YXRpb25zXG4qKlxuKiogVmVyc2lvbiAgICA6IDAuMy4xICAgICAgKDIwMjApXG4qKiBNYWludGFpbmVyIDogS2lzdW5nIFlvdSAoa3lvdXN0YXRAZ21haWwuY29tKVxuKipcbioqIFBsZWFzZSBzaGFyZSBhbnkgYnVncyBvciBzdWdnZXN0aW9ucyB0byB0aGUgbWFpbnRhaW5lci5cbioqIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0gKipcbiJ9 -->
-<pre><code>** ------------------------------------------------------- **
-** Rlinsolve
-**  - Solving (Sparse) System of Linear Equations
-**
-** Version    : 0.3.1      (2020)
-** Maintainer : Kisung You (kyoustat@gmail.com)
-**
-** Please share any bugs or suggestions to the maintainer.
-** ------------------------------------------------------- **</code></pre>
-<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-<ol style="list-style-type: decimal">
-<li></li>
-</ol>
+<div id="section" class="section level3">
+<h3>1.</h3>
 <ol style="list-style-type: lower-alpha">
 <li>Revise las siguientes funciones con la matriz A, que puede decir acerca de su funcionamiento y explique como se utilizan para descomponer la matriz A.</li>
 </ol>
 <p>Solcion :</p>
-<p>Compilando y viendo el resulatdo de las funciones, eye, ones, zeros y matrix se pude enterder que todos tienen una funcion basica en comun, y es la de poder crear una matriz dependiendo del valor de numero de columnas dadas:</p>
+<p>Compilando y viendo el resultado de las funciones, eye, ones, zeros y matrix se pude entender que todos tienen una función básica en común, y es la de poder crear una matriz dependiendo del valor de numero de columnas dadas:</p>
 <p>eye : se encarga de crear una matriz identidad de n x m.</p>
 <p>ones : Crea una n x m de solo unos.</p>
 <p>Zeros : crea una matriz n x m solo con el valor de 0 en cada posicion, tambaien denominada matriz nula.</p>
-<p>matrix: Dado un vector con con valores y el numero de filas se crea una matriz con los datos corresponientes, para el correcto funcionamiento el valor de la cantidad de filas que ser un submultiplo o multiplo de el tamaño del vector dado.</p>
-<p>Dentro de las funciones dadas,con el resultado de la multiplicacion de la matriz A con la matriz identidad( funcion eye ) se puede determinar la diagonal de la matriz A. Con las otras dos funciones no se puede hace hacer una descomposicion de sus partes, ya que si A se multiplican con la matriz de ceros el resultado va a ser una matriz de ceros y en el caso de la matriz de unos el resultado es la misma matriz A.</p>
+<p>matrix: Dado un vector con valores y el número de filas se crea una matriz con los datos correspondientes, para el correcto funcionamiento el valor de la cantidad de filas que ser un submúltiplo o múltiplo del tamaño del vector dado.</p>
+<p>Dentro de las funciones dadas, con el resultado de la multiplicación de la matriz A con la matriz identidad(función eye ) se puede determinar la diagonal de la matriz A. Con las otras dos funciones no se puede hace hacer una descomposición de sus partes, ya que si A se multiplican con la matriz de ceros el resultado va a ser una matriz de ceros y en el caso de la matriz de unos el resultado es la misma matriz A.</p>
 <ol start="2" style="list-style-type: lower-alpha">
 <li>Evalue la matriz de transición para el método <span class="math inline">\(\textbf{SOR}\)</span> y de <span class="math inline">\(Jacobi\)</span></li>
 </ol>
+<p><strong>Solucion:</strong>Para la realización de este punto se tomo como ayuda las funciones dadas para obtener el valor de <span class="math inline">\(A = D - L - U\)</span>, ya obtenidas las matrices necesarias, se procede a evaluar las matrices de transiciones, para el caso de jacovi se tiene que <span class="math inline">\(T = D^{-1}(L+U)\)</span> y para el método de sor se tiene que <span class="math inline">\(T = (I - wD^{-1}L)[(1-w)I+wD^{-1}U]\)</span>, donde <span class="math inline">\(w\)</span> es un valor que esta entre $ [1,2] $.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubiA9ICA0XG5EMTwtZXllKG4sIG0gPSBuKVxuRDI8LW9uZXMobiwgbSA9IG4pXG5EMzwtemVyb3MobiwgbSA9IG4pXG5BID0gbWF0cml4KGMoLTguMSwgLTcsIDYuMTIzLCAtMiwgLTEsIDQsXG4tMywgLTEsIDAsIC0xLCAtNSwgMC42LFxuLTEsIDAuMzMsIDYsIDEvMiksIG5yb3c9NCwgYnlyb3c9VFJVRSlcbkQgPSBEMSAqIEEgIyBtYXRyaXogZGUgZGlhZ29uYWxlcyBcbkRpbnZlcnNhID0gc29sdmUoRCkjaW52ZXJzYSBkZSBsYSBkaWFnb25hbCBkZSBBXG5TdW1NYXRTdXAgPC1BXG5tYXRyaW9JbmYgPC1BXG5TdW1NYXRTdXBbbG93ZXIudHJpKEEsZGlhZyA9IFRSVUUpXTwtMFxuTCA8LSBTdW1NYXRTdXAgIyBNYXRyaXogZGUgZGlhZ29uYWwgaWZlcmlvclxuICBcbm1hdHJpb0luZlt1cHBlci50cmkoQSxkaWFnID0gVFJVRSldPC0wXG5VIDwtIG1hdHJpb0luZiAjbWF0cml6IGRlIGRpYWdvbmFsIHN1cGVyaXIgXG5cblRqYWNvdmkgPC0gIERpbnZlcnNhJSolKFUrTClcbncgPSAxLjJcblRzb3IgIDwtIHNvbHZlKCBEICAtIHcqIEwgKSAlKiUgKCAoMSAtIHcpKiBEICsgdypVICApXG5gYGAifQ== -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubiA9ICA0XG5EMTwtZXllKG4sIG0gPSBuKVxuRDI8LW9uZXMobiwgbSA9IG4pXG5EMzwtemVyb3MobiwgbSA9IG4pXG5BID0gbWF0cml4KGMoLTguMSwgLTcsIDYuMTIzLCAtMiwgLTEsIDQsXG4tMywgLTEsIDAsIC0xLCAtNSwgMC42LFxuLTEsIDAuMzMsIDYsIDEvMiksIG5yb3c9NCwgYnlyb3c9VFJVRSlcbkQgPSBEMSAqIEEgIyBtYXRyaXogZGUgZGlhZ29uYWxlcyBcbkRpbnZlcnNhID0gc29sdmUoRCkjaW52ZXJzYSBkZSBsYSBkaWFnb25hbCBkZSBBXG5TdW1NYXRTdXAgPC1BXG5tYXRyaW9JbmYgPC1BXG5TdW1NYXRTdXBbbG93ZXIudHJpKEEsZGlhZyA9IFRSVUUpXTwtMFxuVSA8LSBTdW1NYXRTdXAgIyBNYXRyaXogZGUgZGlhZ29uYWwgc3Blcmlyb3JcblUgPSBVXG5tYXRyaW9JbmZbdXBwZXIudHJpKEEsZGlhZyA9IFRSVUUpXTwtMFxuTCA8LSBtYXRyaW9JbmYgI21hdHJpeiBkZSBkaWFnb25hbCBpbmZlcmlyb3IgXG5MID0gTFxuVGphY292aSA8LSAgRGludmVyc2ElKiUoVStMKVxuVGphY292aSBcbncgPSAxXG5Uc29yICA8LSBzb2x2ZShEMSAtIHcqc29sdmUoRCklKiVMKSUqJSgoMS13KSpEMSsodypzb2x2ZShEKSUqJVUpKVxuXG5gYGAifQ== -->
 <pre class="r"><code>n =  4
 D1&lt;-eye(n, m = n)
 D2&lt;-ones(n, m = n)
@@ -1813,23 +1792,26 @@ Dinversa = solve(D)#inversa de la diagonal de A
 SumMatSup &lt;-A
 matrioInf &lt;-A
 SumMatSup[lower.tri(A,diag = TRUE)]&lt;-0
-L &lt;- SumMatSup # Matriz de diagonal iferior
-  
+U &lt;- SumMatSup # Matriz de diagonal speriror
+U = U
 matrioInf[upper.tri(A,diag = TRUE)]&lt;-0
-U &lt;- matrioInf #matriz de diagonal superir 
-
+L &lt;- matrioInf #matriz de diagonal inferiror 
+L = L
 Tjacovi &lt;-  Dinversa%*%(U+L)
-w = 1.2
-Tsor  &lt;- solve( D  - w* L ) %*% ( (1 - w)* D + w*U  )</code></pre>
+Tjacovi 
+w = 1
+Tsor  &lt;- solve(D1 - w*solve(D)%*%L)%*%((1-w)*D1+(w*solve(D)%*%U))
+</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-<ol start="2" style="list-style-type: decimal">
-<li>Dada la siguiente matriz, utilice las funciones anteriores para descomponer la matriz <span class="math inline">\(A=L+D+U\)</span>, recuerde que esta descomposición es la del metodo de (Jacobi). Verifique su respuesta</li>
-</ol>
+</div>
+<div id="section-1" class="section level3">
+<h3>2.</h3>
+<p>Dada la siguiente matriz, utilice las funciones anteriores para descomponer la matriz <span class="math inline">\(A=L+D+U\)</span>, recuerde que esta descomposición es la del metodo de (Jacobi). Verifique su respuesta</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubiA9IDRcbkQxPC1leWUobiwgbSA9IG4pXG5EMjwtb25lcyhuLCBtID0gbilcbkQzPC16ZXJvcyhuLCBtID0gbilcbkEgPSBtYXRyaXgoYygtOC4xLCAtNy80LCA2LjEsIC0yLCAtMSwgNCxcbi0zLCAtMSwgMCwgLTEsIC01LCAwLjYsXG4tMSwgMS8zLCA2LCAxLzIpLCBucm93PTQsIGJ5cm93PVRSVUUpXG5EID0gRDEgKiBBXG5TdW1NYXRTdXAgPC1BXG5tYXRyaW9JbmYgPC1BXG5TdW1NYXRTdXBbbG93ZXIudHJpKEEsZGlhZyA9IFRSVUUpXTwtMFxuTCA8LSBTdW1NYXRTdXAgIyBNYXRyaXogZGUgZGlhZ29uYWwgaWZlcmlvclxuTCA9IEwqLTEgIFxubWF0cmlvSW5mW3VwcGVyLnRyaShBLGRpYWcgPSBUUlVFKV08LTBcblUgPC0gbWF0cmlvSW5mICNtYXRyaXogZGUgZGlhZ29uYWwgc3VwZXJpb3IgXG5VID0gVSotMVxuYGBgIn0= -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubiA9IDRcbkQxPC1leWUobiwgbSA9IG4pXG5EMjwtb25lcyhuLCBtID0gbilcbkQzPC16ZXJvcyhuLCBtID0gbilcbkEgPSBtYXRyaXgoYygtOC4xLCAtNy80LCA2LjEsIC0yLCAtMSwgNCxcbi0zLCAtMSwgMCwgLTEsIC01LCAwLjYsXG4tMSwgMS8zLCA2LCAxLzIpLCBucm93PTQsIGJ5cm93PVRSVUUpXG5EID0gRDEgKiBBXG5TdW1NYXRTdXAgPC1BXG5tYXRyaW9JbmYgPC1BXG5TdW1NYXRTdXBbbG93ZXIudHJpKEEsZGlhZyA9IFRSVUUpXTwtMFxuVSA8LSBTdW1NYXRTdXAgIyBNYXRyaXogZGUgZGlhZ29uYWwgc3VwZXJpb3IgXG5cbm1hdHJpb0luZlt1cHBlci50cmkoQSxkaWFnID0gVFJVRSldPC0wXG5MIDwtIG1hdHJpb0luZiAjbWF0cml6IGRlIGRpYWdvbmFsIGluZmVyaW9yIFxuTCA9IEwgXG5gYGAifQ== -->
 <pre class="r"><code>n = 4
 D1&lt;-eye(n, m = n)
 D2&lt;-ones(n, m = n)
@@ -1841,11 +1823,11 @@ D = D1 * A
 SumMatSup &lt;-A
 matrioInf &lt;-A
 SumMatSup[lower.tri(A,diag = TRUE)]&lt;-0
-L &lt;- SumMatSup # Matriz de diagonal iferior
-L = L*-1  
+U &lt;- SumMatSup # Matriz de diagonal superior 
+
 matrioInf[upper.tri(A,diag = TRUE)]&lt;-0
-U &lt;- matrioInf #matriz de diagonal superior 
-U = U*-1</code></pre>
+L &lt;- matrioInf #matriz de diagonal inferior 
+L = L </code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -1906,88 +1888,126 @@ if (identical(A, t)){#verificacion de simetria
 </ul>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYiA9IG1hdHJpeChjKDEuNDUsMyw1LjEyLC00KSwgIG5yb3c9NCwgYnlyb3c9VFJVRSlcbnNvbCA9ICBpdGVyc29sdmUoQSA9IEEsIGIgPSBiLHRvbCA9IDFlLTgsIG1ldGhvZCA9IFwiR2F1c3MtU2VpZGVsXCIgKVxuc29sMiA9bHNvbHZlLmdzKEEsYixyZWx0b2wgPSAxZS04KVxuc29sJHhcbnNvbCRpdGVyXG5wcmludCgnc29sdWNpb24gZG9zJylcbnNvbDIkeFxuc29sMiRpdGVyXG5gYGAifQ== -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYiA9IG1hdHJpeChjKDEuNDUsMyw1LjEyLC00KSwgIG5yb3c9NCwgYnlyb3c9VFJVRSlcbnNvbCA9ICBpdGVyc29sdmUoQSA9IEEsIGIgPSBiLHRvbCA9IDFlLTgsIG1ldGhvZCA9IFwiR2F1c3MtU2VpZGVsXCIgKVxuc29sMiA9bHNvbHZlLmdzKEEsYixyZWx0b2wgPSAxZS04KVxuYGBgIn0= -->
 <pre class="r"><code>b = matrix(c(1.45,3,5.12,-4),  nrow=4, byrow=TRUE)
 sol =  itersolve(A = A, b = b,tol = 1e-8, method = &quot;Gauss-Seidel&quot; )
-sol2 =lsolve.gs(A,b,reltol = 1e-8)
-sol$x
-sol$iter
-print(&#39;solucion dos&#39;)
-sol2$x
-sol2$iter</code></pre>
+sol2 =lsolve.gs(A,b,reltol = 1e-8)</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiKiBsc29sdmUuZ3MgOiBJbml0aWFsaXN6ZWQuXG4qIGxzb2x2ZS5ncyA6IEEgbWF5IG5vdCBiZSBzeW1tZXRyaWMuXG4qIGxzb2x2ZS5ncyA6IG1ha2luZyBpdCBub3JtYWwgZXF1YXRpb24gZm9ybSB2aWEgJ2FkanN5bScgZmxhZy5cbiogbHNvbHZlLmdzIDogTEhTIG1hdHJpeCBBIGlzIG5vdCBkaWFnb25hbGx5IGRvbWluYW50LlxuKiAgICAgICAgICAgOiBzb2x1dGlvbiBmcm9tIEdhdXNzLVNlaWRlbCBtZXRob2QgaXMgbm90IGd1YXJhbnRlZWQuXG4qIGxzb2x2ZS5ncyA6IGNvbXB1dGF0aW9ucyBmaW5pc2hlZC5cbiJ9 -->
+<pre><code>* lsolve.gs : Initialiszed.
+* lsolve.gs : A may not be symmetric.
+* lsolve.gs : making it normal equation form via &#39;adjsym&#39; flag.
+* lsolve.gs : LHS matrix A is not diagonally dominant.
+*           : solution from Gauss-Seidel method is not guaranteed.
+* lsolve.gs : computations finished.</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc29sJHhcbmBgYCJ9 -->
+<pre class="r"><code>sol$x</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIC0zLjM4MDE0NGUrMjM3ICAxLjgwMDM0MGUrMjM3ICAxLjE0ODg1NmUrMjM3IC0yLjE3NDY3OWUrMjM4XG4ifQ== -->
+<pre><code>[1] -3.380144e+237  1.800340e+237  1.148856e+237 -2.174679e+238</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc29sJGl0ZXJcbmBgYCJ9 -->
+<pre class="r"><code>sol$iter</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDEwMDBcbiJ9 -->
+<pre><code>[1] 1000</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucHJpbnQoJ3NvbHVjaW9uIGRvcycpXG5gYGAifQ== -->
+<pre class="r"><code>print(&#39;solucion dos&#39;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwic29sdWNpb24gZG9zXCJcbiJ9 -->
+<pre><code>[1] &quot;solucion dos&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc29sMiR4XG5gYGAifQ== -->
+<pre class="r"><code>sol2$x</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiICAgICAgICAgICAgIFssMV1cblsxLF0gLTEuMDg3OTUxMzU0XG5bMixdICAwLjAwNDc1NTkzOFxuWzMsXSAtMC45MjA2NzIxMzBcbls0LF0gIDAuODY4OTkxNjA0XG4ifQ== -->
+<pre><code>             [,1]
+[1,] -1.087951354
+[2,]  0.004755938
+[3,] -0.920672130
+[4,]  0.868991604</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc29sMiRpdGVyXG5gYGAifQ== -->
+<pre class="r"><code>sol2$iter</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDEyOFxuIn0= -->
+<pre><code>[1] 128</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <ol start="3" style="list-style-type: lower-alpha">
 <li>Genere las iteraciones del método de Jacobi, calcular error relativo para cada iteracion y comparar la solución con el método de Gauss-Seidel.</li>
 </ol>
 <ul>
-<li>Para realizar las iteraciones del método de Jacobi se realizó solo en análisis de las primeras 5 iteraciones, ya que la matriz no converge, esto se puede ver ya que el valor del error va aumentando por cada iteración, es por eso que se decidió usar la función <strong>lsolve.jacovi</strong> y se comparó con el resultado de Gauss-seidel, esta comparación mostro que la función de <em>GS</em> requiere 1000 iteraciones para llegar a la solución, mientras que la de <em>Jacobi</em> dio 349 iteraciones, lo cual muestra un gran cambio en la velocidad en la cual convergen los métodos, donde <em>Jacovi</em> es casi tres veces más rápido que <em>GS</em>.</li>
+<li>Se realizo una funcion la cual realiza el calculo del metodo de jacovi, esto lo hace por medio de la evaluicion de la matriz <span class="math inline">\(T = D^{-1}(L+U)\)</span>, detro de esta se valida si el radio expetral de la matriz T es menor a uno, adicionalmente se usa otra libreria la cual es <em>lsolve.jacovi()</em> para comparar la respuesta, dando un restultado igual, pero con la diferencia de el numero de iteraciones qu requiere para llegar a la respuesta, el cul es de 2 a 361.</li>
 </ul>
 <ol start="4" style="list-style-type: lower-alpha">
 <li>Encuentre la matriz de transición y el radio espectral</li>
 </ol>
 <ul>
-<li>En el siguiente codigo se va a realizar el calculo de el metodo de jacovi, para esto se realizo las validaciones por medio del radio expectral, la matriz de trancision y la evalucion del error por medio de la <span class="math inline">\(Norma_{\infty}\)</span>. La evaluacion del raio expectral se hace por medio de la obtencion del vector propio, para despues obtener el mayor valor absoluto dentro de este. Para la matriz de transicion solo se usa $D<sup>{-1}(L+U)X</sup>{(k)}. Los restultados se observan en la ejecion del siguiente codigo. Como se pude observar el radio expectral es mayor que uno, por lo cual indica que la matriz no converge, es por esto que la funcion para en la iteracion 5.</li>
+<li>En el siguiente codigo se va a realizar el calculo de el metodo de jacovi, para esto se realizo las validaciones por medio del radio expectral, la matriz de trancision y la evalucion del error por medio de la <span class="math inline">\(Norma_{\infty}\)</span>. La evaluacion del raio expectral se hace por medio de la obtencion del vector propio, para despues obtener el mayor valor absoluto dentro de este. Para la matriz de transicion solo se usa $D<sup>{-1}(L+U)X</sup>{(k)}. Los restultados se observan en la ejecion del siguiente codigo. Como se pude observar el radio expectral es menor que uno, por lo cual indica que la matriz converge, es por esto que la funcion.</li>
 </ul>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuamFjb2JpPC0gIGZ1bmN0aW9uKCl7IFxueCA9IG1hdHJpeChjKDEsMSwxLDEpLCAgbnJvdz00LCBieXJvdz1UUlVFKSBcbmUgPSAxMDAwXG5pID0gMFxuVCA9IERpbnZlcnNhJSolKEwrVSkgI21hdHJpeiBkZSB0cmFzaWNpb24gXG5yYWRpb0V4cCA9IG1heChhYnMoZWlnKFQpKSlcbmlmKHJhZGlvRXhwPiAxKXsjIHJhZGlvIGV4cGVjdHJhbCBcbiAgY2F0KCdSYWRpbyBleHBlY3RyYWwgbWFzIGdyYW5kZSBxdWUgMSwgbm8gc2UgcHVkZSBjYWxjdWxhciwgZWwgY3VhbCBlczogJyxyYWRpb0V4cCwnXFxuJylcbn1cbnAxID0gRGludmVyc2ElKiViXG5cbnByaW50KCdNYXRpeiBUJylcbnByaW50KFQpXG53aGlsZShlID4gMWUtOCl7XG4gIERpbnZlcnNhID0gc29sdmUoRClcbiAgeGkgPSBwMSArIFQlKiV4XG4gIGUgPSBhYnMobm9ybSh4aSwnSScpIC0gbm9ybSh4LCdJJykpXG4gIHggPSB4aVxuICBpID0gMSArIGkgXG4gIGNhdChcIkVsIGVycm9yIGVzOiBcIixlLCdcXG4nKVxuICBpZiAoaSA+IDYpXG4gICAgYnJlYWtcbn1cbnByaW50KCdSZXN1bHRhZG8gZGUgbGEgZnVuY2lvbjonKVxucHJpbnQoeClcbmogPSBsc29sdmUuamFjb2JpKEEsYixyZWx0b2wgPTFlLTggKVxucHJpbnQoJ090cmEgZnVuY2lvbicpXG5qJHhcbnByaW50KCdpdGVyYWNpb25lczonKVxuaiRpdGVyXG59XG5qYWNvYmkoKVxuYGBgIn0= -->
-<pre class="r"><code>jacobi&lt;-  function(){ 
-x = matrix(c(1,1,1,1),  nrow=4, byrow=TRUE) 
-e = 1000
-i = 0
-T = Dinversa%*%(L+U) #matriz de trasicion 
-radioExp = max(abs(eig(T)))
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuamFjb2JpPC0gIGZ1bmN0aW9uKEEsYil7IFxueCA9IG1hdHJpeChzYW1wbGUoMCxsZW5ndGgoYikscmVwbGFjZSA9IFRSVUUpLCBieXJvdz1UUlVFKSBcblN1bU1hdFN1cCA8LUFcbm1hdHJpb0luZiA8LUFcblN1bU1hdFN1cFtsb3dlci50cmkoQSxkaWFnID0gVFJVRSldPC0wXG5VIDwtIFN1bU1hdFN1cCAjIE1hdHJpeiBkZSBkaWFnb25hbCBpZmVyaW9yXG5VID0gVSotMSAgXG5tYXRyaW9JbmZbdXBwZXIudHJpKEEsZGlhZyA9IFRSVUUpXTwtMFxuTCA8LSBtYXRyaW9JbmYgI21hdHJpeiBkZSBkaWFnb25hbCBzdXBlcmlvciBcbkwgPSBVKi0xXG5EMSA9ICBleWUobGVuZ3RoKGIpKVxuRCA9IEEqRDFcbnAxID0gc29sdmUoQSklKiViXG5cblRyID0gc29sdmUoRCklKiUoTCtVKSAjbWF0cml6IGRlIHRyYXNpY2lvbiBcblxucmFkaW9FeHAgPSBtYXgoYWJzKGVpZyhUcikpKVxuaWYocmFkaW9FeHA+IDEpeyMgcmFkaW8gZXhwZWN0cmFsIFxuICBjYXQoJ1JhZGlvIGV4cGVjdHJhbCBtYXMgZ3JhbmRlIHF1ZSAxLCBubyBzZSBwdWRlIGNhbGN1bGFyLCBlbCBjdWFsIGVzOiAnLHJhZGlvRXhwLCdcXG4nKVxufWVsc2V7XG4gIGNhdChcIlJhZGlvIGV4cGVjdHJhbDogXCIscmFkaW9FeHAsJ1xcbicpXG59XG5cbmUgPSAxMDAwXG5pID0gMFxud2hpbGUoZSA+IDFlLTgpe1xuICB4aSA9IHAxICsgVHIlKiV4XG4gIGUgPSBhYnMobm9ybSh4aSwnSScpIC0gbm9ybSh4LCdJJykpXG4gIHggPSB4aVxuICBpID0gMSArIGkgXG4gIGNhdChcIkVsIGVycm9yIGVzOiBcIixlLCdcXG4nKVxuICBpZiAoaSA+IDUwMClcbiAgICBicmVha1xufVxucHJpbnQoJ1Jlc3VsdGFkbyBkZSBsYSBmdW5jaW9uOicpXG5wcmludCh4KVxuY2F0KCdJdGVyYWNpb25lcyA6JyAsaSwnXFxuJylcblxufVxuamFjb2JpKEEsYilcbmBgYCJ9 -->
+<pre class="r"><code>jacobi&lt;-  function(A,b){ 
+x = matrix(sample(0,length(b),replace = TRUE), byrow=TRUE) 
+SumMatSup &lt;-A
+matrioInf &lt;-A
+SumMatSup[lower.tri(A,diag = TRUE)]&lt;-0
+U &lt;- SumMatSup # Matriz de diagonal iferior
+U = U*-1  
+matrioInf[upper.tri(A,diag = TRUE)]&lt;-0
+L &lt;- matrioInf #matriz de diagonal superior 
+L = U*-1
+D1 =  eye(length(b))
+D = A*D1
+p1 = solve(A)%*%b
+
+Tr = solve(D)%*%(L+U) #matriz de trasicion 
+
+radioExp = max(abs(eig(Tr)))
 if(radioExp&gt; 1){# radio expectral 
   cat(&#39;Radio expectral mas grande que 1, no se pude calcular, el cual es: &#39;,radioExp,&#39;\n&#39;)
+}else{
+  cat(&quot;Radio expectral: &quot;,radioExp,&#39;\n&#39;)
 }
-p1 = Dinversa%*%b
 
-print(&#39;Matiz T&#39;)
-print(T)
+e = 1000
+i = 0
 while(e &gt; 1e-8){
-  Dinversa = solve(D)
-  xi = p1 + T%*%x
+  xi = p1 + Tr%*%x
   e = abs(norm(xi,&#39;I&#39;) - norm(x,&#39;I&#39;))
   x = xi
   i = 1 + i 
   cat(&quot;El error es: &quot;,e,&#39;\n&#39;)
-  if (i &gt; 6)
+  if (i &gt; 500)
     break
 }
 print(&#39;Resultado de la funcion:&#39;)
 print(x)
-j = lsolve.jacobi(A,b,reltol =1e-8 )
-print(&#39;Otra funcion&#39;)
-j$x
-print(&#39;iteraciones:&#39;)
-j$iter
+cat(&#39;Iteraciones :&#39; ,i,&#39;\n&#39;)
+
 }
-jacobi()</code></pre>
+jacobi(A,b)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiUmFkaW8gZXhwZWN0cmFsIG1hcyBncmFuZGUgcXVlIDEsIG5vIHNlIHB1ZGUgY2FsY3VsYXIsIGVsIGN1YWwgZXM6ICAxLjQ4NDUyMiBcblsxXSBcIk1hdGl6IFRcIlxuICAgICBbLDFdICAgICAgIFssMl0gICAgICAgIFssM10gICAgICAgWyw0XVxuWzEsXSAwLjAwIC0wLjIxNjA0OTQgICAwLjc1MzA4NjQgLTAuMjQ2OTEzNlxuWzIsXSAwLjI1ICAwLjAwMDAwMDAgICAwLjc1MDAwMDAgIDAuMjUwMDAwMFxuWzMsXSAwLjAwIC0wLjIwMDAwMDAgICAwLjAwMDAwMDAgIDAuMTIwMDAwMFxuWzQsXSAyLjAwIC0wLjY2NjY2NjcgLTEyLjAwMDAwMDAgIDAuMDAwMDAwMFxuRWwgZXJyb3IgZXM6ICAxNy42NjY2NyBcbkVsIGVycm9yIGVzOiAgMTMuOTQ5NzggXG5FbCBlcnJvciBlczogIDQwLjcyODc3IFxuRWwgZXJyb3IgZXM6ICAyNi42ODkzOCBcbkVsIGVycm9yIGVzOiAgNzIuNzAyMzYgXG5FbCBlcnJvciBlczogIDE5LjI5NzA5IFxuRWwgZXJyb3IgZXM6ICAxMTAuMjQ4NyBcblsxXSBcIlJlc3VsdGFkbyBkZSBsYSBmdW5jaW9uOlwiXG4gICAgICAgICAgWywxXVxuWzEsXSAtMjEuMTI2MjZcblsyLF0gIDE1LjAxOTQ4XG5bMyxdICAxMi42MzU3NFxuWzQsXSAxODIuNDEwMjZcbiJ9 -->
-<pre><code>Radio expectral mas grande que 1, no se pude calcular, el cual es:  1.484522 
-[1] &quot;Matiz T&quot;
-     [,1]       [,2]        [,3]       [,4]
-[1,] 0.00 -0.2160494   0.7530864 -0.2469136
-[2,] 0.25  0.0000000   0.7500000  0.2500000
-[3,] 0.00 -0.2000000   0.0000000  0.1200000
-[4,] 2.00 -0.6666667 -12.0000000  0.0000000
-El error es:  17.66667 
-El error es:  13.94978 
-El error es:  40.72877 
-El error es:  26.68938 
-El error es:  72.70236 
-El error es:  19.29709 
-El error es:  110.2487 
+<!-- rnb-output-begin eyJkYXRhIjoiUmFkaW8gZXhwZWN0cmFsOiAgMCBcbkVsIGVycm9yIGVzOiAgMS4wODc5NTIgXG5FbCBlcnJvciBlczogIDAgXG5bMV0gXCJSZXN1bHRhZG8gZGUgbGEgZnVuY2lvbjpcIlxuICAgICAgICAgICAgIFssMV1cblsxLF0gLTEuMDg3OTUxNTI5XG5bMixdICAwLjAwNDc1NjAyOFxuWzMsXSAtMC45MjA2NzIxNTRcbls0LF0gIDAuODY4OTkyMTAwXG5JdGVyYWNpb25lcyA6IDIgXG4ifQ== -->
+<pre><code>Radio expectral:  0 
+El error es:  1.087952 
+El error es:  0 
 [1] &quot;Resultado de la funcion:&quot;
-          [,1]
-[1,] -21.12626
-[2,]  15.01948
-[3,]  12.63574
-[4,] 182.41026</code></pre>
+             [,1]
+[1,] -1.087951529
+[2,]  0.004756028
+[3,] -0.920672154
+[4,]  0.868992100
+Iteraciones : 2 </code></pre>
 <!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaiA9IGxzb2x2ZS5qYWNvYmkoQSxiLHJlbHRvbCA9MWUtOCApXG5gYGAifQ== -->
+<pre class="r"><code>j = lsolve.jacobi(A,b,reltol =1e-8 )</code></pre>
+<!-- rnb-source-end -->
 <!-- rnb-output-begin eyJkYXRhIjoiKiBsc29sdmUuamFjb2JpIDogSW5pdGlhbGlzemVkLlxuKiBsc29sdmUuamFjb2JpIDogQSBtYXkgbm90IGJlIHN5bW1ldHJpYy5cbiogbHNvbHZlLmphY29iaSA6IG1ha2luZyBpdCBub3JtYWwgZXF1YXRpb24gZm9ybSB2aWEgJ2FkanN5bScgZmxhZy5cbiogbHNvbHZlLmphY29iaSA6IExIUyBtYXRyaXggQSBpcyBub3QgZGlhZ29uYWxseSBkb21pbmFudC5cbiogICAgICAgICAgICAgICA6IHNvbHV0aW9uIGZyb20gSmFjb2JpIG1ldGhvZCBpcyBub3QgZ3VhcmFudGVlZC5cbiogbHNvbHZlLmphY29iaSA6IGNvbXB1dGF0aW9ucyBmaW5pc2hlZC5cbiJ9 -->
 <pre><code>* lsolve.jacobi : Initialiszed.
 * lsolve.jacobi : A may not be symmetric.
@@ -1996,26 +2016,47 @@ El error es:  110.2487
 *               : solution from Jacobi method is not guaranteed.
 * lsolve.jacobi : computations finished.</code></pre>
 <!-- rnb-output-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiT3RyYSBmdW5jaW9uXCJcblsxXSBcIml0ZXJhY2lvbmVzOlwiXG5bMV0gMzY4XG4ifQ== -->
-<pre><code>[1] &quot;Otra funcion&quot;
-[1] &quot;iteraciones:&quot;
-[1] 368</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucHJpbnQoJ090cmEgZnVuY2lvbicpXG5gYGAifQ== -->
+<pre class="r"><code>print(&#39;Otra funcion&#39;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiT3RyYSBmdW5jaW9uXCJcbiJ9 -->
+<pre><code>[1] &quot;Otra funcion&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaiR4XG5gYGAifQ== -->
+<pre class="r"><code>j$x</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiICAgICAgICAgICAgIFssMV1cblsxLF0gLTEuMDg3OTUxMTMwXG5bMixdICAwLjAwNDc1NTgxN1xuWzMsXSAtMC45MjA2NzIwODdcbls0LF0gIDAuODY4OTkwOTE0XG4ifQ== -->
+<pre><code>             [,1]
+[1,] -1.087951130
+[2,]  0.004755817
+[3,] -0.920672087
+[4,]  0.868990914</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucHJpbnQoJ2l0ZXJhY2lvbmVzOicpXG5gYGAifQ== -->
+<pre class="r"><code>print(&#39;iteraciones:&#39;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiaXRlcmFjaW9uZXM6XCJcbiJ9 -->
+<pre><code>[1] &quot;iteraciones:&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaiRpdGVyXG5gYGAifQ== -->
+<pre class="r"><code>j$iter</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDM1M1xuIn0= -->
+<pre><code>[1] 353</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-<ol start="3" style="list-style-type: decimal">
-<li>Sea el sistema <span class="math inline">\(AX=b\)</span> dados en ejercicio,y con tol= e^-8<br />
-</li>
-</ol>
-<ol style="list-style-type: lower-alpha">
-<li>Implemente una función en R para que evalue las raíces del polinomio característico asociado a la matriz <span class="math inline">\(A\)</span></li>
-</ol>
+</div>
+<div id="section-2" class="section level3">
+<h3>3.</h3>
+<p>Sea el sistema <span class="math inline">\(AX=b\)</span> dados en ejercicio,y con tol= e^-8<br />
+a. Implemente una función en R para que evalue las raíces del polinomio característico asociado a la matriz <span class="math inline">\(A\)</span></p>
 <ul>
-<li>La siguiente función toma una matriz y lo que hace es que por medio del método <strong>charpoly</strong> se va a obtener el polinomio característico, lo cual después por medio de la ayuda de la función de <strong>newton</strong> poder evaluar la raíz el polinomio.</li>
+<li>La siguiente función toma una matriz y lo que hace es que por medio del método <strong>charpoly</strong> se va a obtener el polinomio característico, lo cual después por medio de la ayuda de la función de <strong>newton</strong> poder evaluar la raíz del polinomio característico.</li>
 </ul>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucmFpY2VzUG9saUNhciA8LWZ1bmN0aW9uKEEpe1xuICBwb2xpID0gY2hhcnBvbHkoQSlcbiAgZiA8LSBmdW5jdGlvbih4KXtcbiAgICByID0gIGhvcm5lcigocG9saSkseClcbiAgICByZXR1cm4ociR5KVxuICB9XG4gIHggPXNlcSgtMTEsMzApXG4gIHggPSBuZXd0b24oZnVuID0gZiAsIHgwID0gNSx0b2wgPSAxZS04KVxuICB4XG59XG5yYWljZXNQb2xpQ2FyKEEpXG5gYGAifQ== -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucmFpY2VzUG9saUNhciA8LWZ1bmN0aW9uKEEpe1xuICBwb2xpID0gY2hhcnBvbHkoQSlcbiAgZiA8LSBmdW5jdGlvbih4KXtcbiAgICByID0gIGhvcm5lcigocG9saSkseClcbiAgICByZXR1cm4ociR5KVxuICB9XG4gIHggPXNlcSgtMTEsMzApXG4gIHggPSBuZXd0b24oZnVuID0gZiAsIHgwID0gNSx0b2wgPSAxZS04KVxuICB4XG59XG5yYWljZXNQb2xpQ2FyKEEpXG5cbmBgYCJ9 -->
 <pre class="r"><code>raicesPoliCar &lt;-function(A){
   poli = charpoly(A)
   f &lt;- function(x){
@@ -2026,35 +2067,83 @@ El error es:  110.2487
   x = newton(fun = f , x0 = 5,tol = 1e-8)
   x
 }
-raicesPoliCar(A)</code></pre>
+raicesPoliCar(A)
+</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiJHJvb3RcblsxXSA0LjUzNTgwM1xuXG4kZi5yb290XG5bMV0gLTEuOTg5NTJlLTEzXG5cbiRuaXRlclxuWzFdIDVcblxuJGVzdGltLnByZWNcblsxXSA0LjYzMTU4MWUtMTJcbiJ9 -->
-<pre><code>$root
-[1] 4.535803
-
-$f.root
-[1] -1.98952e-13
-
-$niter
-[1] 5
-
-$estim.prec
-[1] 4.631581e-12</code></pre>
-<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <ol start="2" style="list-style-type: lower-alpha">
-<li>Use el teorema de convergencia para determinar cuál método iterativo es más favorable.<br />
-</li>
+<li>Use el teorema de convergencia para determinar cuál método iterativo es más favorable.</li>
+</ol>
+<ul>
+<li><strong>Solucion:</strong> Para le teorema de convergencia se tiene que evaluar dos condiciones, la primera es si una matriz <span class="math inline">\(A\)</span> es diagonalmente dominante, y la segunda condición es que si esa misma matriz es simétrica definida positiva, en el punto <em>2.a</em> se pude verificar el resultado de la matriz con la cual se va a evaluar el teorema de convergencia, el cual arrojo que la matriz no es simétrica ni tampoco diagonalmente dominante, es por eso que según el método no hay un método más favorable para la evaluación de esta, pero esto no indica que no se puedan evaluar por algún método, solo indica que no hay uno que haga converger más rápido a la matriz.</li>
+</ul>
+<ol start="3" style="list-style-type: lower-alpha">
 <li>Evalue la matriz de transición para cada caso (método) y en el caso del método de relajación determine el valor óptimo de <span class="math inline">\(\omega\)</span></li>
 </ol>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuXG5UamFjb3ZpID0gRGludmVyc2ElKiUoTCtVKVxuXG5gYGAifQ== -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuXG5UamFjb3ZpID0gRGludmVyc2ElKiUoVStMKVxuY2F0KCdKYWNvdmlcXG4nKVxuYGBgIn0= -->
 <pre class="r"><code>
-Tjacovi = Dinversa%*%(L+U)
-</code></pre>
+Tjacovi = Dinversa%*%(U+L)
+cat(&#39;Jacovi\n&#39;)</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiSmFjb3ZpXG4ifQ== -->
+<pre><code>Jacovi</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuVGphY292aVxuYGBgIn0= -->
+<pre class="r"><code>Tjacovi</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiICAgICAgWywxXSAgICAgIFssMl0gICAgICAgWywzXSAgICAgICBbLDRdXG5bMSxdICAwLjAwIDAuMjE2MDQ5NCAtMC43NTMwODY0ICAwLjI0NjkxMzZcblsyLF0gLTAuMjUgMC4wMDAwMDAwIC0wLjc1MDAwMDAgLTAuMjUwMDAwMFxuWzMsXSAgMC4wMCAwLjIwMDAwMDAgIDAuMDAwMDAwMCAtMC4xMjAwMDAwXG5bNCxdIC0yLjAwIDAuNjY2NjY2NyAxMi4wMDAwMDAwICAwLjAwMDAwMDBcbiJ9 -->
+<pre><code>      [,1]      [,2]       [,3]       [,4]
+[1,]  0.00 0.2160494 -0.7530864  0.2469136
+[2,] -0.25 0.0000000 -0.7500000 -0.2500000
+[3,]  0.00 0.2000000  0.0000000 -0.1200000
+[4,] -2.00 0.6666667 12.0000000  0.0000000</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuVGdhdXNzICA8LSBzb2x2ZShEMSAtIHNvbHZlKEQpJSolTCklKiUoc29sdmUoRCklKiVVKVxuY2F0KCdHYXVzc1xcbicpXG5gYGAifQ== -->
+<pre class="r"><code>Tgauss  &lt;- solve(D1 - solve(D)%*%L)%*%(solve(D)%*%U)
+cat(&#39;Gauss\n&#39;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiR2F1c3NcbiJ9 -->
+<pre><code>Gauss</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuVGdhdXNzXG5gYGAifQ== -->
+<pre class="r"><code>Tgauss</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiICAgICBbLDFdICAgICAgICBbLDJdICAgICAgIFssM10gICAgICAgWyw0XVxuWzEsXSAgICAwICAwLjIxNjA0OTM4IC0wLjc1MzA4NjQgIDAuMjQ2OTEzNlxuWzIsXSAgICAwIC0wLjA1NDAxMjM1IC0wLjU2MTcyODQgLTAuMzExNzI4NFxuWzMsXSAgICAwIC0wLjAxMDgwMjQ3IC0wLjExMjM0NTcgLTAuMTgyMzQ1N1xuWzQsXSAgICAwIC0wLjU5NzczNjYzIC0wLjIxNjQ2MDkgLTIuODg5Nzk0MlxuIn0= -->
+<pre><code>     [,1]        [,2]       [,3]       [,4]
+[1,]    0  0.21604938 -0.7530864  0.2469136
+[2,]    0 -0.05401235 -0.5617284 -0.3117284
+[3,]    0 -0.01080247 -0.1123457 -0.1823457
+[4,]    0 -0.59773663 -0.2164609 -2.8897942</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudyA9IDEuMlxuVHNvciAgPC0gc29sdmUoRDEgLSB3KnNvbHZlKEQpJSolTCklKiUoKDEtdykqRDErKHcqc29sdmUoRCklKiVVKSlcbmNhdCgnU29yXFxuJylcbmBgYCJ9 -->
+<pre class="r"><code>w = 1.2
+Tsor  &lt;- solve(D1 - w*solve(D)%*%L)%*%((1-w)*D1+(w*solve(D)%*%U))
+cat(&#39;Sor\n&#39;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiU29yXG4ifQ== -->
+<pre><code>Sor</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuVHNvclxuYGBgIn0= -->
+<pre class="r"><code>Tsor</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiICAgICAgICAgWywxXSAgICAgICAgWywyXSAgICAgICBbLDNdICAgICAgIFssNF1cblsxLF0gLTAuMjAwMDAgIDAuMjU5MjU5MjYgLTAuOTAzNzAzNyAgMC4yOTYyOTYzXG5bMixdICAwLjA2MDAwIC0wLjI3Nzc3Nzc4IC0wLjYyODg4ODkgLTAuMzg4ODg4OVxuWzMsXSAgMC4wMTQ0MCAtMC4wNjY2NjY2NyAtMC4zNTA5MzMzIC0wLjIzNzMzMzNcbls0LF0gIDAuNzM1MzYgLTEuODA0NDQ0NDQgLTMuMzg3NjYyMiAtNC42Mzk4MjIyXG4ifQ== -->
+<pre><code>         [,1]        [,2]       [,3]       [,4]
+[1,] -0.20000  0.25925926 -0.9037037  0.2962963
+[2,]  0.06000 -0.27777778 -0.6288889 -0.3888889
+[3,]  0.01440 -0.06666667 -0.3509333 -0.2373333
+[4,]  0.73536 -1.80444444 -3.3876622 -4.6398222</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucmFkaW9FeHAgPSBtYXgoYWJzKGVpZyhUcikpKVxudyA9IDIvKDEtKDEtc3FydChyYWRpb0V4cF4yKSkpXG5jYXQoJ3cgb3B0aW1vJyx3LCdcXG4nKVxuYGBgIn0= -->
+<pre class="r"><code>radioExp = max(abs(eig(Tr)))
+w = 2/(1-(1-sqrt(radioExp^2)))
+cat(&#39;w optimo&#39;,w,&#39;\n&#39;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoidyBvcHRpbW8gMS4zNDcyMzUgXG4ifQ== -->
+<pre><code>w optimo 1.347235 </code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <ol start="4" style="list-style-type: lower-alpha">
@@ -2069,9 +2158,6 @@ e Comparar con la solución por defecto<br />
 <pre class="r"><code>co =  norm(A,&#39;I&#39;)*norm(solve(A),&#39;I&#39;)
 co</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDMxLjYwNDY5XG4ifQ== -->
-<pre><code>[1] 31.60469</code></pre>
-<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <ol start="7" style="list-style-type: lower-alpha">
@@ -2089,104 +2175,247 @@ b</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-<ol start="4" style="list-style-type: decimal">
-<li><ol style="list-style-type: lower-alpha">
+</div>
+<div id="section-3" class="section level3">
+<h3>4.</h3>
+<ol style="list-style-type: lower-alpha">
 <li>Pruebe el siguiente algoritmo con una matriz <span class="math inline">\(A_{6}\)</span>, modifiquelo para que <span class="math inline">\(a_{ii}=0\)</span> para todo <span class="math inline">\(i\)</span></li>
-</ol></li>
 </ol>
+<ul>
+<li>El algoritmo que se nos propone, lo que hace es que recibe una matriz y un factor, dependiendo de el factor lo que hara es cambiar todos los valores de la diagonal respectiva a ceros. La modificacion propuesta lo que hace es que evaluamos la matriz diagonal (con ayuda de la funcion eye), y para todos los casos, la diagonal de la matriz tambien sera una matriz de ceros.</li>
+</ul>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudHJpbDEgPC0gZnVuY3Rpb24oTSwgayA9IDApIHtcbmlmIChrID09IDApIHtcbk1bdXBwZXIudHJpKE0sIGRpYWcgPSBGQUxTRSldIDwtIDBcbn0gZWxzZSB7XG5NW2NvbChNKSA+PSByb3coTSkgKyBrICsgMV0gPC0gMFxufVxucmV0dXJuKE0pXG59XG5gYGAifQ== -->
-<pre class="r"><code>tril1 &lt;- function(M, k = 0) {
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuXG50cmlsMSA8LSBmdW5jdGlvbihNLCBrID0gMCkge1xuaWYgKGsgPT0gMCkge1xuTVt1cHBlci50cmkoTSwgZGlhZyA9IEZBTFNFKV0gPC0gMFxufSBlbHNlIHtcbk1bY29sKE0pID49IHJvdyhNKSArIGsgKyAxXSA8LSAwXG59XG5yZXR1cm4oTSlcbn1cblxuXG4jIyMjIyMjIyMjI1xuXG4jI0Z1bmNpb24geWEgbW9kaWZpY2FkYVxudHJpbG1vZCA8LSBmdW5jdGlvbihNLCBrID0gMCkge1xuaWYgKGsgPT0gMCkge1xuXG5NW3VwcGVyLnRyaShNLCBkaWFnID0gVFJVRSldIDwtIDBcblxufSBlbHNlIHtcbiAgTVtjb2woTSkgPj0gcm93KE0pICsgayArIDFdIDwtIDBcbiAgbj02XG4gIEQxPC1leWUobiwgbSA9IG4pXG4gIHRyYT1NLShNKkQxKVxuICBNPC10cmFcblxuXG59XG5yZXR1cm4oTSlcbn1cblxuXG4jI01hdHJpeiBkZSBkYXRvcyBhbGVhdG9yaWEgZGUgdGFtYcOxbyA2eDZcbk1hPC1tYXRyaXgoc2FtcGxlKC0xMDA6MTAwLCAzNiksIG5yb3cgPSA2KVxucHJpbnQoXCJBbGdvcml0bW8gb3JpZ2luYWxcIilcbnRyaWwxKE1hLCBrPTApXG5wcmludChcIkFsZ29yaXRtbyBtb2RpZmljYWRvXCIpXG50cmlsbW9kKE1hLCBrPTApXG5cblxuXG5gYGAifQ== -->
+<pre class="r"><code>
+tril1 &lt;- function(M, k = 0) {
 if (k == 0) {
 M[upper.tri(M, diag = FALSE)] &lt;- 0
 } else {
 M[col(M) &gt;= row(M) + k + 1] &lt;- 0
 }
 return(M)
-}</code></pre>
+}
+
+
+###########
+
+##Funcion ya modificada
+trilmod &lt;- function(M, k = 0) {
+if (k == 0) {
+
+M[upper.tri(M, diag = TRUE)] &lt;- 0
+
+} else {
+  M[col(M) &gt;= row(M) + k + 1] &lt;- 0
+  n=6
+  D1&lt;-eye(n, m = n)
+  tra=M-(M*D1)
+  M&lt;-tra
+
+
+}
+return(M)
+}
+
+
+##Matriz de datos aleatoria de tamaño 6x6
+Ma&lt;-matrix(sample(-100:100, 36), nrow = 6)
+print(&quot;Algoritmo original&quot;)
+tril1(Ma, k=0)
+print(&quot;Algoritmo modificado&quot;)
+trilmod(Ma, k=0)
+</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-<ol start="5" style="list-style-type: decimal">
-<li><p>Cree una función que cuente el número de multiplicaciones en el método directo de Gauss-Jordan, para resolver un sistema de <span class="math inline">\(n\)</span> ecuaciones y pruebelo para <span class="math inline">\(n=5\)</span></p></li>
-<li><p>Dado el siguiente sistema:</p></li>
-</ol>
+</div>
+<div id="section-4" class="section level3">
+<h3>5.</h3>
+<p>Cree una función que cuente el número de multiplicaciones en el método directo de Gauss-Jordan, para resolver un sistema de <span class="math inline">\(n\)</span> ecuaciones y pruebelo para <span class="math inline">\(n=5\)</span></p>
+</div>
+<div id="section-5" class="section level3">
+<h3>7.</h3>
+<p>Dado el siguiente sistema:</p>
 <p><span class="math inline">\(2x-z=1\)</span><br />
-<span class="math inline">\(\beta\)</span><span class="math inline">\(x+2y-z=2\)</span></p>
-<p><span class="math inline">\(-x+y+ \alpha\)</span><span class="math inline">\(z=1\)</span></p>
+<span class="math inline">\(\beta\)</span><span class="math inline">\(x+2y-z=2\)</span><br />
+<span class="math inline">\(-x+y+ \alpha\)</span><span class="math inline">\(z=1\)</span></p>
 <ol style="list-style-type: lower-alpha">
 <li>Encuentre el valor de <span class="math inline">\(\alpha\)</span> y <span class="math inline">\(\beta\)</span> para asegura la convergencia por el método de Jacobi y para Gauss Seidel. Sugerencia: utilice el teorema convergencia</li>
 </ol>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYiA9IDAuNVxuYSA9IDBcbk0gPSAgbWF0cml4KGRhdGEgPSBjKDIsMCwtMSxiLDIsLTEsLTEsMSxhKSxucm93ID0gMylcbmVpZyhNKVxuYGBgIn0= -->
-<pre class="r"><code>b = 0.5
-a = 0
-M =  matrix(data = c(2,0,-1,b,2,-1,-1,1,a),nrow = 3)
-eig(M)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuXG5iID0gNFxuYSA9IDE2XG5NID0gIG1hdHJpeChkYXRhID0gYygyLDAsLTEsYiwyLC0xLC0xLDEsYSksbnJvdyA9IDMsIGJ5cm93ID0gIFRSVUUpXG5iID0gIG1hdHJpeChkYXRhID0gYygxLDIsMykpXG5TdW1NYXRTdXAgPC1NXG5tYXRyaW9JbmYgPC1NXG5TdW1NYXRTdXBbbG93ZXIudHJpKE0sZGlhZyA9IFRSVUUpXTwtMFxuTCA8LSBTdW1NYXRTdXAgIyBNYXRyaXogZGUgZGlhZ29uYWwgaWZlcmlvclxuTCA9IEwqLTEgIFxubWF0cmlvSW5mW3VwcGVyLnRyaShNLGRpYWcgPSBUUlVFKV08LTBcblUgPC0gbWF0cmlvSW5mICNtYXRyaXogZGUgZGlhZ29uYWwgc3VwZXJpb3IgXG5VID0gVSotMVxuc29sdmUoQSlcbmBgYCJ9 -->
+<pre class="r"><code>
+b = 4
+a = 16
+M =  matrix(data = c(2,0,-1,b,2,-1,-1,1,a),nrow = 3, byrow =  TRUE)
+b =  matrix(data = c(1,2,3))
+SumMatSup &lt;-M
+matrioInf &lt;-M
+SumMatSup[lower.tri(M,diag = TRUE)]&lt;-0
+L &lt;- SumMatSup # Matriz de diagonal iferior
+L = L*-1  
+matrioInf[upper.tri(M,diag = TRUE)]&lt;-0
+U &lt;- matrioInf #matriz de diagonal superior 
+U = U*-1
+solve(A)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdICAyLjA1NjA0MjUrMC40ODMzMTRpXG5bMl0gIDIuMDU2MDQyNS0wLjQ4MzMxNGlcblszXSAtMC4xMTIwODQ5KzAuMDAwMDAwaVxuIn0= -->
-<pre><code>[1]  2.0560425+0.483314i
-[2]  2.0560425-0.483314i
-[3] -0.1120849+0.000000i</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiICAgICAgICAgICAgIFssMV0gICAgICAgIFssMl0gICAgICAgIFssM10gICAgICAgIFssNF1cblsxLF0gLTAuMDg3NzgxMjQ2IC0wLjA5MzUwMzUzIC0wLjI4NTU1MzA1IC0wLjE5NTQ2ODM4XG5bMixdIC0wLjA1MTA4NDcyNSAgMC4yMjA3NzMxMyAgMC4wMzY4Mjg1MiAgMC4xOTMwMTMxNFxuWzMsXSAtMC4wMDI3NzIwMzkgLTAuMDM0NTMxNjkgLTAuMTE0MjgwNjIgIDAuMDU2OTg1MjFcbls0LF0gLTAuMTA4MjQxNTM3ICAwLjA4MDE5MTE0ICAwLjc3NTcwOTAyICAwLjc5NjU2NTMxXG4ifQ== -->
+<pre><code>             [,1]        [,2]        [,3]        [,4]
+[1,] -0.087781246 -0.09350353 -0.28555305 -0.19546838
+[2,] -0.051084725  0.22077313  0.03682852  0.19301314
+[3,] -0.002772039 -0.03453169 -0.11428062  0.05698521
+[4,] -0.108241537  0.08019114  0.77570902  0.79656531</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuVCA9IHNvbHZlKE0pJSolKEwrVSlcbm1heChhYnMoZWlnKFQpKSlcbmBgYCJ9 -->
+<pre class="r"><code>T = solve(M)%*%(L+U)
+max(abs(eig(T)))</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDAuNjU3OTYzMVxuIn0= -->
+<pre><code>[1] 0.6579631</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaXRlcnNvbHZlKEEgPSBNLCBiLCB0b2wgPSAxZS04ICwgbWV0aG9kID0gXCJHYXVzcy1TZWlkZWxcIilcbmBgYCJ9 -->
+<pre class="r"><code>itersolve(A = M, b, tol = 1e-8 , method = &quot;Gauss-Seidel&quot;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiJHhcblsxXSAgMC42MTY2NjY3IC0wLjExNjY2NjcgIDAuMjMzMzMzM1xuXG4kaXRlclxuWzFdIDdcblxuJG1ldGhvZFxuWzFdIFwiR2F1c3MtU2VpZGVsXCJcbiJ9 -->
+<pre><code>$x
+[1]  0.6166667 -0.1166667  0.2333333
+
+$iter
+[1] 7
+
+$method
+[1] &quot;Gauss-Seidel&quot;</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <ol start="2" style="list-style-type: lower-alpha">
 <li>Genere una tabla que tenga 10 iteraciones, del método de Jacobi con vector inicial <span class="math inline">\(x_{0}=[1,2,3]^t\)</span></li>
 </ol>
-<ol start="8" style="list-style-type: decimal">
-<li><p>Instalar el paquete Matrix y descomponga la matriz <span class="math inline">\(A\)</span> (del punto dos) de la forma <span class="math inline">\(LU\)</span> y la factorizarla como <span class="math inline">\(A=QR\)</span>. Verifique su respuesta.</p></li>
-<li><p>Realice varias pruebas que la matriz de transición por el método de Gauss-Seidel esta dada por <span class="math inline">\(T=(-D^{-1}U)(I+LD^{-1})^{-1}\)</span></p></li>
-</ol>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuamFjb2JpKE0sYilcbmBgYCJ9 -->
+<pre class="r"><code>jacobi(M,b)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiTWF0aXogVFwiXG5FbCBlcnJvciBlczogIDAuNjE2NjY2NyBcbkVsIGVycm9yIGVzOiAgMCBcblsxXSBcIlJlc3VsdGFkbyBkZSBsYSBmdW5jaW9uOlwiXG4gICAgICAgICAgIFssMV1cblsxLF0gIDAuNjE2NjY2N1xuWzIsXSAtMC4xMTY2NjY3XG5bMyxdICAwLjIzMzMzMzNcbiJ9 -->
+<pre><code>[1] &quot;Matiz T&quot;
+El error es:  0.6166667 
+El error es:  0 
+[1] &quot;Resultado de la funcion:&quot;
+           [,1]
+[1,]  0.6166667
+[2,] -0.1166667
+[3,]  0.2333333</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiKiBsc29sdmUuamFjb2JpIDogSW5pdGlhbGlzemVkLlxuKiBsc29sdmUuamFjb2JpIDogQSBtYXkgbm90IGJlIHN5bW1ldHJpYy5cbiogbHNvbHZlLmphY29iaSA6IG1ha2luZyBpdCBub3JtYWwgZXF1YXRpb24gZm9ybSB2aWEgJ2FkanN5bScgZmxhZy5cbiogbHNvbHZlLmphY29iaSA6IExIUyBtYXRyaXggQSBpcyBub3QgZGlhZ29uYWxseSBkb21pbmFudC5cbiogICAgICAgICAgICAgICA6IHNvbHV0aW9uIGZyb20gSmFjb2JpIG1ldGhvZCBpcyBub3QgZ3VhcmFudGVlZC5cbiogbHNvbHZlLmphY29iaSA6IGNvbXB1dGF0aW9ucyBmaW5pc2hlZC5cbiJ9 -->
+<pre><code>* lsolve.jacobi : Initialiszed.
+* lsolve.jacobi : A may not be symmetric.
+* lsolve.jacobi : making it normal equation form via &#39;adjsym&#39; flag.
+* lsolve.jacobi : LHS matrix A is not diagonally dominant.
+*               : solution from Jacobi method is not guaranteed.
+* lsolve.jacobi : computations finished.</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiT3RyYSBmdW5jaW9uXCJcblsxXSBcIml0ZXJhY2lvbmVzOlwiXG5bMV0gMzM1XG4ifQ== -->
+<pre><code>[1] &quot;Otra funcion&quot;
+[1] &quot;iteraciones:&quot;
+[1] 335</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+</div>
+<div id="section-6" class="section level3">
+<h3>8.</h3>
+<p>Instalar el paquete Matrix y descomponga la matriz <span class="math inline">\(A\)</span> (del punto dos) de la forma <span class="math inline">\(LU\)</span> y la factorizarla como <span class="math inline">\(A=QR\)</span>. Verifique su respuesta.</p>
+<ul>
+<li><strong>Solucion:</strong> En el paquete Matrix nos encontramos con distintas funciones que nos permiten hacer descomposiciones de matrices. En primera instancia utilizamos la funcion tril que nos proporciona la matriz triangular inferior de la matriz original, y la funcion triu para obtener la triangular superior. Por otra parte, el paquete tambien nos proporciona una funcion para la factorizacion <span class="math inline">\(A=QR\)</span>, la cual es qr.</li>
+</ul>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuQSA9IG1hdHJpeChjKC04LjEsIC03LCA2LjEyMywgLTIsIC0xLCA0LFxuLTMsIC0xLCAwLCAtMSwgLTUsIDAuNixcbi0xLCAwLjMzLCA2LCAxLzIpLCBucm93PTQsIGJ5cm93PVRSVUUpXG5BXG5cbkk8LXRyaWwoQSwgaz0wKVxuSVxuXG5TPC10cml1KEEsIGs9MClcblNcblxuUXI8LXFyKEEpXG5RclxuYGBgIn0= -->
+<pre class="r"><code>A = matrix(c(-8.1, -7, 6.123, -2, -1, 4,
+-3, -1, 0, -1, -5, 0.6,
+-1, 0.33, 6, 1/2), nrow=4, byrow=TRUE)
+A
+
+I&lt;-tril(A, k=0)
+I
+
+S&lt;-triu(A, k=0)
+S
+
+Qr&lt;-qr(A)
+Qr</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+</div>
+<div id="section-7" class="section level3">
+<h3>9.</h3>
+<p>Realice varias pruebas que la matriz de transición por el método de Gauss-Seidel esta dada por <span class="math inline">\(T=(-D^{-1}U)(I+LD^{-1})^{-1}\)</span></p>
+</div>
 <div id="sistemas-no-lineales" class="section level3">
 <h3>Sistemas No lineales</h3>
-<ol start="10" style="list-style-type: decimal">
-<li></li>
-</ol>
+</div>
+<div id="section-8" class="section level3">
+<h3>10.</h3>
 <ol style="list-style-type: lower-alpha">
 <li>Determinar numéricamente la intersección entre la circunferencia <span class="math inline">\(x^2 + y^2 = 1\)</span> y la recta <span class="math inline">\(y = x\)</span>. Usamos una aproximación inicial <span class="math inline">\((1,1)\)</span>.</li>
 </ol>
-<p>b Analizar y comentar el siguiente código</p>
+<ul>
+<li><strong>Solución:</strong>Encontramos un paquete de R, denominado BB, que se encarga de resolver y optimizar sistemas de ecuaciones no lineales, y utilizamos una función (llamada BBsolve), que nos permite encontrar las intersecciones de las ecuaciones presentadas dada la aproximación lineal. Entonces se procedió a seguir los pasos que se ilustran en el HELP de la función para hacer el mejor uso de esta. Y primero es necesario pasar las ecuaciones a una función que sería el sistema de ecuaciones no lineales. Al final comprobamos el resultado de la función que nos arrojó con GeoGebra, obteniendo el mismo resultado.</li>
+</ul>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc29sJHBhclxuXG5gYGAifQ== -->
-<pre class="r"><code>sol$par
-</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShCQilcblxucmU8LWMoMSwxKVxuXG4gICAgXG5zaXN0ZW09ZnVuY3Rpb24oeCl7XG4gIG48LWxlbmd0aCh4KVxuICBmdW48LXJlcChOQSwgbilcbiAgZnVuWzFdID0gKHhbMV1eMikrKHhbMl1eMiktMVxuICBmdW5bMl0gPSAoeFsxXSktKHhbMl0pXG4gIGZ1blxufVxuXG5zb2w9QkJzb2x2ZShyZSwgc2lzdGVtKVxuc29sJHBhclxuYGBgIn0= -->
+<pre class="r"><code>library(BB)
+
+re&lt;-c(1,1)
+
+    
+sistem=function(x){
+  n&lt;-length(x)
+  fun&lt;-rep(NA, n)
+  fun[1] = (x[1]^2)+(x[2]^2)-1
+  fun[2] = (x[1])-(x[2])
+  fun
+}
+
+sol=BBsolve(re, sistem)
+sol$par</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiICAgWzFdIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxXG4gIFs0Nl0gMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDFcbiAgWzkxXSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMVxuIFsxMzZdIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxXG4gWzE4MV0gMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDFcbiBbMjI2XSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMVxuIFsyNzFdIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxXG4gWzMxNl0gMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDFcbiBbMzYxXSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMVxuIFs0MDZdIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxXG4gWzQ1MV0gMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDFcbiBbNDk2XSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMVxuIFs1NDFdIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxXG4gWzU4Nl0gMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDFcbiBbNjMxXSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMVxuIFs2NzZdIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxXG4gWzcyMV0gMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDFcbiBbNzY2XSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMVxuIFs4MTFdIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxXG4gWzg1Nl0gMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDFcbiBbOTAxXSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMVxuIFs5NDZdIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxXG4gWzk5MV0gMSAxIDEgMSAxIDEgMSAxIDEgMVxuIFsgcmVhY2hlZCBnZXRPcHRpb24oXCJtYXgucHJpbnRcIikgLS0gb21pdHRlZCA5MDAwIGVudHJpZXMgXVxuIn0= -->
-<pre><code>   [1] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-  [46] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-  [91] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
- [136] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
- [181] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
- [226] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
- [271] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
- [316] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
- [361] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
- [406] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
- [451] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
- [496] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
- [541] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
- [586] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
- [631] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
- [676] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
- [721] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
- [766] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
- [811] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
- [856] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
- [901] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
- [946] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
- [991] 1 1 1 1 1 1 1 1 1 1
- [ reached getOption(&quot;max.print&quot;) -- omitted 9000 entries ]</code></pre>
-<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>b Analizar y comentar el siguiente código</p>
+<ul>
+<li><strong>Solución:</strong> Principalmente BBsolve, es una función que utiliza longitudes de paso Barzilai-Borwein para resolver sistemas de ecuaciones no lineales. Esta función recibe como parámetros un vector el cual da una estimación de las raíces del sistema de ecuaciones no lineales, como segundo parámetro se recibe una función que dado un vector como argumento que lo transforma internamente (en cada una de sus posiciones) para al final retornar el vector modificado, todo esto se realiza en la función denominada “trigexp”.Después regresa una lista de unos, los cuales indican los mejores parámetros para resolver el sistema de ecuaciones.</li>
+</ul>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShCQilcbnRyaWdleHAgPSBmdW5jdGlvbih4KSB7XG5uID0gbGVuZ3RoKHgpXG5GID0gcmVwKE5BLCBuKVxuRlsxXSA9IDMqeFsxXV4yICsgMip4WzJdIC0gNSArIHNpbih4WzFdIC0geFsyXSkgKiBzaW4oeFsxXSArIHhbMl0pXG50bjEgPSAyOihuLTEpXG5GW3RuMV0gPSAteFt0bjEtMV0gKiBleHAoeFt0bjEtMV0gLSB4W3RuMV0pICsgeFt0bjFdICpcbiggNCArIDMqeFt0bjFdXjIpICsgMiAqIHhbdG4xICsgMV0gKyBzaW4oeFt0bjFdIC1cbnhbdG4xICsgMV0pICogc2luKHhbdG4xXSArIHhbdG4xICsgMV0pIC0gOFxuRltuXSA9IC14W24tMV0gKiBleHAoeFtuLTFdIC0geFtuXSkgKyA0Knhbbl0gLSAzXG5GXG59XG5uID0gMTAwMDBcbnAwID0gcnVuaWYobikgIyBuIGluaXRpYWwgcmFuZG9tIHN0YXJ0aW5nIGd1ZXNzZXNcbnNvbCA9IEJCc29sdmUocGFyPXAwLCBmbj10cmlnZXhwKVxuc29sJHBhclxuYGBgIn0= -->
+<pre class="r"><code>library(BB)
+trigexp = function(x) {
+n = length(x)
+F = rep(NA, n)
+F[1] = 3*x[1]^2 + 2*x[2] - 5 + sin(x[1] - x[2]) * sin(x[1] + x[2])
+tn1 = 2:(n-1)
+F[tn1] = -x[tn1-1] * exp(x[tn1-1] - x[tn1]) + x[tn1] *
+( 4 + 3*x[tn1]^2) + 2 * x[tn1 + 1] + sin(x[tn1] -
+x[tn1 + 1]) * sin(x[tn1] + x[tn1 + 1]) - 8
+F[n] = -x[n-1] * exp(x[n-1] - x[n]) + 4*x[n] - 3
+F
+}
+n = 10000
+p0 = runif(n) # n initial random starting guesses
+sol = BBsolve(par=p0, fn=trigexp)
+sol$par</code></pre>
+<!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 </div>
 
-<div id="rmd-source-code">LS0tDQp0aXRsZTogIkFuw6FsaXNpcyBOdW3DqXJpY28tIG5vbWJyZXMgaW50ZWdyYW50ZXMiDQpvdXRwdXQ6DQogIGh0bWxfZG9jdW1lbnQ6DQogICAgZGZfcHJpbnQ6IHBhZ2VkDQogIHBkZl9kb2N1bWVudDogZGVmYXVsdA0KICBodG1sX25vdGVib29rOiBkZWZhdWx0DQotLS0NCiMjRWplcmNpY2lvcyAgIA0KTG9zIHNpZ3VpZW50ZXMgZWplcmNpY2lvcyBlc3RhbiByZWxhY2lvbmFkb3MgY29uIGVsIHRlbWEgZGUgc2lzdGVtYXMgZGUgZWN1YWNpb25lcyBsaW5lYWxlcywgbG9zIGN1YWxlcyBzZSBzb2x1Y2lvbmFuIHV0aWxpemFuZG8gbcOpdG9kb3MgbsO6bWVyaWNvcyAgDQpQYXJhIGxhIHJlYWxpemFjacOzbiBkZSBsb3Mgc2lndWllbnRlcyBlamVyY2ljaW9zIGluc3RhbGFyIGxhcyBsaWJyZXJpYXMgcHJhY21hLCBtYXRyaXggeSBSbGluc29sdmUNCg0KYGBge3IsIGVjaG89VFJVRX0NCmxpYnJhcnkocHJhY21hKQ0KbGlicmFyeShNYXRyaXgpDQpsaWJyYXJ5KFJsaW5zb2x2ZSkNCmBgYA0KDQoNCjEuIA0KYS4gUmV2aXNlIGxhcyBzaWd1aWVudGVzIGZ1bmNpb25lcyBjb24gbGEgbWF0cml6IEEsIHF1ZSBwdWVkZSBkZWNpciBhY2VyY2EgZGUgc3UgZnVuY2lvbmFtaWVudG8geSBleHBsaXF1ZSBjb21vIHNlIHV0aWxpemFuIHBhcmEgZGVzY29tcG9uZXIgbGEgbWF0cml6IEEuDQoNClNvbGNpb24gOg0KDQpDb21waWxhbmRvIHkgdmllbmRvIGVsIHJlc3VsYXRkbyBkZSBsYXMgZnVuY2lvbmVzLCBleWUsIG9uZXMsIHplcm9zIHkgbWF0cml4IHNlIHB1ZGUgZW50ZXJkZXIgcXVlIHRvZG9zIHRpZW5lbiB1bmEgZnVuY2lvbiBiYXNpY2EgZW4gY29tdW4sIHkgZXMgbGEgZGUgcG9kZXIgY3JlYXIgdW5hIG1hdHJpeiBkZXBlbmRpZW5kbyBkZWwgdmFsb3IgZGUgbnVtZXJvIGRlIGNvbHVtbmFzIGRhZGFzOg0KDQogIGV5ZSA6IHNlIGVuY2FyZ2EgZGUgY3JlYXIgdW5hIG1hdHJpeiBpZGVudGlkYWQgZGUgbiB4IG0uDQogIA0KICBvbmVzIDogQ3JlYSB1bmEgIG4geCBtIGRlIHNvbG8gdW5vcy4NCiAgDQogIFplcm9zIDogY3JlYSB1bmEgbWF0cml6IG4geCBtIHNvbG8gY29uIGVsIHZhbG9yIGRlIDAgZW4gY2FkYSBwb3NpY2lvbiwgdGFtYmFpZW4gZGVub21pbmFkYSAgICAgbWF0cml6IG51bGEuDQogIA0KICBtYXRyaXg6IERhZG8gdW4gdmVjdG9yIGNvbiBjb24gdmFsb3JlcyB5IGVsIG51bWVybyBkZSBmaWxhcyBzZSBjcmVhIHVuYSBtYXRyaXogY29uIGxvcyBkYXRvcyBjb3JyZXNwb25pZW50ZXMsIHBhcmEgZWwgY29ycmVjdG8gZnVuY2lvbmFtaWVudG8gZWwgdmFsb3IgZGUgbGEgY2FudGlkYWQgZGUgZmlsYXMgcXVlIHNlciB1biBzdWJtdWx0aXBsbyBvIG11bHRpcGxvIGRlIGVsIHRhbWHDsW8gZGVsIHZlY3RvciBkYWRvLg0KICANCkRlbnRybyBkZSBsYXMgZnVuY2lvbmVzIGRhZGFzLGNvbiBlbCByZXN1bHRhZG8gZGUgbGEgbXVsdGlwbGljYWNpb24gZGUgbGEgbWF0cml6IEEgY29uIGxhIG1hdHJpeiBpZGVudGlkYWQoIGZ1bmNpb24gZXllICkgc2UgcHVlZGUgZGV0ZXJtaW5hciBsYSBkaWFnb25hbCBkZSBsYSBtYXRyaXogQS4gQ29uIGxhcyBvdHJhcyBkb3MgZnVuY2lvbmVzIG5vIHNlIHB1ZWRlIGhhY2UgaGFjZXIgdW5hIGRlc2NvbXBvc2ljaW9uIGRlIHN1cyBwYXJ0ZXMsIHlhIHF1ZSBzaSBBIHNlIG11bHRpcGxpY2FuIGNvbiBsYSBtYXRyaXogZGUgY2Vyb3MgZWwgcmVzdWx0YWRvIHZhIGEgc2VyIHVuYSBtYXRyaXogZGUgY2Vyb3MgeSBlbiBlbCBjYXNvIGRlIGxhIG1hdHJpeiBkZSB1bm9zIGVsIHJlc3VsdGFkbyBlcyBsYSBtaXNtYSBtYXRyaXogQS4NCg0KYi4gRXZhbHVlIGxhIG1hdHJpeiBkZSB0cmFuc2ljacOzbiBwYXJhIGVsIG3DqXRvZG8gJFx0ZXh0YmZ7U09SfSQgIHkgZGUgJEphY29iaSQgICANCg0KYGBge3IsZWNobz1UfQ0KbiA9ICA0DQpEMTwtZXllKG4sIG0gPSBuKQ0KRDI8LW9uZXMobiwgbSA9IG4pDQpEMzwtemVyb3MobiwgbSA9IG4pDQpBID0gbWF0cml4KGMoLTguMSwgLTcsIDYuMTIzLCAtMiwgLTEsIDQsDQotMywgLTEsIDAsIC0xLCAtNSwgMC42LA0KLTEsIDAuMzMsIDYsIDEvMiksIG5yb3c9NCwgYnlyb3c9VFJVRSkNCkQgPSBEMSAqIEEgIyBtYXRyaXogZGUgZGlhZ29uYWxlcyANCkRpbnZlcnNhID0gc29sdmUoRCkjaW52ZXJzYSBkZSBsYSBkaWFnb25hbCBkZSBBDQpTdW1NYXRTdXAgPC1BDQptYXRyaW9JbmYgPC1BDQpTdW1NYXRTdXBbbG93ZXIudHJpKEEsZGlhZyA9IFRSVUUpXTwtMA0KTCA8LSBTdW1NYXRTdXAgIyBNYXRyaXogZGUgZGlhZ29uYWwgaWZlcmlvcg0KICANCm1hdHJpb0luZlt1cHBlci50cmkoQSxkaWFnID0gVFJVRSldPC0wDQpVIDwtIG1hdHJpb0luZiAjbWF0cml6IGRlIGRpYWdvbmFsIHN1cGVyaXIgDQoNClRqYWNvdmkgPC0gIERpbnZlcnNhJSolKFUrTCkNCncgPSAxLjINClRzb3IgIDwtIHNvbHZlKCBEICAtIHcqIEwgKSAlKiUgKCAoMSAtIHcpKiBEICsgdypVICApDQpgYGANCg0KMi4gRGFkYSBsYSBzaWd1aWVudGUgbWF0cml6LCB1dGlsaWNlIGxhcyBmdW5jaW9uZXMgYW50ZXJpb3JlcyBwYXJhIGRlc2NvbXBvbmVyIGxhIG1hdHJpeiAkQT1MK0QrVSQsIHJlY3VlcmRlIHF1ZSBlc3RhIGRlc2NvbXBvc2ljacOzbiBlcyBsYSBkZWwgbWV0b2RvIGRlIChKYWNvYmkpLiBWZXJpZmlxdWUgc3UgcmVzcHVlc3RhDQoNCg0KDQpgYGB7ciwgZWNobz1UfQ0KbiA9IDQNCkQxPC1leWUobiwgbSA9IG4pDQpEMjwtb25lcyhuLCBtID0gbikNCkQzPC16ZXJvcyhuLCBtID0gbikNCkEgPSBtYXRyaXgoYygtOC4xLCAtNy80LCA2LjEsIC0yLCAtMSwgNCwNCi0zLCAtMSwgMCwgLTEsIC01LCAwLjYsDQotMSwgMS8zLCA2LCAxLzIpLCBucm93PTQsIGJ5cm93PVRSVUUpDQpEID0gRDEgKiBBDQpTdW1NYXRTdXAgPC1BDQptYXRyaW9JbmYgPC1BDQpTdW1NYXRTdXBbbG93ZXIudHJpKEEsZGlhZyA9IFRSVUUpXTwtMA0KTCA8LSBTdW1NYXRTdXAgIyBNYXRyaXogZGUgZGlhZ29uYWwgaWZlcmlvcg0KTCA9IEwqLTEgIA0KbWF0cmlvSW5mW3VwcGVyLnRyaShBLGRpYWcgPSBUUlVFKV08LTANClUgPC0gbWF0cmlvSW5mICNtYXRyaXogZGUgZGlhZ29uYWwgc3VwZXJpb3IgDQpVID0gVSotMQ0KYGBgDQphLiBBZGljaW9uYWxtZW50ZSwgdmVyaWZpcXVlIHNpIEEgZXMgc2ltw6l0cmljYSwgc2kgQSBlcyBkaWFnb25hbG1lbnRlIGRvbWluYW50ZSwganVzdGlmaXF1ZSBzdSByZXNwdWVzdGEgDQoNClNvbHVjaW9uOiANCg0KLSBwYXJhIHZlcmlmaWNhciBzaSB1bmEgbWF0cml6IGVzIHNpbWV0aWNhIHNlIHRpZW5lIHF1ZSB0b21hciBsYSB0cmFucHVlc3RhIGRlIGxhIG1hdHJpeiBvcmlnaW5hbCB5IGVsIHJlc3VsdGFkbyB0aWVuZSBxdWUgc2VyIGVsIG1pc21vIGEgbGEgbWF0cml6IG9yaWdpbmFsLCBlbmVzdGUgY2FzbyBwYXJhIGxhIG1hdHJpeiBkYWRhIGRlIDR4NCBhbCB0cmFuc3BvbmVybGEgbm8gc2UgdmEgYSBkYXIgbGEgbWlzbWEgbWF0cml6IG9yaWdpbmFsLg0KLSBQYXJhIGVsIGNhc28gZGUgbGEgbWF0cml6IEEsIHNlIHRvbW8gY2FkYSBmaWxhIHNpbiBpbmNsdWlyIGVsIHZhbG9yIGRlIGxhIGRpYWdvbmFsIHkgc2UgY29tcGFybyBxdWUgbGEgc3VtYSBkZWwgZWwgdmFsb3IgYWJzb2x1dG8gZGUgbG9zIGNvbXBvbmVudGVzIHNlYSBtZW5vciBhIGVsIHZhbG9yIGVuIGxhIGRpYWdvbmFsIHkgYXNpIHBvciBjYWRhIHZhbG9yIGZpbGEsIGVsIHNldWx0YWRvIGRpbyBxdWUgbGEgbWF0cml6IG5vIGVzIGRpYWdvbmFsbWVudGUgZG9taW5hbnRlLg0KDQpgYGB7cn0NCnQgPSB0KEEpI3RyYW5zcHVlc3RhIGRlIGxhIG1hdHJpeg0KaWYgKGlkZW50aWNhbChBLCB0KSl7I3ZlcmlmaWNhY2lvbiBkZSBzaW1ldHJpYSANCiAgcHJpbnQoIk1hdHJpeiBzaW1ldHJpY2EgIikNCn1lbHNlDQp7DQogIHByaW50KCdObyBlcyBzaW1ldHJpY2EnKQ0KfQ0KZm9yIChpIGluIHNlcSgxLDQsYnkgPSAxKSl7I3ZlcmlmaWNhciBzaSBlcyBkYWlnb25hbG1lbnRlIGRvbWluYW50ZQ0KICBzdW0gPSAwDQogIGZvciAoIGogaW4gc2VxKDEsNCkpew0KICAgIHN1bSA9IHN1bSArIGFicyhBW2ksal0pDQogIH0NCiAgc3VtICA9IHN1bSAtIGFicyhBW2ksaV0pDQogIGQgPSBhYnMoQVtpLGldKQ0KICANCiAgaWYoIGQgPCBzdW0gKXsNCiAgICBlcyA9IEZBTFNFDQogICAgcHJpbnQoIk5vIGVzIGRpYWdvYW5hbG1lbnRlIGRvbWluYW50ZSAiKQ0KICAgIGJyZWFrDQogICAgDQogIH0NCiAgZXMgPSBUUlVFDQp9DQppZihlcykNCiAgcHJpbnQoJ0VzIGRpYWdvbmFsbWVudGUgZG9taW5hbnRlJykNCmBgYA0KICANCiAgYi4gVXRpbGljZSBsYSBmdW5jacOzbiBpdGVyc29sdmUoQSwgYiwgdG9sICwgbWV0aG9kID0gIkdhdXNzLVNlaWRlbCIpIHkgc29sdWNpb25hciBlbCBzaXN0ZW1hIGFzb2NpYWRvIGEgbGEgbWF0cml6ICRBJCBjb246ICAgJGI9WzEuNDUsMyw1LjEyLC00XV57dH0kIGNvbiB1bmEgdG9sZXJhbmNpYSBkZSBlcnJvciBkZSAkMWVeLTgkIA0KICANCi0gTGEgZnVuY2lvbiAqKmludGVyc29sdmUoKSoqIHRpZW5lIGxhIHRhcmVhIGRlIGNhbGN1bGFyIHVuYSBtYXRyaXogJEEkIGNvbiB1biB2ZWN0b3IgJGIkIHNlZ8O6biBlbCB0aXBvIGRlIG1ldG9kbyBxdWUgc2UgZXNwZWNpZmlxdWUsIGFsIGV2YWx1YXIgbGEgbWF0cml6IGRhZGEgZW4gZWwgZWplcmNpY2lvIGNvbiBzdSBjb3JyZXNwb25kaWVudGUgdmVjdG9yIHkgZWwgbWV0b2RvIGRlIEdhdXNzLVNlaWRlbCwgc2Ugb2J0dXZvIHVuYSByZXNwdWV0YSBsYSBjdWFsIGNvbXBhcmFtb3MgY29uIGxhIGRlIEV4Y2VsLCBhbCBldmFsdWFyIGxvcyByZXN1bHRhZG9zIHNlIHB1ZG8gb2JzZXJ2YXIgcXVlIGVyYW4gdG90YWxtZW50ZSBkaWZlcmVudGVzLCBkYW5kbyBlbCBFeGNlbCBjaWZyYXMgcGVxdWXDsWFzIGEgZGlmZXJlbmNpYSBkZWwgbWV0b2RvIGRlIGxhIGxpYnJlcmlhICoqcHJhZ21hKiogcXVlIGRhIHVub3MgdmFsb3JlcyBtdXkgZ3JhbmRlcy4gQ29uIGVzdGUgcHJvYmxlbWEgZGVpY2lkaW1vcyBidXNjYXIgb3RyYSBmdW5jaW9uIGVuIGxhIGxpYnJlcmlhIGRlIFJsaW5zb2x2ZSwgbGEgY3VhbCBlcyAqKmxzb2x2ZS5ncygpKiogbGEgY3VhbCBlcyB1bmEgZnVuY2lvbiBxdWUgZXZhbHVhIGRpcmVjdGFtZW50ZSB1bmEgbWF0cml6IHBvciBlbCBtZXRvZG8gZGUgR2F1c3MtU2VpZGVsLiBBbCBjb21wYXJhciBzZSBwdWRvIG9idGVuZXIgcXVlIGVsIHJlc3VsdGFkbyBkZWwgZXhjZWwgeSBsYSBmdW5jaW9uIGRlICoqUmxpbnNvbHZlKiogZXJhIGVsIG1pc21vLiBTZSBjcmVlIHF1ZSBlc3RlIHByb2JsZW1hIHF1ZSBzZSBvYnRpbmVuZSBjb24gaW50ZXJzb2x2ZSBlcyBkYWRvIHBvcnF1ZSBsYSBmdW5jaW9uIG5vIGNvbnZlcmdlIHkgZXMgcG9yIGVzbyBxdWUgYXJyb2phIHJlc3VsdGFkb3MgdGFuIGdyYW5kZXMsYSBkaWZlcmVuY2lhIGRlIGxhIG90cmEgZnV1bmNpb24gcXVlIHBvc2libGVtZW50ZSBlc3TDoSBhZGFwdGFkYSBwYXJhIHBvZGVyIGVuY29udHJhciB1bmEgc29sdWNpw7NuIGN1YW5kbyBsYXMgbWF0cmljZXMgbm8gY29udmVyZ2VuLg0KDQpgYGB7cn0NCmIgPSBtYXRyaXgoYygxLjQ1LDMsNS4xMiwtNCksICBucm93PTQsIGJ5cm93PVRSVUUpDQpzb2wgPSAgaXRlcnNvbHZlKEEgPSBBLCBiID0gYix0b2wgPSAxZS04LCBtZXRob2QgPSAiR2F1c3MtU2VpZGVsIiApDQpzb2wyID1sc29sdmUuZ3MoQSxiLHJlbHRvbCA9IDFlLTgpDQpzb2wkeA0Kc29sJGl0ZXINCnByaW50KCdzb2x1Y2lvbiBkb3MnKQ0Kc29sMiR4DQpzb2wyJGl0ZXINCmBgYA0KDQpjLiBHZW5lcmUgbGFzIGl0ZXJhY2lvbmVzIGRlbCBtw6l0b2RvIGRlIEphY29iaSwgY2FsY3VsYXIgZXJyb3IgcmVsYXRpdm8gcGFyYSBjYWRhIGl0ZXJhY2lvbiB5IGNvbXBhcmFyIGxhIHNvbHVjacOzbiBjb24gZWwgbcOpdG9kbyBkZSBHYXVzcy1TZWlkZWwuDQoNCi0gIFBhcmEgcmVhbGl6YXIgbGFzIGl0ZXJhY2lvbmVzIGRlbCBtw6l0b2RvIGRlIEphY29iaSBzZSByZWFsaXrDsyBzb2xvIGVuIGFuw6FsaXNpcyBkZSBsYXMgcHJpbWVyYXMgNSBpdGVyYWNpb25lcywgeWEgcXVlIGxhIG1hdHJpeiBubyBjb252ZXJnZSwgZXN0byBzZSBwdWVkZSB2ZXIgeWEgcXVlIGVsIHZhbG9yIGRlbCBlcnJvciB2YSBhdW1lbnRhbmRvIHBvciBjYWRhIGl0ZXJhY2nDs24sIGVzIHBvciBlc28gcXVlIHNlIGRlY2lkacOzIHVzYXIgbGEgZnVuY2nDs24gKipsc29sdmUuamFjb3ZpKiogeSBzZSBjb21wYXLDsyBjb24gZWwgcmVzdWx0YWRvIGRlIEdhdXNzLXNlaWRlbCwgZXN0YSBjb21wYXJhY2nDs24gbW9zdHJvIHF1ZSBsYSBmdW5jacOzbiBkZSAqR1MqIHJlcXVpZXJlIDEwMDAgaXRlcmFjaW9uZXMgcGFyYSBsbGVnYXIgYSBsYSBzb2x1Y2nDs24sIG1pZW50cmFzIHF1ZSBsYSBkZSAqSmFjb2JpKiBkaW8gMzQ5IGl0ZXJhY2lvbmVzLCBsbyBjdWFsIG11ZXN0cmEgdW4gZ3JhbiBjYW1iaW8gZW4gbGEgdmVsb2NpZGFkIGVuIGxhIGN1YWwgY29udmVyZ2VuIGxvcyBtw6l0b2RvcywgZG9uZGUgKkphY292aSogZXMgY2FzaSB0cmVzIHZlY2VzIG3DoXMgcsOhcGlkbyBxdWUgKkdTKi4NCg0KZC4gRW5jdWVudHJlIGxhIG1hdHJpeiBkZSB0cmFuc2ljacOzbiB5IGVsIHJhZGlvIGVzcGVjdHJhbCANCg0KLSAgIEVuIGVsIHNpZ3VpZW50ZSBjb2RpZ28gc2UgdmEgYSByZWFsaXphciBlbCBjYWxjdWxvIGRlIGVsIG1ldG9kbyBkZSBqYWNvdmksIHBhcmEgZXN0byBzZSByZWFsaXpvIGxhcyB2YWxpZGFjaW9uZXMgcG9yIG1lZGlvIGRlbCByYWRpbyBleHBlY3RyYWwsIGxhIG1hdHJpeiBkZSB0cmFuY2lzaW9uIHkgbGEgZXZhbHVjaW9uIGRlbCBlcnJvciBwb3IgbWVkaW8gZGUgbGEgJE5vcm1hX3tcaW5mdHl9JC4gTGEgZXZhbHVhY2lvbiBkZWwgcmFpbyBleHBlY3RyYWwgc2UgaGFjZSBwb3IgbWVkaW8gZGUgbGEgb2J0ZW5jaW9uIGRlbCB2ZWN0b3IgcHJvcGlvLCBwYXJhIGRlc3B1ZXMgb2J0ZW5lciBlbCBtYXlvciB2YWxvciBhYnNvbHV0byBkZW50cm8gZGUgZXN0ZS4gUGFyYSBsYSBtYXRyaXogZGUgdHJhbnNpY2lvbiBzb2xvIHNlIHVzYSAkRF57LTF9KEwrVSlYXnsoayl9LiBMb3MgcmVzdHVsdGFkb3MgIHNlIG9ic2VydmFuIGVuIGxhIGVqZWNpb24gZGVsIHNpZ3VpZW50ZSBjb2RpZ28uIENvbW8gc2UgcHVkZSBvYnNlcnZhciBlbCByYWRpbyBleHBlY3RyYWwgZXMgbWF5b3IgcXVlIHVubywgcG9yIGxvIGN1YWwgaW5kaWNhIHF1ZSBsYSBtYXRyaXogbm8gY29udmVyZ2UsIGVzIHBvciBlc3RvIHF1ZSBsYSBmdW5jaW9uIHBhcmEgZW4gbGEgaXRlcmFjaW9uIDUuDQpgYGB7cn0NCmphY29iaTwtICBmdW5jdGlvbigpeyANCnggPSBtYXRyaXgoYygxLDEsMSwxKSwgIG5yb3c9NCwgYnlyb3c9VFJVRSkgDQplID0gMTAwMA0KaSA9IDANClQgPSBEaW52ZXJzYSUqJShMK1UpICNtYXRyaXogZGUgdHJhc2ljaW9uIA0KcmFkaW9FeHAgPSBtYXgoYWJzKGVpZyhUKSkpDQppZihyYWRpb0V4cD4gMSl7IyByYWRpbyBleHBlY3RyYWwgDQogIGNhdCgnUmFkaW8gZXhwZWN0cmFsIG1hcyBncmFuZGUgcXVlIDEsIG5vIHNlIHB1ZGUgY2FsY3VsYXIsIGVsIGN1YWwgZXM6ICcscmFkaW9FeHAsJ1xuJykNCn0NCnAxID0gRGludmVyc2ElKiViDQoNCnByaW50KCdNYXRpeiBUJykNCnByaW50KFQpDQp3aGlsZShlID4gMWUtOCl7DQogIERpbnZlcnNhID0gc29sdmUoRCkNCiAgeGkgPSBwMSArIFQlKiV4DQogIGUgPSBhYnMobm9ybSh4aSwnSScpIC0gbm9ybSh4LCdJJykpDQogIHggPSB4aQ0KICBpID0gMSArIGkgDQogIGNhdCgiRWwgZXJyb3IgZXM6ICIsZSwnXG4nKQ0KICBpZiAoaSA+IDYpDQogICAgYnJlYWsNCn0NCnByaW50KCdSZXN1bHRhZG8gZGUgbGEgZnVuY2lvbjonKQ0KcHJpbnQoeCkNCmogPSBsc29sdmUuamFjb2JpKEEsYixyZWx0b2wgPTFlLTggKQ0KcHJpbnQoJ090cmEgZnVuY2lvbicpDQpqJHgNCnByaW50KCdpdGVyYWNpb25lczonKQ0KaiRpdGVyDQp9DQpqYWNvYmkoKQ0KYGBgDQoNCg0KDQoNCg0KMy4gU2VhIGVsIHNpc3RlbWEgJEFYPWIkIGRhZG9zIGVuIGVqZXJjaWNpbyx5ICBjb24gdG9sPSBlXi04ICAgICAgICANCiBhLiBJbXBsZW1lbnRlIHVuYSBmdW5jacOzbiBlbiBSIHBhcmEgcXVlIGV2YWx1ZSBsYXMgcmHDrWNlcyBkZWwgcG9saW5vbWlvIGNhcmFjdGVyw61zdGljbyBhc29jaWFkbyBhIGxhICAgICBtYXRyaXogJEEkICAgIA0KIA0KIC0gTGEgc2lndWllbnRlIGZ1bmNpw7NuIHRvbWEgdW5hIG1hdHJpeiB5IGxvIHF1ZSBoYWNlIGVzIHF1ZSBwb3IgbWVkaW8gZGVsIG3DqXRvZG8gKipjaGFycG9seSoqIHNlIHZhIGEgb2J0ZW5lciBlbCBwb2xpbm9taW8gY2FyYWN0ZXLDrXN0aWNvLCBsbyBjdWFsIGRlc3B1w6lzIHBvciBtZWRpbyBkZSBsYSBheXVkYSBkZSBsYSBmdW5jacOzbiBkZSAqKm5ld3RvbioqIHBvZGVyIGV2YWx1YXIgbGEgcmHDrXogZWwgcG9saW5vbWlvLg0KYGBge3J9DQpyYWljZXNQb2xpQ2FyIDwtZnVuY3Rpb24oQSl7DQogIHBvbGkgPSBjaGFycG9seShBKQ0KICBmIDwtIGZ1bmN0aW9uKHgpew0KICAgIHIgPSAgaG9ybmVyKChwb2xpKSx4KQ0KICAgIHJldHVybihyJHkpDQogIH0NCiAgeCA9c2VxKC0xMSwzMCkNCiAgeCA9IG5ld3RvbihmdW4gPSBmICwgeDAgPSA1LHRvbCA9IDFlLTgpDQogIHgNCn0NCnJhaWNlc1BvbGlDYXIoQSkNCg0KYGBgDQogDQogYi4gVXNlIGVsIHRlb3JlbWEgZGUgY29udmVyZ2VuY2lhIHBhcmEgZGV0ZXJtaW5hciBjdcOhbCBtw6l0b2RvIGl0ZXJhdGl2byBlcyBtw6FzIGZhdm9yYWJsZS4gIA0KIGMuIEV2YWx1ZSBsYSBtYXRyaXogZGUgdHJhbnNpY2nDs24gcGFyYSBjYWRhIGNhc28gKG3DqXRvZG8pIHkgZW4gZWwgY2FzbyBkZWwgbcOpdG9kbyBkZSByZWxhamFjacOzbiBkZXRlcm1pbmUgZWwgdmFsb3Igw7NwdGltbyBkZSAkXG9tZWdhJCANCmBgYHtyfQ0KDQpUamFjb3ZpID0gRGludmVyc2ElKiUoTCtVKQ0KDQpgYGANCiANCiBkLiBUZW5pZW5kbyBlbiBjdWVudGEgbG8gYW50ZXJpb3IgcmVzb2x2ZXIgZWwgc2lzdGVtYSAgIA0KIGUgQ29tcGFyYXIgY29uIGxhIHNvbHVjacOzbiBwb3IgZGVmZWN0byAgICAgICANCmYuIEV2YWx1YXIgZWwgbsO6bWVybyBkZSBjb25kaWNpw7NuIGRlIGxhIG1hdHJpeiBBICAgIA0KYGBge3J9DQpjbyA9ICBub3JtKEEsJ0knKSpub3JtKHNvbHZlKEEpLCdJJykNCmNvDQpgYGANCg0KZy4gRXZhbHVhciBlbCBlZmVjdG8gZW4gbGEgc29sdWNpw7NuIHNpIGxhIGVudHJhZGFkICRhX3sxMX09NC4wMSQgYXBsaWNhciBjYW1iaW8geSBzb2x1Y2lvbmFyLiBEZXNwdcOpcywgZGViZSBjb21wYXJhciBjb24gZWwgdmFsb3IgY29uZGljw7NuICAgDQoNCmBgYHtyLCBlY2hvPVR9DQpBID0gbWF0cml4KGMoNCwgLTEsIC0xLCAtMSwgLTEsIDQsDQotMSwgLTEsIC0xLCAtMSwgNCwgLTEsDQotMSwgLTEsIC0xLCA0KSwgbnJvdz00LCBieXJvdz1UUlVFKQ0KQQ0KYiA9IGMoMS4xMTExMSwgNSwgMS41LC0yLjMzKQ0KYg0KYGBgDQoNCjQuIGEuIFBydWViZSBlbCBzaWd1aWVudGUgYWxnb3JpdG1vIGNvbiB1bmEgbWF0cml6ICRBX3s2fSQsIG1vZGlmaXF1ZWxvIHBhcmEgcXVlICRhX3tpaX09MCQgcGFyYSB0b2RvICRpJCAgDQoNCmBgYHtyLCBlY2hvPVR9DQp0cmlsMSA8LSBmdW5jdGlvbihNLCBrID0gMCkgew0KaWYgKGsgPT0gMCkgew0KTVt1cHBlci50cmkoTSwgZGlhZyA9IEZBTFNFKV0gPC0gMA0KfSBlbHNlIHsNCk1bY29sKE0pID49IHJvdyhNKSArIGsgKyAxXSA8LSAwDQp9DQpyZXR1cm4oTSkNCn0NCmBgYA0KDQoNCjUuIENyZWUgdW5hIGZ1bmNpw7NuIHF1ZSBjdWVudGUgZWwgbsO6bWVybyBkZSBtdWx0aXBsaWNhY2lvbmVzIGVuIGVsIG3DqXRvZG8gZGlyZWN0byBkZSBHYXVzcy1Kb3JkYW4sIHBhcmEgcmVzb2x2ZXIgdW4gc2lzdGVtYSBkZSAkbiQgZWN1YWNpb25lcyB5IHBydWViZWxvIHBhcmEgJG49NSQgICAgDQoNCjcuIERhZG8gZWwgc2lndWllbnRlIHNpc3RlbWE6IA0KDQokMngtej0xJCAgIA0KJFxiZXRhJCR4KzJ5LXo9MiQgICAgIA0KDQokLXgreSsgXGFscGhhJCR6PTEkICANCg0KDQphLiBFbmN1ZW50cmUgZWwgdmFsb3IgZGUgJFxhbHBoYSQgeSAkXGJldGEkIHBhcmEgYXNlZ3VyYSBsYSBjb252ZXJnZW5jaWEgcG9yIGVsIG3DqXRvZG8gZGUgSmFjb2JpIHkgcGFyYSBHYXVzcyBTZWlkZWwuIFN1Z2VyZW5jaWE6IHV0aWxpY2UgZWwgdGVvcmVtYSBjb252ZXJnZW5jaWEgIA0KYGBge3J9DQpiID0gMC41DQphID0gMA0KTSA9ICBtYXRyaXgoZGF0YSA9IGMoMiwwLC0xLGIsMiwtMSwtMSwxLGEpLG5yb3cgPSAzKQ0KZWlnKE0pDQoNCmBgYA0KDQoNCmIuIEdlbmVyZSB1bmEgdGFibGEgcXVlIHRlbmdhIDEwIGl0ZXJhY2lvbmVzLCBkZWwgbcOpdG9kbyBkZSBKYWNvYmkgY29uIHZlY3RvciBpbmljaWFsICR4X3swfT1bMSwyLDNdXnQkICAgICAgDQoNCjguIEluc3RhbGFyIGVsIHBhcXVldGUgTWF0cml4IHkgZGVzY29tcG9uZ2EgbGEgbWF0cml6ICRBJCAoZGVsIHB1bnRvIGRvcykgZGUgbGEgZm9ybWEgJExVJCB5IGxhIGZhY3Rvcml6YXJsYSBjb21vICRBPVFSJC4gVmVyaWZpcXVlIHN1IHJlc3B1ZXN0YS4gIA0KDQo5LiBSZWFsaWNlIHZhcmlhcyBwcnVlYmFzIHF1ZSBsYSBtYXRyaXogZGUgdHJhbnNpY2nDs24gcG9yIGVsIG3DqXRvZG8gZGUgR2F1c3MtU2VpZGVsIGVzdGEgZGFkYSBwb3IgJFQ9KC1EXnstMX1VKShJK0xEXnstMX0pXnstMX0kICAgIA0KDQoNCiMjIyBTaXN0ZW1hcyBObyBsaW5lYWxlcyAgDQoxMC4NCmEuIERldGVybWluYXIgbnVtw6lyaWNhbWVudGUgbGEgaW50ZXJzZWNjacOzbiBlbnRyZSBsYSBjaXJjdW5mZXJlbmNpYSAkeF4yICsgeV4yID0gMSQgeSBsYSByZWN0YSAkeSA9IHgkLiBVc2Ftb3MgdW5hIGFwcm94aW1hY2nDs24gaW5pY2lhbCAkKDEsMSkkLiAgIA0KDQpiIEFuYWxpemFyIHkgY29tZW50YXIgZWwgc2lndWllbnRlIGPDs2RpZ28gIA0KYGBge3IsIGVjaG89VH0NCmxpYnJhcnkoQkIpDQp0cmlnZXhwID0gZnVuY3Rpb24oeCkgew0KbiA9IGxlbmd0aCh4KQ0KRiA9IHJlcChOQSwgbikNCkZbMV0gPSAzKnhbMV1eMiArIDIqeFsyXSAtIDUgKyBzaW4oeFsxXSAtIHhbMl0pICogc2luKHhbMV0gKyB4WzJdKQ0KdG4xID0gMjoobi0xKQ0KRlt0bjFdID0gLXhbdG4xLTFdICogZXhwKHhbdG4xLTFdIC0geFt0bjFdKSArIHhbdG4xXSAqDQooIDQgKyAzKnhbdG4xXV4yKSArIDIgKiB4W3RuMSArIDFdICsgc2luKHhbdG4xXSAtDQp4W3RuMSArIDFdKSAqIHNpbih4W3RuMV0gKyB4W3RuMSArIDFdKSAtIDgNCkZbbl0gPSAteFtuLTFdICogZXhwKHhbbi0xXSAtIHhbbl0pICsgNCp4W25dIC0gMw0KRg0KfQ0KbiA9IDEwMDAwDQpwMCA9IHJ1bmlmKG4pICMgbiBpbml0aWFsIHJhbmRvbSBzdGFydGluZyBndWVzc2VzDQpzb2wgPSBCQnNvbHZlKHBhcj1wMCwgZm49dHJpZ2V4cCkNCnNvbCRwYXINCmBgYA0KDQo=</div>
+<div id="rmd-source-code">LS0tDQp0aXRsZTogIkFuw6FsaXNpcyBOdW3DqXJpY28tIEp1bGlhbiBCdWlsZXMsIERhbmllbCBSZXllcywgRGFuaWVsIEZpZXJybywgU2FudGlhZ28gQmVybXVkZXoiDQpvdXRwdXQ6DQogIGh0bWxfZG9jdW1lbnQ6DQogICAgZGZfcHJpbnQ6IHBhZ2VkDQogIHBkZl9kb2N1bWVudDogZGVmYXVsdA0KICBodG1sX25vdGVib29rOiBkZWZhdWx0DQotLS0NCiMjRWplcmNpY2lvcyAgIA0KTG9zIHNpZ3VpZW50ZXMgZWplcmNpY2lvcyBlc3RhbiByZWxhY2lvbmFkb3MgY29uIGVsIHRlbWEgZGUgc2lzdGVtYXMgZGUgZWN1YWNpb25lcyBsaW5lYWxlcywgbG9zIGN1YWxlcyBzZSBzb2x1Y2lvbmFuIHV0aWxpemFuZG8gbcOpdG9kb3MgbsO6bWVyaWNvcyAgDQpQYXJhIGxhIHJlYWxpemFjacOzbiBkZSBsb3Mgc2lndWllbnRlcyBlamVyY2ljaW9zIGluc3RhbGFyIGxhcyBsaWJyZXJpYXMgcHJhY21hLCBtYXRyaXggeSBSbGluc29sdmUNCg0KYGBge3IsIGVjaG89VFJVRX0NCmxpYnJhcnkocHJhY21hKQ0KbGlicmFyeShNYXRyaXgpDQpsaWJyYXJ5KFJsaW5zb2x2ZSkNCmBgYA0KDQoNCiMjIyAxLiANCmEuIFJldmlzZSBsYXMgc2lndWllbnRlcyBmdW5jaW9uZXMgY29uIGxhIG1hdHJpeiBBLCBxdWUgcHVlZGUgZGVjaXIgYWNlcmNhIGRlIHN1IGZ1bmNpb25hbWllbnRvIHkgZXhwbGlxdWUgY29tbyBzZSB1dGlsaXphbiBwYXJhIGRlc2NvbXBvbmVyIGxhIG1hdHJpeiBBLg0KDQpTb2xjaW9uIDoNCg0KQ29tcGlsYW5kbyB5IHZpZW5kbyBlbCByZXN1bHRhZG8gZGUgbGFzIGZ1bmNpb25lcywgZXllLCBvbmVzLCB6ZXJvcyB5IG1hdHJpeCBzZSBwdWRlIGVudGVuZGVyIHF1ZSB0b2RvcyB0aWVuZW4gdW5hIGZ1bmNpw7NuIGLDoXNpY2EgZW4gY29tw7puLCB5IGVzIGxhIGRlIHBvZGVyIGNyZWFyIHVuYSBtYXRyaXogZGVwZW5kaWVuZG8gZGVsIHZhbG9yIGRlIG51bWVybyBkZSBjb2x1bW5hcyBkYWRhczoNCg0KICBleWUgOiBzZSBlbmNhcmdhIGRlIGNyZWFyIHVuYSBtYXRyaXogaWRlbnRpZGFkIGRlIG4geCBtLg0KICANCiAgb25lcyA6IENyZWEgdW5hICBuIHggbSBkZSBzb2xvIHVub3MuDQogIA0KICBaZXJvcyA6IGNyZWEgdW5hIG1hdHJpeiBuIHggbSBzb2xvIGNvbiBlbCB2YWxvciBkZSAwIGVuIGNhZGEgcG9zaWNpb24sIHRhbWJhaWVuIGRlbm9taW5hZGEgICAgIG1hdHJpeiBudWxhLg0KICANCiAgbWF0cml4OiBEYWRvIHVuIHZlY3RvciBjb24gdmFsb3JlcyB5IGVsIG7Dum1lcm8gZGUgZmlsYXMgc2UgY3JlYSB1bmEgbWF0cml6IGNvbiBsb3MgZGF0b3MgY29ycmVzcG9uZGllbnRlcywgcGFyYSBlbCBjb3JyZWN0byBmdW5jaW9uYW1pZW50byBlbCB2YWxvciBkZSBsYSBjYW50aWRhZCBkZSBmaWxhcyBxdWUgc2VyIHVuIHN1Ym3Dumx0aXBsbyBvIG3Dumx0aXBsbyBkZWwgdGFtYcOxbyBkZWwgdmVjdG9yIGRhZG8uDQogIA0KRGVudHJvIGRlIGxhcyBmdW5jaW9uZXMgZGFkYXMsIGNvbiBlbCByZXN1bHRhZG8gZGUgbGEgbXVsdGlwbGljYWNpw7NuIGRlIGxhIG1hdHJpeiBBIGNvbiBsYSBtYXRyaXogaWRlbnRpZGFkKGZ1bmNpw7NuIGV5ZSApIHNlIHB1ZWRlIGRldGVybWluYXIgbGEgZGlhZ29uYWwgZGUgbGEgbWF0cml6IEEuIENvbiBsYXMgb3RyYXMgZG9zIGZ1bmNpb25lcyBubyBzZSBwdWVkZSBoYWNlIGhhY2VyIHVuYSBkZXNjb21wb3NpY2nDs24gZGUgc3VzIHBhcnRlcywgeWEgcXVlIHNpIEEgc2UgbXVsdGlwbGljYW4gY29uIGxhIG1hdHJpeiBkZSBjZXJvcyBlbCByZXN1bHRhZG8gdmEgYSBzZXIgdW5hIG1hdHJpeiBkZSBjZXJvcyB5IGVuIGVsIGNhc28gZGUgbGEgbWF0cml6IGRlIHVub3MgZWwgcmVzdWx0YWRvIGVzIGxhIG1pc21hIG1hdHJpeiBBLg0KDQpiLiBFdmFsdWUgbGEgbWF0cml6IGRlIHRyYW5zaWNpw7NuIHBhcmEgZWwgbcOpdG9kbyAkXHRleHRiZntTT1J9JCAgeSBkZSAkSmFjb2JpJCAgIA0KDQoqKlNvbHVjaW9uOioqUGFyYSBsYSByZWFsaXphY2nDs24gZGUgZXN0ZSBwdW50byBzZSB0b21vIGNvbW8gYXl1ZGEgIGxhcyBmdW5jaW9uZXMgZGFkYXMgcGFyYSBvYnRlbmVyIGVsIHZhbG9yIGRlICRBID0gRCAtIEwgLSBVJCwgeWEgb2J0ZW5pZGFzIGxhcyBtYXRyaWNlcyBuZWNlc2FyaWFzLCBzZSBwcm9jZWRlIGEgZXZhbHVhciBsYXMgbWF0cmljZXMgZGUgdHJhbnNpY2lvbmVzLCBwYXJhIGVsIGNhc28gZGUgamFjb3ZpIHNlIHRpZW5lIHF1ZSAgJFQgPSAgRF57LTF9KEwrVSkkIHkgcGFyYSBlbCBtw6l0b2RvIGRlIHNvciBzZSB0aWVuZSBxdWUgJFQgPSAoSSAtIHdEXnstMX1MKVsoMS13KUkrd0Reey0xfVVdJCwgZG9uZGUgJHckIGVzIHVuIHZhbG9yIHF1ZSBlc3RhIGVudHJlICQgWzEsMl0gJC4NCmBgYHtyLGVjaG89VH0NCm4gPSAgNA0KRDE8LWV5ZShuLCBtID0gbikNCkQyPC1vbmVzKG4sIG0gPSBuKQ0KRDM8LXplcm9zKG4sIG0gPSBuKQ0KQSA9IG1hdHJpeChjKC04LjEsIC03LCA2LjEyMywgLTIsIC0xLCA0LA0KLTMsIC0xLCAwLCAtMSwgLTUsIDAuNiwNCi0xLCAwLjMzLCA2LCAxLzIpLCBucm93PTQsIGJ5cm93PVRSVUUpDQpEID0gRDEgKiBBICMgbWF0cml6IGRlIGRpYWdvbmFsZXMgDQpEaW52ZXJzYSA9IHNvbHZlKEQpI2ludmVyc2EgZGUgbGEgZGlhZ29uYWwgZGUgQQ0KU3VtTWF0U3VwIDwtQQ0KbWF0cmlvSW5mIDwtQQ0KU3VtTWF0U3VwW2xvd2VyLnRyaShBLGRpYWcgPSBUUlVFKV08LTANClUgPC0gU3VtTWF0U3VwICMgTWF0cml6IGRlIGRpYWdvbmFsIHNwZXJpcm9yDQpVID0gVQ0KbWF0cmlvSW5mW3VwcGVyLnRyaShBLGRpYWcgPSBUUlVFKV08LTANCkwgPC0gbWF0cmlvSW5mICNtYXRyaXogZGUgZGlhZ29uYWwgaW5mZXJpcm9yIA0KTCA9IEwNClRqYWNvdmkgPC0gIERpbnZlcnNhJSolKFUrTCkNClRqYWNvdmkgDQp3ID0gMQ0KVHNvciAgPC0gc29sdmUoRDEgLSB3KnNvbHZlKEQpJSolTCklKiUoKDEtdykqRDErKHcqc29sdmUoRCklKiVVKSkNCg0KYGBgDQoNCiMjIyAyLg0KRGFkYSBsYSBzaWd1aWVudGUgbWF0cml6LCB1dGlsaWNlIGxhcyBmdW5jaW9uZXMgYW50ZXJpb3JlcyBwYXJhIGRlc2NvbXBvbmVyIGxhIG1hdHJpeiAkQT1MK0QrVSQsIHJlY3VlcmRlIHF1ZSBlc3RhIGRlc2NvbXBvc2ljacOzbiBlcyBsYSBkZWwgbWV0b2RvIGRlIChKYWNvYmkpLiBWZXJpZmlxdWUgc3UgcmVzcHVlc3RhDQoNCg0KDQpgYGB7ciwgZWNobz1UfQ0KbiA9IDQNCkQxPC1leWUobiwgbSA9IG4pDQpEMjwtb25lcyhuLCBtID0gbikNCkQzPC16ZXJvcyhuLCBtID0gbikNCkEgPSBtYXRyaXgoYygtOC4xLCAtNy80LCA2LjEsIC0yLCAtMSwgNCwNCi0zLCAtMSwgMCwgLTEsIC01LCAwLjYsDQotMSwgMS8zLCA2LCAxLzIpLCBucm93PTQsIGJ5cm93PVRSVUUpDQpEID0gRDEgKiBBDQpTdW1NYXRTdXAgPC1BDQptYXRyaW9JbmYgPC1BDQpTdW1NYXRTdXBbbG93ZXIudHJpKEEsZGlhZyA9IFRSVUUpXTwtMA0KVSA8LSBTdW1NYXRTdXAgIyBNYXRyaXogZGUgZGlhZ29uYWwgc3VwZXJpb3IgDQoNCm1hdHJpb0luZlt1cHBlci50cmkoQSxkaWFnID0gVFJVRSldPC0wDQpMIDwtIG1hdHJpb0luZiAjbWF0cml6IGRlIGRpYWdvbmFsIGluZmVyaW9yIA0KTCA9IEwgDQpgYGANCmEuIEFkaWNpb25hbG1lbnRlLCB2ZXJpZmlxdWUgc2kgQSBlcyBzaW3DqXRyaWNhLCBzaSBBIGVzIGRpYWdvbmFsbWVudGUgZG9taW5hbnRlLCBqdXN0aWZpcXVlIHN1IHJlc3B1ZXN0YSANCg0KU29sdWNpb246IA0KDQotIHBhcmEgdmVyaWZpY2FyIHNpIHVuYSBtYXRyaXogZXMgc2ltZXRpY2Egc2UgdGllbmUgcXVlIHRvbWFyIGxhIHRyYW5wdWVzdGEgZGUgbGEgbWF0cml6IG9yaWdpbmFsIHkgZWwgcmVzdWx0YWRvIHRpZW5lIHF1ZSBzZXIgZWwgbWlzbW8gYSBsYSBtYXRyaXogb3JpZ2luYWwsIGVuZXN0ZSBjYXNvIHBhcmEgbGEgbWF0cml6IGRhZGEgZGUgNHg0IGFsIHRyYW5zcG9uZXJsYSBubyBzZSB2YSBhIGRhciBsYSBtaXNtYSBtYXRyaXogb3JpZ2luYWwuDQotIFBhcmEgZWwgY2FzbyBkZSBsYSBtYXRyaXogQSwgc2UgdG9tbyBjYWRhIGZpbGEgc2luIGluY2x1aXIgZWwgdmFsb3IgZGUgbGEgZGlhZ29uYWwgeSBzZSBjb21wYXJvIHF1ZSBsYSBzdW1hIGRlbCBlbCB2YWxvciBhYnNvbHV0byBkZSBsb3MgY29tcG9uZW50ZXMgc2VhIG1lbm9yIGEgZWwgdmFsb3IgZW4gbGEgZGlhZ29uYWwgeSBhc2kgcG9yIGNhZGEgdmFsb3IgZmlsYSwgZWwgc2V1bHRhZG8gZGlvIHF1ZSBsYSBtYXRyaXogbm8gZXMgZGlhZ29uYWxtZW50ZSBkb21pbmFudGUuDQoNCmBgYHtyfQ0KdCA9IHQoQSkjdHJhbnNwdWVzdGEgZGUgbGEgbWF0cml6DQppZiAoaWRlbnRpY2FsKEEsIHQpKXsjdmVyaWZpY2FjaW9uIGRlIHNpbWV0cmlhIA0KICBwcmludCgiTWF0cml6IHNpbWV0cmljYSAiKQ0KfWVsc2UNCnsNCiAgcHJpbnQoJ05vIGVzIHNpbWV0cmljYScpDQp9DQpmb3IgKGkgaW4gc2VxKDEsNCxieSA9IDEpKXsjdmVyaWZpY2FyIHNpIGVzIGRhaWdvbmFsbWVudGUgZG9taW5hbnRlDQogIHN1bSA9IDANCiAgZm9yICggaiBpbiBzZXEoMSw0KSl7DQogICAgc3VtID0gc3VtICsgYWJzKEFbaSxqXSkNCiAgfQ0KICBzdW0gID0gc3VtIC0gYWJzKEFbaSxpXSkNCiAgZCA9IGFicyhBW2ksaV0pDQogIA0KICBpZiggZCA8IHN1bSApew0KICAgIGVzID0gRkFMU0UNCiAgICBwcmludCgiTm8gZXMgZGlhZ29hbmFsbWVudGUgZG9taW5hbnRlICIpDQogICAgYnJlYWsNCiAgICANCiAgfQ0KICBlcyA9IFRSVUUNCn0NCmlmKGVzKQ0KICBwcmludCgnRXMgZGlhZ29uYWxtZW50ZSBkb21pbmFudGUnKQ0KYGBgDQogIA0KICBiLiBVdGlsaWNlIGxhIGZ1bmNpw7NuIGl0ZXJzb2x2ZShBLCBiLCB0b2wgLCBtZXRob2QgPSAiR2F1c3MtU2VpZGVsIikgeSBzb2x1Y2lvbmFyIGVsIHNpc3RlbWEgYXNvY2lhZG8gYSBsYSBtYXRyaXogJEEkIGNvbjogICAkYj1bMS40NSwzLDUuMTIsLTRdXnt0fSQgY29uIHVuYSB0b2xlcmFuY2lhIGRlIGVycm9yIGRlICQxZV4tOCQgDQogIA0KLSBMYSBmdW5jaW9uICoqaW50ZXJzb2x2ZSgpKiogdGllbmUgbGEgdGFyZWEgZGUgY2FsY3VsYXIgdW5hIG1hdHJpeiAkQSQgY29uIHVuIHZlY3RvciAkYiQgc2Vnw7puIGVsIHRpcG8gZGUgbWV0b2RvIHF1ZSBzZSBlc3BlY2lmaXF1ZSwgYWwgZXZhbHVhciBsYSBtYXRyaXogZGFkYSBlbiBlbCBlamVyY2ljaW8gY29uIHN1IGNvcnJlc3BvbmRpZW50ZSB2ZWN0b3IgeSBlbCBtZXRvZG8gZGUgR2F1c3MtU2VpZGVsLCBzZSBvYnR1dm8gdW5hIHJlc3B1ZXRhIGxhIGN1YWwgY29tcGFyYW1vcyBjb24gbGEgZGUgRXhjZWwsIGFsIGV2YWx1YXIgbG9zIHJlc3VsdGFkb3Mgc2UgcHVkbyBvYnNlcnZhciBxdWUgZXJhbiB0b3RhbG1lbnRlIGRpZmVyZW50ZXMsIGRhbmRvIGVsIEV4Y2VsIGNpZnJhcyBwZXF1ZcOxYXMgYSBkaWZlcmVuY2lhIGRlbCBtZXRvZG8gZGUgbGEgbGlicmVyaWEgKipwcmFnbWEqKiBxdWUgZGEgdW5vcyB2YWxvcmVzIG11eSBncmFuZGVzLiBDb24gZXN0ZSBwcm9ibGVtYSBkZWljaWRpbW9zIGJ1c2NhciBvdHJhIGZ1bmNpb24gZW4gbGEgbGlicmVyaWEgZGUgUmxpbnNvbHZlLCBsYSBjdWFsIGVzICoqbHNvbHZlLmdzKCkqKiBsYSBjdWFsIGVzIHVuYSBmdW5jaW9uIHF1ZSBldmFsdWEgZGlyZWN0YW1lbnRlIHVuYSBtYXRyaXogcG9yIGVsIG1ldG9kbyBkZSBHYXVzcy1TZWlkZWwuIEFsIGNvbXBhcmFyIHNlIHB1ZG8gb2J0ZW5lciBxdWUgZWwgcmVzdWx0YWRvIGRlbCBleGNlbCB5IGxhIGZ1bmNpb24gZGUgKipSbGluc29sdmUqKiBlcmEgZWwgbWlzbW8uIFNlIGNyZWUgcXVlIGVzdGUgcHJvYmxlbWEgcXVlIHNlIG9idGluZW5lIGNvbiBpbnRlcnNvbHZlIGVzIGRhZG8gcG9ycXVlIGxhIGZ1bmNpb24gbm8gY29udmVyZ2UgeSBlcyBwb3IgZXNvIHF1ZSBhcnJvamEgcmVzdWx0YWRvcyB0YW4gZ3JhbmRlcyxhIGRpZmVyZW5jaWEgZGUgbGEgb3RyYSBmdXVuY2lvbiBxdWUgcG9zaWJsZW1lbnRlIGVzdMOhIGFkYXB0YWRhIHBhcmEgcG9kZXIgZW5jb250cmFyIHVuYSBzb2x1Y2nDs24gY3VhbmRvIGxhcyBtYXRyaWNlcyBubyBjb252ZXJnZW4uDQoNCmBgYHtyfQ0KYiA9IG1hdHJpeChjKDEuNDUsMyw1LjEyLC00KSwgIG5yb3c9NCwgYnlyb3c9VFJVRSkNCnNvbCA9ICBpdGVyc29sdmUoQSA9IEEsIGIgPSBiLHRvbCA9IDFlLTgsIG1ldGhvZCA9ICJHYXVzcy1TZWlkZWwiICkNCnNvbDIgPWxzb2x2ZS5ncyhBLGIscmVsdG9sID0gMWUtOCkNCnNvbCR4DQpzb2wkaXRlcg0KcHJpbnQoJ3NvbHVjaW9uIGRvcycpDQpzb2wyJHgNCnNvbDIkaXRlcg0KYGBgDQoNCmMuIEdlbmVyZSBsYXMgaXRlcmFjaW9uZXMgZGVsIG3DqXRvZG8gZGUgSmFjb2JpLCBjYWxjdWxhciBlcnJvciByZWxhdGl2byBwYXJhIGNhZGEgaXRlcmFjaW9uIHkgY29tcGFyYXIgbGEgc29sdWNpw7NuIGNvbiBlbCBtw6l0b2RvIGRlIEdhdXNzLVNlaWRlbC4NCg0KLSAgU2UgcmVhbGl6byB1bmEgZnVuY2lvbiBsYSBjdWFsIHJlYWxpemEgZWwgY2FsY3VsbyBkZWwgbWV0b2RvIGRlIGphY292aSwgZXN0byBsbyBoYWNlIHBvciBtZWRpbyBkZSBsYSBldmFsdWljaW9uIGRlIGxhIG1hdHJpeiAkVCA9IEReey0xfShMK1UpJCwgZGV0cm8gZGUgZXN0YSBzZSB2YWxpZGEgc2kgZWwgcmFkaW8gZXhwZXRyYWwgZGUgbGEgbWF0cml6IFQgZXMgbWVub3IgYSB1bm8sIGFkaWNpb25hbG1lbnRlIHNlIHVzYSBvdHJhIGxpYnJlcmlhIGxhIGN1YWwgZXMgKmxzb2x2ZS5qYWNvdmkoKSogcGFyYSBjb21wYXJhciBsYSByZXNwdWVzdGEsIGRhbmRvIHVuIHJlc3R1bHRhZG8gaWd1YWwsIHBlcm8gY29uIGxhIGRpZmVyZW5jaWEgZGUgZWwgbnVtZXJvIGRlIGl0ZXJhY2lvbmVzIHF1IHJlcXVpZXJlIHBhcmEgbGxlZ2FyIGEgbGEgcmVzcHVlc3RhLCBlbCBjdWwgZXMgZGUgMiBhIDM2MS4NCg0KZC4gRW5jdWVudHJlIGxhIG1hdHJpeiBkZSB0cmFuc2ljacOzbiB5IGVsIHJhZGlvIGVzcGVjdHJhbCANCg0KLSAgIEVuIGVsIHNpZ3VpZW50ZSBjb2RpZ28gc2UgdmEgYSByZWFsaXphciBlbCBjYWxjdWxvIGRlIGVsIG1ldG9kbyBkZSBqYWNvdmksIHBhcmEgZXN0byBzZSByZWFsaXpvIGxhcyB2YWxpZGFjaW9uZXMgcG9yIG1lZGlvIGRlbCByYWRpbyBleHBlY3RyYWwsIGxhIG1hdHJpeiBkZSB0cmFuY2lzaW9uIHkgbGEgZXZhbHVjaW9uIGRlbCBlcnJvciBwb3IgbWVkaW8gZGUgbGEgJE5vcm1hX3tcaW5mdHl9JC4gTGEgZXZhbHVhY2lvbiBkZWwgcmFpbyBleHBlY3RyYWwgc2UgaGFjZSBwb3IgbWVkaW8gZGUgbGEgb2J0ZW5jaW9uIGRlbCB2ZWN0b3IgcHJvcGlvLCBwYXJhIGRlc3B1ZXMgb2J0ZW5lciBlbCBtYXlvciB2YWxvciBhYnNvbHV0byBkZW50cm8gZGUgZXN0ZS4gUGFyYSBsYSBtYXRyaXogZGUgdHJhbnNpY2lvbiBzb2xvIHNlIHVzYSAkRF57LTF9KEwrVSlYXnsoayl9LiBMb3MgcmVzdHVsdGFkb3MgIHNlIG9ic2VydmFuIGVuIGxhIGVqZWNpb24gZGVsIHNpZ3VpZW50ZSBjb2RpZ28uIENvbW8gc2UgcHVkZSBvYnNlcnZhciBlbCByYWRpbyBleHBlY3RyYWwgZXMgbWVub3IgcXVlIHVubywgcG9yIGxvIGN1YWwgaW5kaWNhIHF1ZSBsYSBtYXRyaXogY29udmVyZ2UsIGVzIHBvciBlc3RvIHF1ZSBsYSBmdW5jaW9uLg0KDQpgYGB7cn0NCmphY29iaTwtICBmdW5jdGlvbihBLGIpeyANCnggPSBtYXRyaXgoc2FtcGxlKDAsbGVuZ3RoKGIpLHJlcGxhY2UgPSBUUlVFKSwgYnlyb3c9VFJVRSkgDQpTdW1NYXRTdXAgPC1BDQptYXRyaW9JbmYgPC1BDQpTdW1NYXRTdXBbbG93ZXIudHJpKEEsZGlhZyA9IFRSVUUpXTwtMA0KVSA8LSBTdW1NYXRTdXAgIyBNYXRyaXogZGUgZGlhZ29uYWwgaWZlcmlvcg0KVSA9IFUqLTEgIA0KbWF0cmlvSW5mW3VwcGVyLnRyaShBLGRpYWcgPSBUUlVFKV08LTANCkwgPC0gbWF0cmlvSW5mICNtYXRyaXogZGUgZGlhZ29uYWwgc3VwZXJpb3IgDQpMID0gVSotMQ0KRDEgPSAgZXllKGxlbmd0aChiKSkNCkQgPSBBKkQxDQpwMSA9IHNvbHZlKEEpJSolYg0KDQpUciA9IHNvbHZlKEQpJSolKEwrVSkgI21hdHJpeiBkZSB0cmFzaWNpb24gDQoNCnJhZGlvRXhwID0gbWF4KGFicyhlaWcoVHIpKSkNCmlmKHJhZGlvRXhwPiAxKXsjIHJhZGlvIGV4cGVjdHJhbCANCiAgY2F0KCdSYWRpbyBleHBlY3RyYWwgbWFzIGdyYW5kZSBxdWUgMSwgbm8gc2UgcHVkZSBjYWxjdWxhciwgZWwgY3VhbCBlczogJyxyYWRpb0V4cCwnXG4nKQ0KfWVsc2V7DQogIGNhdCgiUmFkaW8gZXhwZWN0cmFsOiAiLHJhZGlvRXhwLCdcbicpDQp9DQoNCmUgPSAxMDAwDQppID0gMA0Kd2hpbGUoZSA+IDFlLTgpew0KICB4aSA9IHAxICsgVHIlKiV4DQogIGUgPSBhYnMobm9ybSh4aSwnSScpIC0gbm9ybSh4LCdJJykpDQogIHggPSB4aQ0KICBpID0gMSArIGkgDQogIGNhdCgiRWwgZXJyb3IgZXM6ICIsZSwnXG4nKQ0KICBpZiAoaSA+IDUwMCkNCiAgICBicmVhaw0KfQ0KcHJpbnQoJ1Jlc3VsdGFkbyBkZSBsYSBmdW5jaW9uOicpDQpwcmludCh4KQ0KY2F0KCdJdGVyYWNpb25lcyA6JyAsaSwnXG4nKQ0KDQp9DQpqYWNvYmkoQSxiKQ0KaiA9IGxzb2x2ZS5qYWNvYmkoQSxiLHJlbHRvbCA9MWUtOCApDQpwcmludCgnT3RyYSBmdW5jaW9uJykNCmokeA0KcHJpbnQoJ2l0ZXJhY2lvbmVzOicpDQpqJGl0ZXINCmBgYA0KDQoNCg0KDQoNCiMjIyAzLg0KU2VhIGVsIHNpc3RlbWEgJEFYPWIkIGRhZG9zIGVuIGVqZXJjaWNpbyx5ICBjb24gdG9sPSBlXi04ICAgICAgICANCiBhLiBJbXBsZW1lbnRlIHVuYSBmdW5jacOzbiBlbiBSIHBhcmEgcXVlIGV2YWx1ZSBsYXMgcmHDrWNlcyBkZWwgcG9saW5vbWlvIGNhcmFjdGVyw61zdGljbyBhc29jaWFkbyBhIGxhIG1hdHJpeiAkQSQgICAgDQogDQogLSBMYSBzaWd1aWVudGUgZnVuY2nDs24gdG9tYSB1bmEgbWF0cml6IHkgbG8gcXVlIGhhY2UgZXMgcXVlIHBvciBtZWRpbyBkZWwgbcOpdG9kbyAqKmNoYXJwb2x5Kiogc2UgdmEgYSBvYnRlbmVyIGVsIHBvbGlub21pbyBjYXJhY3RlcsOtc3RpY28sIGxvIGN1YWwgZGVzcHXDqXMgcG9yIG1lZGlvIGRlIGxhIGF5dWRhIGRlIGxhIGZ1bmNpw7NuIGRlICoqbmV3dG9uKiogcG9kZXIgZXZhbHVhciBsYSByYcOteiBkZWwgcG9saW5vbWlvIGNhcmFjdGVyw61zdGljby4NCiANCmBgYHtyfQ0KcmFpY2VzUG9saUNhciA8LWZ1bmN0aW9uKEEpew0KICBwb2xpID0gY2hhcnBvbHkoQSkNCiAgZiA8LSBmdW5jdGlvbih4KXsNCiAgICByID0gIGhvcm5lcigocG9saSkseCkNCiAgICByZXR1cm4ociR5KQ0KICB9DQogIHggPXNlcSgtMTEsMzApDQogIHggPSBuZXd0b24oZnVuID0gZiAsIHgwID0gNSx0b2wgPSAxZS04KQ0KICB4DQp9DQpyYWljZXNQb2xpQ2FyKEEpDQoNCmBgYA0KIA0KIGIuIFVzZSBlbCB0ZW9yZW1hIGRlIGNvbnZlcmdlbmNpYSBwYXJhIGRldGVybWluYXIgY3XDoWwgbcOpdG9kbyBpdGVyYXRpdm8gZXMgbcOhcyBmYXZvcmFibGUuICANCiANCiAgLSAqKlNvbHVjaW9uOioqICBQYXJhIGxlIHRlb3JlbWEgZGUgY29udmVyZ2VuY2lhIHNlIHRpZW5lIHF1ZSBldmFsdWFyIGRvcyBjb25kaWNpb25lcywgbGEgcHJpbWVyYSBlcyBzaSB1bmEgbWF0cml6ICRBJCBlcyBkaWFnb25hbG1lbnRlIGRvbWluYW50ZSwgeSBsYSBzZWd1bmRhIGNvbmRpY2nDs24gIGVzIHF1ZSBzaSBlc2EgbWlzbWEgbWF0cml6IGVzIHNpbcOpdHJpY2EgZGVmaW5pZGEgcG9zaXRpdmEsIGVuIGVsIHB1bnRvICoyLmEqIHNlIHB1ZGUgdmVyaWZpY2FyIGVsIHJlc3VsdGFkbyBkZSBsYSBtYXRyaXogY29uIGxhIGN1YWwgc2UgdmEgYSBldmFsdWFyIGVsIHRlb3JlbWEgZGUgY29udmVyZ2VuY2lhLCBlbCBjdWFsIGFycm9qbyBxdWUgbGEgbWF0cml6IG5vIGVzIHNpbcOpdHJpY2EgbmkgdGFtcG9jbyBkaWFnb25hbG1lbnRlIGRvbWluYW50ZSwgZXMgcG9yIGVzbyBxdWUgc2Vnw7puIGVsIG3DqXRvZG8gbm8gaGF5IHVuIG3DqXRvZG8gbcOhcyBmYXZvcmFibGUgcGFyYSBsYSBldmFsdWFjacOzbiBkZSBlc3RhLCBwZXJvIGVzdG8gbm8gaW5kaWNhIHF1ZSBubyBzZSBwdWVkYW4gZXZhbHVhciBwb3IgYWxnw7puIG3DqXRvZG8sIHNvbG8gaW5kaWNhIHF1ZSBubyBoYXkgdW5vIHF1ZSBoYWdhIGNvbnZlcmdlciBtw6FzIHLDoXBpZG8gYSBsYSBtYXRyaXouDQogIA0KIGMuIEV2YWx1ZSBsYSBtYXRyaXogZGUgdHJhbnNpY2nDs24gcGFyYSBjYWRhIGNhc28gKG3DqXRvZG8pIHkgZW4gZWwgY2FzbyBkZWwgbcOpdG9kbyBkZSByZWxhamFjacOzbiBkZXRlcm1pbmUgZWwgdmFsb3Igw7NwdGltbyBkZSAkXG9tZWdhJCANCmBgYHtyfQ0KDQpUamFjb3ZpID0gRGludmVyc2ElKiUoVStMKQ0KY2F0KCdKYWNvdmlcbicpDQpUamFjb3ZpDQpUZ2F1c3MgIDwtIHNvbHZlKEQxIC0gc29sdmUoRCklKiVMKSUqJShzb2x2ZShEKSUqJVUpDQpjYXQoJ0dhdXNzXG4nKQ0KVGdhdXNzDQp3ID0gMS4yDQpUc29yICA8LSBzb2x2ZShEMSAtIHcqc29sdmUoRCklKiVMKSUqJSgoMS13KSpEMSsodypzb2x2ZShEKSUqJVUpKQ0KY2F0KCdTb3JcbicpDQpUc29yDQoNCnJhZGlvRXhwID0gbWF4KGFicyhlaWcoVHIpKSkNCncgPSAyLygxLSgxLXNxcnQocmFkaW9FeHBeMikpKQ0KY2F0KCd3IG9wdGltbycsdywnXG4nKQ0KYGBgDQogDQogZC4gVGVuaWVuZG8gZW4gY3VlbnRhIGxvIGFudGVyaW9yIHJlc29sdmVyIGVsIHNpc3RlbWEgICANCiBlIENvbXBhcmFyIGNvbiBsYSBzb2x1Y2nDs24gcG9yIGRlZmVjdG8gICAgICAgDQpmLiBFdmFsdWFyIGVsIG7Dum1lcm8gZGUgY29uZGljacOzbiBkZSBsYSBtYXRyaXogQSAgICANCmBgYHtyfQ0KY28gPSAgbm9ybShBLCdJJykqbm9ybShzb2x2ZShBKSwnSScpDQpjbw0KYGBgDQoNCmcuIEV2YWx1YXIgZWwgZWZlY3RvIGVuIGxhIHNvbHVjacOzbiBzaSBsYSBlbnRyYWRhZCAkYV97MTF9PTQuMDEkIGFwbGljYXIgY2FtYmlvIHkgc29sdWNpb25hci4gRGVzcHXDqXMsIGRlYmUgY29tcGFyYXIgY29uIGVsIHZhbG9yIGNvbmRpY8OzbiAgIA0KDQpgYGB7ciwgZWNobz1UfQ0KQSA9IG1hdHJpeChjKDQsIC0xLCAtMSwgLTEsIC0xLCA0LA0KLTEsIC0xLCAtMSwgLTEsIDQsIC0xLA0KLTEsIC0xLCAtMSwgNCksIG5yb3c9NCwgYnlyb3c9VFJVRSkNCkENCmIgPSBjKDEuMTExMTEsIDUsIDEuNSwtMi4zMykNCmINCmBgYA0KDQojIyMgNC4NCmEuIFBydWViZSBlbCBzaWd1aWVudGUgYWxnb3JpdG1vIGNvbiB1bmEgbWF0cml6ICRBX3s2fSQsIG1vZGlmaXF1ZWxvIHBhcmEgcXVlICRhX3tpaX09MCQgcGFyYSB0b2RvICRpJCAgDQoNCi0gRWwgYWxnb3JpdG1vIHF1ZSBzZSBub3MgcHJvcG9uZSwgbG8gcXVlIGhhY2UgZXMgcXVlIHJlY2liZSB1bmEgbWF0cml6IHkgdW4gZmFjdG9yLCBkZXBlbmRpZW5kbyBkZSBlbCBmYWN0b3IgbG8gcXVlIGhhcmEgZXMgY2FtYmlhciB0b2RvcyBsb3MgdmFsb3JlcyBkZSBsYSBkaWFnb25hbCByZXNwZWN0aXZhIGEgY2Vyb3MuIExhIG1vZGlmaWNhY2lvbiBwcm9wdWVzdGEgbG8gcXVlIGhhY2UgZXMgcXVlIGV2YWx1YW1vcyBsYSBtYXRyaXogZGlhZ29uYWwgKGNvbiBheXVkYSBkZSBsYSBmdW5jaW9uIGV5ZSksIHkgcGFyYSB0b2RvcyBsb3MgY2Fzb3MsIGxhIGRpYWdvbmFsIGRlIGxhIG1hdHJpeiB0YW1iaWVuIHNlcmEgdW5hIG1hdHJpeiBkZSBjZXJvcy4NCg0KYGBge3IsIGVjaG89VH0NCg0KdHJpbDEgPC0gZnVuY3Rpb24oTSwgayA9IDApIHsNCmlmIChrID09IDApIHsNCk1bdXBwZXIudHJpKE0sIGRpYWcgPSBGQUxTRSldIDwtIDANCn0gZWxzZSB7DQpNW2NvbChNKSA+PSByb3coTSkgKyBrICsgMV0gPC0gMA0KfQ0KcmV0dXJuKE0pDQp9DQoNCg0KIyMjIyMjIyMjIyMNCg0KIyNGdW5jaW9uIHlhIG1vZGlmaWNhZGENCnRyaWxtb2QgPC0gZnVuY3Rpb24oTSwgayA9IDApIHsNCmlmIChrID09IDApIHsNCg0KTVt1cHBlci50cmkoTSwgZGlhZyA9IFRSVUUpXSA8LSAwDQoNCn0gZWxzZSB7DQogIE1bY29sKE0pID49IHJvdyhNKSArIGsgKyAxXSA8LSAwDQogIG49Ng0KICBEMTwtZXllKG4sIG0gPSBuKQ0KICB0cmE9TS0oTSpEMSkNCiAgTTwtdHJhDQoNCg0KfQ0KcmV0dXJuKE0pDQp9DQoNCg0KIyNNYXRyaXogZGUgZGF0b3MgYWxlYXRvcmlhIGRlIHRhbWHDsW8gNng2DQpNYTwtbWF0cml4KHNhbXBsZSgtMTAwOjEwMCwgMzYpLCBucm93ID0gNikNCnByaW50KCJBbGdvcml0bW8gb3JpZ2luYWwiKQ0KdHJpbDEoTWEsIGs9MCkNCnByaW50KCJBbGdvcml0bW8gbW9kaWZpY2FkbyIpDQp0cmlsbW9kKE1hLCBrPTApDQoNCg0KDQpgYGANCg0KDQojIyMgNS4NCkNyZWUgdW5hIGZ1bmNpw7NuIHF1ZSBjdWVudGUgZWwgbsO6bWVybyBkZSBtdWx0aXBsaWNhY2lvbmVzIGVuIGVsIG3DqXRvZG8gZGlyZWN0byBkZSBHYXVzcy1Kb3JkYW4sIHBhcmEgcmVzb2x2ZXIgdW4gc2lzdGVtYSBkZSAkbiQgZWN1YWNpb25lcyB5IHBydWViZWxvIHBhcmEgJG49NSQgICAgDQoNCiMjIyA3Lg0KRGFkbyBlbCBzaWd1aWVudGUgc2lzdGVtYTogDQoNCiQyeC16PTEkICAgDQokXGJldGEkJHgrMnktej0yJCAgICAgDQokLXgreSsgXGFscGhhJCR6PTEkICANCg0KDQphLiBFbmN1ZW50cmUgZWwgdmFsb3IgZGUgJFxhbHBoYSQgeSAkXGJldGEkIHBhcmEgYXNlZ3VyYSBsYSBjb252ZXJnZW5jaWEgcG9yIGVsIG3DqXRvZG8gZGUgSmFjb2JpIHkgcGFyYSBHYXVzcyBTZWlkZWwuIFN1Z2VyZW5jaWE6IHV0aWxpY2UgZWwgdGVvcmVtYSBjb252ZXJnZW5jaWEgIA0KYGBge3J9DQoNCmIgPSA0DQphID0gMTYNCk0gPSAgbWF0cml4KGRhdGEgPSBjKDIsMCwtMSxiLDIsLTEsLTEsMSxhKSxucm93ID0gMywgYnlyb3cgPSAgVFJVRSkNCmIgPSAgbWF0cml4KGRhdGEgPSBjKDEsMiwzKSkNClN1bU1hdFN1cCA8LU0NCm1hdHJpb0luZiA8LU0NClN1bU1hdFN1cFtsb3dlci50cmkoTSxkaWFnID0gVFJVRSldPC0wDQpMIDwtIFN1bU1hdFN1cCAjIE1hdHJpeiBkZSBkaWFnb25hbCBpZmVyaW9yDQpMID0gTCotMSAgDQptYXRyaW9JbmZbdXBwZXIudHJpKE0sZGlhZyA9IFRSVUUpXTwtMA0KVSA8LSBtYXRyaW9JbmYgI21hdHJpeiBkZSBkaWFnb25hbCBzdXBlcmlvciANClUgPSBVKi0xDQpzb2x2ZShBKQ0KVCA9IHNvbHZlKE0pJSolKEwrVSkNCm1heChhYnMoZWlnKFQpKSkNCml0ZXJzb2x2ZShBID0gTSwgYiwgdG9sID0gMWUtOCAsIG1ldGhvZCA9ICJHYXVzcy1TZWlkZWwiKQ0KDQoNCmBgYA0KDQoNCmIuIEdlbmVyZSB1bmEgdGFibGEgcXVlIHRlbmdhIDEwIGl0ZXJhY2lvbmVzLCBkZWwgbcOpdG9kbyBkZSBKYWNvYmkgY29uIHZlY3RvciBpbmljaWFsICR4X3swfT1bMSwyLDNdXnQkICAgICANCmBgYHtyfQ0KamFjb2JpKE0sYikNCmBgYA0KDQoNCiMjIyA4Lg0KSW5zdGFsYXIgZWwgcGFxdWV0ZSBNYXRyaXggeSBkZXNjb21wb25nYSBsYSBtYXRyaXogJEEkIChkZWwgcHVudG8gZG9zKSBkZSBsYSBmb3JtYSAkTFUkIHkgbGEgZmFjdG9yaXphcmxhIGNvbW8gJEE9UVIkLiBWZXJpZmlxdWUgc3UgcmVzcHVlc3RhLiAgDQoNCi0gKipTb2x1Y2lvbjoqKiBFbiBlbCBwYXF1ZXRlIE1hdHJpeCBub3MgZW5jb250cmFtb3MgY29uIGRpc3RpbnRhcyBmdW5jaW9uZXMgcXVlIG5vcyBwZXJtaXRlbiBoYWNlciBkZXNjb21wb3NpY2lvbmVzIGRlIG1hdHJpY2VzLiBFbiBwcmltZXJhIGluc3RhbmNpYSB1dGlsaXphbW9zIGxhIGZ1bmNpb24gdHJpbCBxdWUgbm9zIHByb3BvcmNpb25hIGxhIG1hdHJpeiB0cmlhbmd1bGFyIGluZmVyaW9yIGRlIGxhIG1hdHJpeiBvcmlnaW5hbCwgeSBsYSBmdW5jaW9uIHRyaXUgcGFyYSBvYnRlbmVyIGxhIHRyaWFuZ3VsYXIgc3VwZXJpb3IuIFBvciBvdHJhIHBhcnRlLCBlbCBwYXF1ZXRlIHRhbWJpZW4gbm9zIHByb3BvcmNpb25hIHVuYSBmdW5jaW9uIHBhcmEgbGEgZmFjdG9yaXphY2lvbiAkQT1RUiQsIGxhIGN1YWwgZXMgcXIuDQoNCmBgYHtyLCBlY2hvPVR9DQpBID0gbWF0cml4KGMoLTguMSwgLTcsIDYuMTIzLCAtMiwgLTEsIDQsDQotMywgLTEsIDAsIC0xLCAtNSwgMC42LA0KLTEsIDAuMzMsIDYsIDEvMiksIG5yb3c9NCwgYnlyb3c9VFJVRSkNCkENCg0KSTwtdHJpbChBLCBrPTApDQpJDQoNClM8LXRyaXUoQSwgaz0wKQ0KUw0KDQpRcjwtcXIoQSkNClFyDQpgYGANCg0KIyMjIDkuIA0KUmVhbGljZSB2YXJpYXMgcHJ1ZWJhcyBxdWUgbGEgbWF0cml6IGRlIHRyYW5zaWNpw7NuIHBvciBlbCBtw6l0b2RvIGRlIEdhdXNzLVNlaWRlbCBlc3RhIGRhZGEgcG9yICRUPSgtRF57LTF9VSkoSStMRF57LTF9KV57LTF9JCAgICANCg0KDQojIyMgU2lzdGVtYXMgTm8gbGluZWFsZXMgIA0KIyMjIDEwLg0KYS4gRGV0ZXJtaW5hciBudW3DqXJpY2FtZW50ZSBsYSBpbnRlcnNlY2Npw7NuIGVudHJlIGxhIGNpcmN1bmZlcmVuY2lhICR4XjIgKyB5XjIgPSAxJCB5IGxhIHJlY3RhICR5ID0geCQuIFVzYW1vcyB1bmEgYXByb3hpbWFjacOzbiBpbmljaWFsICQoMSwxKSQuICAgDQoNCi0gKipTb2x1Y2nDs246KipFbmNvbnRyYW1vcyB1biBwYXF1ZXRlIGRlIFIsIGRlbm9taW5hZG8gQkIsIHF1ZSBzZSBlbmNhcmdhIGRlIHJlc29sdmVyIHkgb3B0aW1pemFyIHNpc3RlbWFzIGRlIGVjdWFjaW9uZXMgbm8gbGluZWFsZXMsIHkgdXRpbGl6YW1vcyB1bmEgZnVuY2nDs24gKGxsYW1hZGEgQkJzb2x2ZSksIHF1ZSBub3MgcGVybWl0ZSBlbmNvbnRyYXIgbGFzIGludGVyc2VjY2lvbmVzIGRlIGxhcyBlY3VhY2lvbmVzIHByZXNlbnRhZGFzIGRhZGEgbGEgYXByb3hpbWFjacOzbiBsaW5lYWwuIEVudG9uY2VzIHNlIHByb2NlZGnDsyBhIHNlZ3VpciBsb3MgcGFzb3MgcXVlIHNlIGlsdXN0cmFuIGVuIGVsIEhFTFAgZGUgbGEgZnVuY2nDs24gcGFyYSBoYWNlciBlbCBtZWpvciB1c28gZGUgZXN0YS4gWSBwcmltZXJvIGVzIG5lY2VzYXJpbyBwYXNhciBsYXMgZWN1YWNpb25lcyBhIHVuYSBmdW5jacOzbiBxdWUgc2Vyw61hIGVsIHNpc3RlbWEgZGUgZWN1YWNpb25lcyBubyBsaW5lYWxlcy4gQWwgZmluYWwgY29tcHJvYmFtb3MgZWwgcmVzdWx0YWRvIGRlIGxhIGZ1bmNpw7NuIHF1ZSBub3MgYXJyb2rDsyBjb24gR2VvR2VicmEsIG9idGVuaWVuZG8gZWwgbWlzbW8gcmVzdWx0YWRvLg0KDQpgYGB7cn0NCmxpYnJhcnkoQkIpDQoNCnJlPC1jKDEsMSkNCg0KICAgIA0Kc2lzdGVtPWZ1bmN0aW9uKHgpew0KICBuPC1sZW5ndGgoeCkNCiAgZnVuPC1yZXAoTkEsIG4pDQogIGZ1blsxXSA9ICh4WzFdXjIpKyh4WzJdXjIpLTENCiAgZnVuWzJdID0gKHhbMV0pLSh4WzJdKQ0KICBmdW4NCn0NCg0Kc29sPUJCc29sdmUocmUsIHNpc3RlbSkNCnNvbCRwYXINCmBgYA0KDQoNCmIgQW5hbGl6YXIgeSBjb21lbnRhciBlbCBzaWd1aWVudGUgY8OzZGlnbyAgDQoNCi0gKipTb2x1Y2nDs246KiogUHJpbmNpcGFsbWVudGUgQkJzb2x2ZSwgZXMgdW5hIGZ1bmNpw7NuIHF1ZSB1dGlsaXphIGxvbmdpdHVkZXMgZGUgcGFzbyBCYXJ6aWxhaS1Cb3J3ZWluIHBhcmEgcmVzb2x2ZXIgc2lzdGVtYXMgZGUgZWN1YWNpb25lcyBubyBsaW5lYWxlcy4gRXN0YSBmdW5jacOzbiByZWNpYmUgY29tbyBwYXLDoW1ldHJvcyB1biB2ZWN0b3IgZWwgY3VhbCBkYSB1bmEgZXN0aW1hY2nDs24gZGUgbGFzIHJhw61jZXMgZGVsIHNpc3RlbWEgZGUgZWN1YWNpb25lcyBubyAgbGluZWFsZXMsIGNvbW8gc2VndW5kbyBwYXLDoW1ldHJvIHNlIHJlY2liZSB1bmEgZnVuY2nDs24gcXVlIGRhZG8gdW4gdmVjdG9yIGNvbW8gYXJndW1lbnRvIHF1ZSBsbyB0cmFuc2Zvcm1hIGludGVybmFtZW50ZSAoZW4gY2FkYSB1bmEgZGUgc3VzIHBvc2ljaW9uZXMpIHBhcmEgYWwgZmluYWwgcmV0b3JuYXIgZWwgdmVjdG9yIG1vZGlmaWNhZG8sIHRvZG8gZXN0byBzZSByZWFsaXphIGVuIGxhIGZ1bmNpw7NuIGRlbm9taW5hZGEgInRyaWdleHAiLkRlc3B1w6lzIHJlZ3Jlc2EgdW5hIGxpc3RhIGRlIHVub3MsIGxvcyBjdWFsZXMgaW5kaWNhbiBsb3MgbWVqb3JlcyBwYXLDoW1ldHJvcyBwYXJhIHJlc29sdmVyIGVsIHNpc3RlbWEgIGRlIGVjdWFjaW9uZXMuDQoNCmBgYHtyLCBlY2hvPVR9DQpsaWJyYXJ5KEJCKQ0KdHJpZ2V4cCA9IGZ1bmN0aW9uKHgpIHsNCm4gPSBsZW5ndGgoeCkNCkYgPSByZXAoTkEsIG4pDQpGWzFdID0gMyp4WzFdXjIgKyAyKnhbMl0gLSA1ICsgc2luKHhbMV0gLSB4WzJdKSAqIHNpbih4WzFdICsgeFsyXSkNCnRuMSA9IDI6KG4tMSkNCkZbdG4xXSA9IC14W3RuMS0xXSAqIGV4cCh4W3RuMS0xXSAtIHhbdG4xXSkgKyB4W3RuMV0gKg0KKCA0ICsgMyp4W3RuMV1eMikgKyAyICogeFt0bjEgKyAxXSArIHNpbih4W3RuMV0gLQ0KeFt0bjEgKyAxXSkgKiBzaW4oeFt0bjFdICsgeFt0bjEgKyAxXSkgLSA4DQpGW25dID0gLXhbbi0xXSAqIGV4cCh4W24tMV0gLSB4W25dKSArIDQqeFtuXSAtIDMNCkYNCn0NCm4gPSAxMDAwMA0KcDAgPSBydW5pZihuKSAjIG4gaW5pdGlhbCByYW5kb20gc3RhcnRpbmcgZ3Vlc3Nlcw0Kc29sID0gQkJzb2x2ZShwYXI9cDAsIGZuPXRyaWdleHApDQpzb2wkcGFyDQpgYGANCg0K</div>
 
 
 
