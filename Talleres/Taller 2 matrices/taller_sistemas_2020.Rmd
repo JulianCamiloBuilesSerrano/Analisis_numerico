@@ -459,7 +459,7 @@ Realice varias pruebas que la matriz de transición por el método de Gauss-Seid
 
 ```{r}
 gasucomp<- function(A,b){
-  #x = matrix(sample(0,length(b),replace = TRUE), byrow=TRUE) 
+  x = matrix(sample(0,length(b),replace = TRUE), byrow=TRUE) 
 SumMatSup <-A
 matrioInf <-A
 SumMatSup[lower.tri(A,diag = TRUE)]<-0
