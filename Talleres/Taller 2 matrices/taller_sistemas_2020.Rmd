@@ -329,8 +329,8 @@ Cree una función que cuente el número de multiplicaciones en el método direct
 
 
 ```{r, echo=T}
-matrizJordan <- matrix(data = c(2,3,7,-2,5,6,8,9,4),nrow =3,ncol = 3, byrow = TRUE)
-Res <- c(3,5,8)
+matrizJordan <- matrix(data = c(2,3,7,-2,5,6,8,9,4,8,9,6, 2,3,7,-2,5,6,8,9,4,8,9,6,-9),nrow =5,ncol = 5, byrow = TRUE)
+Res <- c(3,5,8, 5, 7)
 a <- matrizJordan
 b <- Res
 
@@ -455,11 +455,11 @@ Qr
 ### 9. 
 Realice varias pruebas que la matriz de transición por el método de Gauss-Seidel esta dada por $T=(-D^{-1}U)(I+LD^{-1})^{-1}$    
 
-
+- **Solucion:** 
 
 ```{r}
 gasucomp<- function(A,b){
-  x = matrix(sample(0,length(b),replace = TRUE), byrow=TRUE) 
+  #x = matrix(sample(0,length(b),replace = TRUE), byrow=TRUE) 
 SumMatSup <-A
 matrioInf <-A
 SumMatSup[lower.tri(A,diag = TRUE)]<-0
@@ -471,15 +471,17 @@ L = U*-1
 I =  eye(length(b))
 Tg = solve(D-L)%*%U
 Cg = solve(D-L)%*%b
-
 Ti = (solve(D)%*%U)%*%solve(I + L%*%solve(D))
 print(Tg)
 print(Ti)  
-
  
 }
+A = matrix(c(4, -1, -1, -1, -1, 4,
+-1, -1, -1, -1, 4, -1,
+-1, -1, -1, 4), nrow=4, byrow=TRUE)
+x0 <- rep(0, n)
+b = c(5, 2, 8, 8)
 gasucomp(A,b)
-
 ```
 
 
